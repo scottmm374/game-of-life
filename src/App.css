@@ -1,52 +1,11 @@
-/* .App {
+.App {
   text-align: center;
-} */
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
-
-.controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-button {
-  height: 3em;
-  width: 6em;
-  margin: 1em;
-  font-weight: bold;
-  font-size: 0.5em;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: white;
-  border: 1px solid white;
-  background-color: black;
-}
-
-.canvas {
-  height: 600px;
-  width: 600px;
-  border: solid 2px red;
-}
-
-button:hover {
-  color: black;
-  background-color: #00baff;
-}
-
-button:focus {
-  border: 1px solid #00baff;
-}
-
-button:active {
-  background-color: #1f1f1f;
-  color: white;
+.board {
+  background-image: linear-gradient(#333 1px, transparent 1px),
+    linear-gradient(90deg, #333 1px, transparent 1px);
+  position: relative;
+  margin: 0 auto;
+  background-color: #000;
 }
