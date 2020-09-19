@@ -8,6 +8,8 @@
 }
 
 .board {
+  height: 800px;
+  width: 800px;
   /* background-image: linear-gradient(#333 1px, transparent 1px),
     linear-gradient(90deg, #333 1px, transparent 1px); */
   position: relative;
@@ -16,5 +18,8 @@
 }
 
 .cell {
-  border: solid 1px rgb(204, 118, 5);
+  height: 20px;
+  width: 20px;
+  color: white;
+  border: solid 2px rgb(204, 118, 5);
 }
