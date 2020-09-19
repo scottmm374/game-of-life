@@ -2,10 +2,19 @@
   text-align: center;
 }
 
+.App-header {
+  padding: 30px;
+  font-size: 2rem;
+}
+
 .board {
-  background-image: linear-gradient(#333 1px, transparent 1px),
-    linear-gradient(90deg, #333 1px, transparent 1px);
+  /* background-image: linear-gradient(#333 1px, transparent 1px),
+    linear-gradient(90deg, #333 1px, transparent 1px); */
   position: relative;
   margin: 0 auto;
-  background-color: #000;
+  background-color: rgb(40, 39, 39);
+}
+
+.cell {
+  border: solid 1px rgb(204, 118, 5);
 }

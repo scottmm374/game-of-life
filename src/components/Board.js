@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Cell from "./Cell";
 
-const Board = () => {
-  const CELL_SIZE = 20;
-  const WIDTH = 800;
-  const HEIGHT = 600;
+const cell = 20;
+const boardWidth = 800;
+const boardHeight = 600;
+// const COLS = Math.floor(boardWidth / cell);
+// const ROWS = Math.floor(boardHeight / cell);
+
+export function Board() {
+  // const [generation, setGeneration] = useState(0);
+
+  // const [newGrid, setNewGrid] = useState();
+
   return (
-    <div
-      className="board"
-      style={{
-        width: WIDTH,
-        height: HEIGHT,
-        backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`,
-      }}
-    ></div>
+    <div>
+      <Cell />
+    </div>
   );
-};
-
-export default Board;
+}
