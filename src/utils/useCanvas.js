@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import presets from "./presets";
 
 const canvasWidth = 800;
 const canvasHeight = 800;
@@ -14,6 +15,9 @@ export function useCanvas() {
   const [initialGrid] = useState(
     new Array(COLS).fill(null).map(() => new Array(ROWS).fill(0))
   );
+
+  //choosing which grid to use
+  const [presetGrid, setPresetGrid] = useState(presets("human"));
 
   useEffect(() => {
     const canvasObj = canvasRef.current;

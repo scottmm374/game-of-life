@@ -22,17 +22,12 @@ let grid = Board();
 requestAnimationFrame(updateGrid);
 
 function updateGrid() {
-  grid = NewGen(grid);
+  grid = newGenGrid(grid);
   renderGrid(grid);
   requestAnimationFrame(updateGrid);
 }
 
-function NewGen(grid) {
-  // grid[4][4] = 1;
-  // grid[4][5] = 1;
-  // grid[5][4] = 1;
-  // grid[5][5] = 1;
-
+function newGenGrid(grid) {
   // copy of grid
   const newGen = grid.map((array) => [...array]);
 
