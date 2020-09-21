@@ -1,38 +1,32 @@
 import React, { useEffect, useState } from "react";
-import CellGrid from "./Cell";
+// import CellGrid from "./Cell";
 
-const cell_size = 10;
-const boardWidth = 60;
-const boardHeight = 60;
-const cols = Math.floor(boardWidth / cell_size);
-const rows = Math.floor(boardHeight / cell_size);
+const cell_size = 25;
+const height = 250;
+const width = 250;
+const cols = Math.floor(width / cell_size);
+const rows = Math.floor(height / cell_size);
 
 export function Board() {
-  const [initialGrid] = useState(
-    new Array(cols)
-      .fill(null)
-      .map(() => new Array(rows).fill(Math.round(Math.random())))
+  const [grid] = useState(
+    new Array(cols).fill(null).map(() => new Array(rows).fill(0))
   );
 
-  useEffect(() => {
-    function createBoard(grid) {
-      for (let col = 0; col < grid.length; col++) {
-        for (let row = 0; row < grid[col].length; row++) {
-          const cell = grid[col][row];
-
-          console.log(cell ? "alive" : null);
-        }
-      }
+  function createBoard(gridOption) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {}
     }
-    createBoard(initialGrid);
-  }, [initialGrid]);
+  }
 
-  console.log(initialGrid, "initialGrid");
+  createBoard(grid);
+
+  console.log(grid, "initialGrid");
 
   return (
-    <div className="cell">
-      {/* need to map the grid in I think */}
-      <CellGrid grid={initialGrid} />
-    </div>
+    <>
+      {grid.map((cell) => (
+        <div className="cell">{cell}</div>
+      ))}
+    </>
   );
 }
