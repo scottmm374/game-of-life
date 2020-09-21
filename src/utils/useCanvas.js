@@ -9,14 +9,14 @@ const COLS = Math.floor(canvasHeight / cell_size);
 const ROWS = Math.floor(canvasWidth / cell_size);
 export function useCanvas() {
   const canvasRef = useRef(null);
-  const [cood, setCood] = useState([]);
+  const [gen, setGen] = useState(0);
 
   // represents canvas height/ width and cell size
   const [initialGrid] = useState(
     new Array(COLS).fill(null).map(() => new Array(ROWS).fill(0))
   );
 
-  //choosing which grid to use
+  //state for Presets, might move this
   const [presetGrid, setPresetGrid] = useState(presets("human"));
 
   useEffect(() => {
@@ -47,5 +47,13 @@ export function useCanvas() {
     render(initialGrid, ctx);
   }, [initialGrid]);
 
-  return [cood, setCood, canvasRef, canvasWidth, canvasHeight];
+  return [
+    gen,
+    setGen,
+    canvasRef,
+    canvasWidth,
+    canvasHeight,
+    presetGrid,
+    setPresetGrid,
+  ];
 }
