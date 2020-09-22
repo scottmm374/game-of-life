@@ -1,4 +1,4 @@
-export default function Presets(choice) {
+export default function Presets(choice, height, width, cell) {
   const canvasHeight = 625;
   const canvasWidth = 625;
   const cell_size = 25;
@@ -20,7 +20,6 @@ export default function Presets(choice) {
     presetGrid[11][13] = 1;
     presetGrid[12][11] = 1;
     presetGrid[12][12] = 1;
-
     // WIDTH = 4;
     // HEIGHT = 7;
     // // cell_size = 20;

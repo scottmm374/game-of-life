@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Board from "./components/Board";
 import { Container, Row, Col } from "reactstrap";
-import canvas from "./utils/useCanvas";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
         <Row>
           <Col lg="8">
             <h3>Conways Game of Life</h3> */}
-
       <Board />
       {/* </Col>
           <Col md="4">
