@@ -3,9 +3,9 @@ import React, { useState } from "react";
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-const canvasWidth = 800;
-const canvasHeight = 800;
-const cell_size = 10;
+const canvasWidth = 625;
+const canvasHeight = 625;
+const cell_size = 25;
 
 const COLS = Math.floor(canvasHeight / cell_size);
 const ROWS = Math.floor(canvasWidth / cell_size);

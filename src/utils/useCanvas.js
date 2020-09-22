@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
-import presets from "./presets";
+import Presets from "./presets";
+import ControlPanel from "../components/ControlPanel";
 
-const canvasWidth = 800;
-const canvasHeight = 800;
-const cell_size = 10;
+const canvasWidth = 625;
+const canvasHeight = 625;
+const cell_size = 25;
 
 const COLS = Math.floor(canvasHeight / cell_size);
 const ROWS = Math.floor(canvasWidth / cell_size);
-export function useCanvas() {
+
+function UseCanvas() {
   const canvasRef = useRef(null);
   const [gen, setGen] = useState(0);
 
@@ -17,7 +19,8 @@ export function useCanvas() {
   );
 
   //state for Presets, might move this
-  const [presetGrid, setPresetGrid] = useState(presets("human"));
+  const [presetGrid, setPresetGrid] = useState(Presets("beehive"));
+  console.table(presetGrid);
 
   useEffect(() => {
     const canvasObj = canvasRef.current;
@@ -47,13 +50,23 @@ export function useCanvas() {
     render(initialGrid, ctx);
   }, [initialGrid]);
 
-  return [
-    gen,
-    setGen,
-    canvasRef,
-    canvasWidth,
-    canvasHeight,
-    presetGrid,
-    setPresetGrid,
-  ];
+  return (
+    <div>
+      <ControlPanel
+        canvasRef={canvasRef}
+        gen={gen}
+        setGen={setGen}
+        presetGrid={presetGrid}
+        setPresetGrid={setPresetGrid}
+      />
+      <canvas
+        ref={canvasRef}
+        canvasWidth={canvasWidth}
+        canvasHeight={canvasHeight}
+      />
+      <Presets />
+    </div>
+  );
 }
+
+export default UseCanvas;

@@ -1,8 +1,12 @@
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+import React from "react";
+import UseCanvas from "../utils/useCanvas";
 
 function Board() {
-  return <div></div>;
+  return (
+    <div>
+      <UseCanvas />
+    </div>
+  );
 }
 
 export default Board;
