@@ -1,4 +1,5 @@
 .App {
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -9,7 +10,8 @@
 
 .boardGame {
   display: flex;
-  width: 600px;
-  height: 600px;
-  background: green;
+  width: 625px;
+  height: 625px;
+  /* background: rgb(51, 50, 50);
+  border: solid 3px #ff751a; */
 }

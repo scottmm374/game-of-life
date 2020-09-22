@@ -18,6 +18,8 @@ function UseCanvas() {
     new Array(COLS).fill(null).map(() => new Array(ROWS).fill(0))
   );
 
+  initialGrid[8][10] = 1;
+
   //state for Presets, might move this
   const [presetGrid, setPresetGrid] = useState(Presets("beehive"));
   console.table(presetGrid);
@@ -35,10 +37,10 @@ function UseCanvas() {
           context.rect(col * cell_size, row * cell_size, cell_size, cell_size);
 
           if (cell) {
-            context.fillStyle = "black";
+            context.fillStyle = "white";
           }
           context.fill();
-          context.lineWidth = 2;
+          context.lineWidth = 1;
           context.strokeStyle = "#ff751a";
           context.stroke();
         }
