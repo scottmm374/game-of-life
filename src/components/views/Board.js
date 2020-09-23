@@ -1,5 +1,5 @@
 import React from "react";
-import UseCanvas from "../utils/useCanvas";
+import UseCanvas from "../hooks/useCanvas";
 import ControlView from "./ControlView";
 
 function Board() {

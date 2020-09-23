@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import Presets from "./presets";
-import ControlPanel from "../components/ControlPanel";
+import Presets from "../utils/presets";
+import ControlPanel from "../ControlPanel";
 
 const canvasWidth = 625;
 const canvasHeight = 625;
@@ -28,11 +28,12 @@ function UseCanvas() {
   console.table(presetGrid);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("canvas");
+    // const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
     // ctx.scale(canvasWidth, canvasHeight);
 
-    function render(grid, context) {
+    function render(grid) {
       for (let col = 0; col < ROWS; col++) {
         for (let row = 0; row < COLS; row++) {
           const cell = grid[col][row];
@@ -52,9 +53,9 @@ function UseCanvas() {
       }
     }
     // clear canvas before next render
-    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.clearRect(0, 0, canvasWidth, canvasHeight);
     // Change when I have presets done
-    render(presetGrid, ctx);
+    render(presetGrid, context);
   }, [presetGrid, gen]);
 
   return (
@@ -67,10 +68,7 @@ function UseCanvas() {
         setPresetGrid={setPresetGrid}
         initialGrid={initialGrid}
       />
-      <canvas
-        ref={canvasRef}
-        style={{ width: canvasWidth, height: canvasHeight }}
-      />
+      <canvas ref={canvasRef} id="canvas" width="625px" height="625px" />
     </div>
   );
 }

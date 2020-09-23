@@ -9,14 +9,14 @@
 }
 
 .boardGame {
-  display: flex;
-  width: 625px;
-  height: 625px;
-  /* background: rgb(51, 50, 50);
-  border: solid 3px #ff751a; */
+  max-width: 830px;
+  margin: 0 auto;
+}
+.grid {
+  width: 100%;
+  text-align: center;
 }
 
-.canvas {
-  height: 625px;
-  width: 625px;
-}
+/* canvas {
+  max-width: 100%;
+} */

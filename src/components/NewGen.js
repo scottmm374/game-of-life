@@ -1,8 +1,3 @@
-import React, { useState } from "react";
-
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-
 const canvasWidth = 625;
 const canvasHeight = 625;
 const cell_size = 25;
@@ -12,7 +7,7 @@ const ROWS = Math.floor(canvasWidth / cell_size);
 
 function NewGenGrid(grid) {
   // copy of grid
-  const newGen = grid.map((array) => [...array]);
+  const newGenGrid = grid.map((array) => [...array]);
 
   for (let col = 0; col < grid.length; col++) {
     for (let row = 0; row < grid[col].length; row++) {
@@ -38,21 +33,21 @@ function NewGenGrid(grid) {
 
       if (cell === 1 && neighbors < 2) {
         console.log(cell, "cell");
-        newGen[col][row] = 0;
-        console.log(" Col and Row", newGen[col][row]);
+        newGenGrid[col][row] = 0;
+        console.log(" Col and Row", newGenGrid[col][row]);
       } else if (cell === 0 && neighbors === 3) {
         console.log(cell, "cell");
         console.log("You Live");
-        newGen[col][row] = 1;
-        console.log(" Col and Row", newGen[col][row]);
+        newGenGrid[col][row] = 1;
+        console.log(" Col and Row", newGenGrid[col][row]);
       } else if (cell === 1 && neighbors >= 4) {
         console.log("You Die");
-        newGen[col][row] = 0;
+        newGenGrid[col][row] = 0;
       }
     }
   }
-  console.table(newGen);
-  return newGen;
+  console.table(newGenGrid);
+  return newGenGrid;
 }
 
 export default NewGenGrid;

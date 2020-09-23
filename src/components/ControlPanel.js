@@ -1,8 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useCanvas } from "../utils/useCanvas";
-import NewGenGrid from "./NewGen";
-import ControlView from "./ControlView";
-import Presets from "../utils/presets";
+import ControlView from "./views/ControlView";
 
 const cell_size = 25;
 
@@ -85,13 +82,6 @@ function ControlPanel(props) {
 
   return (
     <div>
-      <canvas
-        canvasRef={props.canvasRef}
-        canvasWidth={props.canvasWidth}
-        canvasHeight={props.canvasHeight}
-        onClick={handleClick}
-      />
-
       <ControlView
         handleClick={handleClick}
         startGame={startGame}
