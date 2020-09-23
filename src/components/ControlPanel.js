@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import ControlView from "./views/ControlView";
-import useCanvas from "./hooks/useCanvas";
+import useAnimate from "./hooks/useAnimate";
 import NewGenGrid from "./NewGen";
 import Presets from "./utils/presets";
 // const cell_size = 25;
@@ -17,7 +17,7 @@ function ControlPanel() {
     setPresetGrid,
     gen,
     setGen,
-  ] = useCanvas();
+  ] = useAnimate();
 
   function updateGrid() {
     setPresetGrid((prevGrid) => NewGenGrid(prevGrid));
@@ -25,7 +25,7 @@ function ControlPanel() {
   }
 
   function handleClick(e) {
-    stopGame();
+    // stopGame();
     let mousePos = getCoodinates(e, canvasRef, cell_size);
 
     const currentCood = {
@@ -57,7 +57,6 @@ function ControlPanel() {
   //   updateGrid();
   // }
   function stopGame() {
-    console.log("stop");
     setGameRunning(false);
     clearInterval(interval.current);
   }
@@ -78,7 +77,7 @@ function ControlPanel() {
   function handleConfig(e) {
     stopGame();
     setPresetGrid(initialGrid);
-    Presets(e.target.value);
+    Presets(e.target.value, 625, 625, 25);
     setGen(0);
   }
 

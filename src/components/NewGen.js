@@ -11,6 +11,7 @@ const ROWS = Math.floor(canvasWidth / cell_size);
 function NewGenGrid(grid) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
+  console.table(newGenGrid);
 
   for (let col = 0; col < grid.length; col++) {
     for (let row = 0; row < grid[col].length; row++) {
@@ -35,27 +36,22 @@ function NewGenGrid(grid) {
       }
 
       if (cell === 1 && neighbors < 2) {
-        console.log(cell, "less then 2");
+        // console.log(cell, "less then 2");
         newGenGrid[col][row] = 0;
-        console.log(" less then 2 should be 0", newGenGrid[col][row]);
+        // console.log(" less then 2 should be 0", newGenGrid[col][row]);
       } else if (cell === 0 && neighbors === 3) {
-        console.log(cell, "dead cell has 3 neightbors");
+        // console.log(cell, "dead cell has 3 neightbors");
         newGenGrid[col][row] = 1;
-        console.log(" Should be 1", newGenGrid[col][row]);
+        // console.log(" Should be 1", newGenGrid[col][row]);
       } else if (cell === 1 && neighbors >= 4) {
-        console.log(cell, "too many neightbors");
+        // console.log(cell, "too many neightbors");
         newGenGrid[col][row] = 0;
-        console.log(" Should be 0", newGenGrid[col][row]);
+        // console.log(" Should be 0", newGenGrid[col][row]);
       }
     }
   }
   // console.table(newGenGrid);
   return newGenGrid;
-  //  (
-  // <>
-  //   <ControlPanel newGrid={newGenGrid} NewGenGrid={NewGenGrid} />
-  // </>
-  // );
 }
 
 export default NewGenGrid;

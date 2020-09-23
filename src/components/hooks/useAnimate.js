@@ -9,10 +9,11 @@ const cell_size = 25;
 const COLS = Math.floor(canvasHeight / cell_size);
 const ROWS = Math.floor(canvasWidth / cell_size);
 
-function useCanvas(props) {
+function useAnimate() {
   const canvasRef = useRef(null);
-  // const [cell_size, setCell_size] = useState(25);
+
   const [gen, setGen] = useState(0);
+  console.log(gen, "gen");
 
   // represents canvas height/ width and cell size
   const [initialGrid] = useState(
@@ -28,21 +29,20 @@ function useCanvas(props) {
   // console.table(presetGrid);
 
   useEffect(() => {
-    const canvas = document.getElementById("canvas");
-    // const canvas = canvasRef.current;
+    // const canvas = document.getElementById("canvas");
+    const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-    // ctx.scale(canvasWidth, canvasHeight);
 
-    function render(grid) {
+    function render(grid, context) {
       for (let col = 0; col < ROWS; col++) {
         for (let row = 0; row < COLS; row++) {
           const cell = grid[col][row];
 
           context.beginPath();
-          // context.rect(col, col, cell_size, cell_size);
+
           context.rect(col * cell_size, row * cell_size, cell_size, cell_size);
 
-          if (cell) {
+          if (cell === 1) {
             context.fillStyle = "black";
           } else {
             context.fillStyle = "white";
@@ -71,4 +71,4 @@ function useCanvas(props) {
   ];
 }
 
-export default useCanvas;
+export default useAnimate;
