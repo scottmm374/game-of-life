@@ -1,11 +1,11 @@
 import React from "react";
-import UseCanvas from "../hooks/useCanvas";
+import ControlPanel from "../ControlPanel";
 import ControlView from "./ControlView";
 
 function Board() {
   return (
     <div>
-      <UseCanvas />
+      <ControlPanel />
       {/* <ControlView /> */}
     </div>
   );

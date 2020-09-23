@@ -1,29 +1,40 @@
 import React, { useState, useRef } from "react";
 import ControlView from "./views/ControlView";
+import useCanvas from "./hooks/useCanvas";
+import NewGenGrid from "./NewGen";
+import Presets from "./utils/presets";
+// const cell_size = 25;
 
-const cell_size = 25;
-
-function ControlPanel(props) {
+function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
 
+  const [
+    canvasRef,
+    cell_size,
+    initialGrid,
+    presetGrid,
+    setPresetGrid,
+    gen,
+    setGen,
+  ] = useCanvas();
+
   function updateGrid() {
-    props.setPresetGrid((prev) => props.NewGenGrid(prev));
-    props.setGen((prevGen) => prevGen + 1);
+    setPresetGrid((prevGrid) => NewGenGrid(prevGrid));
+    setGen((prevGen) => prevGen + 1);
   }
 
   function handleClick(e) {
     stopGame();
-    let mousePos = getCoodinates(e, props.canvasRef, props.cell_size);
+    let mousePos = getCoodinates(e, canvasRef, cell_size);
 
     const currentCood = {
-      x: e.clientX - mousePos.left - ((e.clientX - mousePos.left) % cell_size),
-      y:
-        e.clientY - mousePos.right - ((e.clientY - mousePos.right) % cell_size),
+      x: mousePos.x,
+      y: mousePos.y,
     };
-    console.log(currentCood);
+    console.log(currentCood, "coodinates");
 
-    const newGrid = props.presetGrid.map((row, key) => {
+    const newGrid = presetGrid.map((row, key) => {
       if (key === currentCood.x / cell_size) {
         return row.map((cell, col_key) => {
           if (col_key === currentCood.y / cell_size) {
@@ -36,9 +47,15 @@ function ControlPanel(props) {
         return row;
       }
     });
-    props.setPresetGrid(newGrid);
+    setPresetGrid(newGrid);
   }
 
+  // function handleNext() {
+  //   if (gameRunning) {
+  //     stopGame();
+  //   }
+  //   updateGrid();
+  // }
   function stopGame() {
     console.log("stop");
     setGameRunning(false);
@@ -54,25 +71,20 @@ function ControlPanel(props) {
   function clearBoard() {
     console.log("clear");
     stopGame();
-    props.setPresetGrid(props.initialGrid);
-    props.setGen(0);
+    setPresetGrid(initialGrid);
+    setGen(0);
   }
 
   function handleConfig(e) {
     stopGame();
-    props.setPresetGrid(props.initialGrid);
-    props.Presets(
-      e.target.value,
-      props.canvasWidth,
-      props.camvasHeight,
-      props.cell_size
-    );
-    props.setGen(0);
+    setPresetGrid(initialGrid);
+    Presets(e.target.value);
+    setGen(0);
   }
 
   // Mouse coodinates when Clicking
   function getCoodinates(e, canvasRef, cell_size) {
-    let bound = props.canvasRef.current.getBoundingClientRect();
+    let bound = canvasRef.current.getBoundingClientRect();
     const currentCood = {
       x: e.clientX - bound.left - ((e.clientX - bound.left) % cell_size),
       y: e.clientY - bound.right - ((e.clientY - bound.right) % cell_size),
@@ -82,12 +94,26 @@ function ControlPanel(props) {
 
   return (
     <div>
-      <ControlView
-        handleClick={handleClick}
-        startGame={startGame}
-        stopGame={stopGame}
-        clearBoard={clearBoard}
-      />
+      <div className="grid">
+        <canvas
+          ref={canvasRef}
+          id="canvas"
+          width="625px"
+          height="625px"
+          onClick={handleClick}
+        />
+      </div>
+      <div>
+        <ControlView
+          startGame={startGame}
+          stopGame={stopGame}
+          clearBoard={clearBoard}
+          handleConfig={handleConfig}
+          gameRunning={gameRunning}
+          // handleNext={handleNext}
+          gen={gen}
+        />
+      </div>
     </div>
   );
 }
