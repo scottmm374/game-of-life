@@ -10,7 +10,7 @@ const cell_size = 25;
 const COLS = Math.floor(canvasHeight / cell_size);
 const ROWS = Math.floor(canvasWidth / cell_size);
 
-function newGenGrid(grid) {
+function NewGenGrid(grid) {
   // copy of grid
   const newGen = grid.map((array) => [...array]);
 
@@ -55,4 +55,4 @@ function newGenGrid(grid) {
   return newGen;
 }
 
-export default newGenGrid;
+export default NewGenGrid;
