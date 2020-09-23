@@ -11,7 +11,7 @@ const ROWS = Math.floor(canvasWidth / cell_size);
 
 function UseCanvas() {
   const canvasRef = useRef(null);
-  const [cell_size, setCell_size] = useState(25);
+  // const [cell_size, setCell_size] = useState(25);
   const [gen, setGen] = useState(0);
 
   // represents canvas height/ width and cell size
@@ -28,13 +28,13 @@ function UseCanvas() {
   console.table(presetGrid);
 
   useEffect(() => {
-    const canvasObj = canvasRef.current;
-    const ctx = canvasObj.getContext("2d");
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
     // ctx.scale(canvasWidth, canvasHeight);
 
     function render(grid, context) {
-      for (let col = 0; col < grid.length; col++) {
-        for (let row = 0; row < grid[col].length; row++) {
+      for (let col = 0; col < ROWS; col++) {
+        for (let row = 0; row < COLS; row++) {
           const cell = grid[col][row];
 
           context.beginPath();
@@ -55,22 +55,22 @@ function UseCanvas() {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     // Change when I have presets done
     render(presetGrid, ctx);
-  }, [presetGrid]);
+  }, [presetGrid, gen]);
 
   return (
     <div>
-      {/* <ControlPanel
+      <ControlPanel
         canvasRef={canvasRef}
         gen={gen}
         setGen={setGen}
         presetGrid={presetGrid}
         setPresetGrid={setPresetGrid}
-      /> */}
+        initialGrid={initialGrid}
+      />
       <canvas
         ref={canvasRef}
         style={{ width: canvasWidth, height: canvasHeight }}
       />
-      <Presets />
     </div>
   );
 }
