@@ -1,7 +1,7 @@
-function NewGen(grid, width, height, cell_size) {
+export default function NewGen(grid, width, height, cell_size) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
-  console.table(newGenGrid);
+  // console.table(newGenGrid);
 
   for (let col = 0; col < grid.length; col++) {
     for (let row = 0; row < grid[col].length; row++) {
@@ -20,29 +20,28 @@ function NewGen(grid, width, height, cell_size) {
           if (
             x_cood >= 0 &&
             y_cood >= 0 &&
-            x_cood < Math.floor(height / cell_size) &&
-            y_cood < Math.floor(width / cell_size)
+            x_cood < Math.floor(width / cell_size) &&
+            y_cood < Math.floor(height / cell_size)
           ) {
             // console.log("Things are good");
-            const alive = grid[x_cood][y_cood];
+            const alive = grid[col + i][row + j];
             neighbors += alive;
+            console.log(alive, "alive");
           }
         }
       }
 
       // Game logic for Dead/Alive
 
-      if (grid[col][row] === 1 && neighbors <= 1) {
+      if (cell === 1 && neighbors <= 1) {
         newGenGrid[col][row] = 0;
-      } else if ((grid[col][row] === 0 && neighbors === 3) || neighbors === 2) {
+      } else if (cell === 0 && neighbors === 3) {
         newGenGrid[col][row] = 1;
-      } else if (grid[col][row] === 1 && neighbors >= 4) {
+      } else if (cell === 1 && neighbors >= 4) {
         newGenGrid[col][row] = 0;
       }
     }
   }
-  // console.table(newGenGrid);
+
   return newGenGrid;
 }
-
-export default NewGen;

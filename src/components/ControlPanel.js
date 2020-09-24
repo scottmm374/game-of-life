@@ -8,7 +8,7 @@ import NewGen from "./NewGen";
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
-  const [speed, setSpeed] = useState(500);
+  const [speed, setSpeed] = useState(1000);
 
   const [
     canvasRef,
@@ -39,11 +39,11 @@ function ControlPanel() {
 
     const newGrid = nextGrid.map((row, key) => {
       if (key === currentCood.x / cell_size) {
-        return row.map((cell, col_key) => {
+        return row.map((item, col_key) => {
           if (col_key === currentCood.y / cell_size) {
-            return cell === 0 ? 1 : 0;
+            return item === 0 ? 1 : 0;
           } else {
-            return cell;
+            return item;
           }
         });
       } else {
@@ -53,12 +53,6 @@ function ControlPanel() {
     setNextGrid(newGrid);
   }
 
-  // function handleNext() {
-  //   if (gameRunning) {
-  //     stopGame();
-  //   }
-  //   updateGrid();
-  // }
   function stopGame() {
     setGameRunning(false);
     clearInterval(interval.current);
@@ -92,7 +86,7 @@ function ControlPanel() {
     let bound = canvasRef.current.getBoundingClientRect();
     const currentCood = {
       x: e.clientX - bound.left - ((e.clientX - bound.left) % cell_size),
-      y: e.clientY - bound.right - ((e.clientY - bound.right) % cell_size),
+      y: e.clientY - bound.top - ((e.clientY - bound.top) % cell_size),
     };
     return currentCood;
   }

@@ -1,27 +1,25 @@
 import { useEffect, useState, useRef } from "react";
 import Presets from "../utils/presets";
-// import ControlPanel from "../ControlPanel";
+
+export const width = 625;
+export const height = 625;
+export const cell_size = 25;
 
 function useAnimate() {
   const canvasRef = useRef(null);
-  const [cell_size] = useState(25);
 
   const [gen, setGen] = useState(0);
-  console.log(gen, "gen");
+  const [nextGrid, setNextGrid] = useState(Presets(" ", 625, 625, 25));
+  console.table(nextGrid, "nextgrid");
+  // console.log(gen, "gen");
 
-  const width = 625;
-  const height = 625;
-  const COLS = Math.floor(height / cell_size);
-  const ROWS = Math.floor(width / cell_size);
+  const COLS = Math.floor(width / cell_size);
+  const ROWS = Math.floor(height / cell_size);
 
-  // represents canvas height/ width and cell size
   const [initialGrid] = useState(
     new Array(COLS).fill(null).map(() => new Array(ROWS).fill(0))
   );
-  // console.table(initialGrid);
-  // initialGrid[8][10] = 1;
 
-  const [nextGrid, setNextGrid] = useState(Presets("blinker", 625, 625, 25));
   // console.table(presetGrid);
 
   useEffect(() => {
@@ -30,15 +28,15 @@ function useAnimate() {
     const ctx = canvas.getContext("2d");
 
     function render(grid, context) {
-      for (let col = 0; col < ROWS; col++) {
-        for (let row = 0; row < COLS; row++) {
+      for (let col = 0; col < grid.length; col++) {
+        for (let row = 0; row < grid[col].length; row++) {
           const cell = grid[col][row];
 
           context.beginPath();
 
           context.rect(col * cell_size, row * cell_size, cell_size, cell_size);
 
-          if (cell === 1) {
+          if (cell) {
             context.fillStyle = "black";
           } else {
             context.fillStyle = "white";
@@ -54,7 +52,7 @@ function useAnimate() {
     ctx.clearRect(0, 0, height, width);
     // Change when I have presets done
     render(nextGrid, ctx);
-  }, [nextGrid, gen, cell_size, COLS, ROWS]);
+  }, [nextGrid, gen]);
 
   return [
     canvasRef,

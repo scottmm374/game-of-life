@@ -12,23 +12,17 @@ export default function Presets(choice, height, width, cell_size) {
   // let y = 0;
 
   if (choice === "beehive") {
-    // WIDTH = 4;
-    // HEIGHT = 7;
-    // let x = Math.floor(COLS / 2 - WIDTH / 2);
-    // let y = Math.floor(ROWS / 2 - HEIGHT / 2);
-
     presetGrid[10][11] = 1;
     presetGrid[10][12] = 1;
     presetGrid[11][10] = 1;
     presetGrid[11][13] = 1;
     presetGrid[12][11] = 1;
     presetGrid[12][12] = 1;
-  }
-
-  if (choice === "blinker") {
+  } else if (choice === "blinker") {
     presetGrid[16][15] = 1;
     presetGrid[16][16] = 1;
     presetGrid[16][17] = 1;
+    console.log(presetGrid, "inside blinker");
   }
 
   // console.table(presetGrid);
