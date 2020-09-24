@@ -1,14 +1,4 @@
-import React from "react";
-import ControlPanel from "./ControlPanel";
-
-const canvasWidth = 625;
-const canvasHeight = 625;
-const cell_size = 25;
-
-const COLS = Math.floor(canvasHeight / cell_size);
-const ROWS = Math.floor(canvasWidth / cell_size);
-
-function NewGenGrid(grid) {
+function NewGen(grid, width, height, cell_size) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
   console.table(newGenGrid);
@@ -26,27 +16,28 @@ function NewGenGrid(grid) {
           }
           const x_cood = col + i;
           const y_cood = row + j;
-          if (x_cood >= 0 && y_cood >= 0 && x_cood < COLS && y_cood < ROWS) {
+
+          if (
+            x_cood >= 0 &&
+            y_cood >= 0 &&
+            x_cood < Math.floor(height / cell_size) &&
+            y_cood < Math.floor(width / cell_size)
+          ) {
             // console.log("Things are good");
             const alive = grid[x_cood][y_cood];
             neighbors += alive;
-            console.log(alive, "alive");
           }
         }
       }
 
-      if (cell === 1 && neighbors < 2) {
-        // console.log(cell, "less then 2");
+      // Game logic for Dead/Alive
+
+      if (grid[col][row] === 1 && neighbors <= 1) {
         newGenGrid[col][row] = 0;
-        // console.log(" less then 2 should be 0", newGenGrid[col][row]);
-      } else if (cell === 0 && neighbors === 3) {
-        // console.log(cell, "dead cell has 3 neightbors");
+      } else if ((grid[col][row] === 0 && neighbors === 3) || neighbors === 2) {
         newGenGrid[col][row] = 1;
-        // console.log(" Should be 1", newGenGrid[col][row]);
-      } else if (cell === 1 && neighbors >= 4) {
-        // console.log(cell, "too many neightbors");
+      } else if (grid[col][row] === 1 && neighbors >= 4) {
         newGenGrid[col][row] = 0;
-        // console.log(" Should be 0", newGenGrid[col][row]);
       }
     }
   }
@@ -54,4 +45,4 @@ function NewGenGrid(grid) {
   return newGenGrid;
 }
 
-export default NewGenGrid;
+export default NewGen;

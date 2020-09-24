@@ -1,19 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Presets from "../utils/presets";
-import ControlPanel from "../ControlPanel";
-
-const canvasWidth = 625;
-const canvasHeight = 625;
-const cell_size = 25;
-
-const COLS = Math.floor(canvasHeight / cell_size);
-const ROWS = Math.floor(canvasWidth / cell_size);
+// import ControlPanel from "../ControlPanel";
 
 function useAnimate() {
   const canvasRef = useRef(null);
+  const [cell_size] = useState(25);
 
   const [gen, setGen] = useState(0);
   console.log(gen, "gen");
+
+  const width = 625;
+  const height = 625;
+  const COLS = Math.floor(height / cell_size);
+  const ROWS = Math.floor(width / cell_size);
 
   // represents canvas height/ width and cell size
   const [initialGrid] = useState(
@@ -22,16 +21,13 @@ function useAnimate() {
   // console.table(initialGrid);
   // initialGrid[8][10] = 1;
 
-  //state for Presets, might move this
-  const [presetGrid, setPresetGrid] = useState(
-    Presets("blinker", 625, 625, 25)
-  );
+  const [nextGrid, setNextGrid] = useState(Presets("blinker", 625, 625, 25));
   // console.table(presetGrid);
 
   useEffect(() => {
     // const canvas = document.getElementById("canvas");
     const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
 
     function render(grid, context) {
       for (let col = 0; col < ROWS; col++) {
@@ -55,19 +51,21 @@ function useAnimate() {
       }
     }
     // clear canvas before next render
-    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    ctx.clearRect(0, 0, height, width);
     // Change when I have presets done
-    render(presetGrid, context);
-  }, [presetGrid, gen]);
+    render(nextGrid, ctx);
+  }, [nextGrid, gen, cell_size, COLS, ROWS]);
 
   return [
     canvasRef,
     cell_size,
     initialGrid,
-    presetGrid,
-    setPresetGrid,
+    nextGrid,
+    setNextGrid,
     gen,
     setGen,
+    width,
+    height,
   ];
 }
 

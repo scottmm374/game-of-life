@@ -13,15 +13,25 @@ const NewCard = styled(Card)`
   width: 120px;
 `;
 
+const NewContain = styled(Container)`
+  border: solid 1px red;
+`;
+
 function PresetView() {
   return (
     <>
-      <Container>
+      <NewContain>
+        <NewCard>
+          <NewImg src={beehive} />
+        </NewCard>
+        <NewCard>
+          <NewImg src={beehive} />
+        </NewCard>
         <NewCard>
           <NewImg src={beehive} />
         </NewCard>
         <CardTitle>Beehive</CardTitle>
-      </Container>
+      </NewContain>
     </>
   );
 }
