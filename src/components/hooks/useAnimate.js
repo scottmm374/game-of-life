@@ -21,7 +21,7 @@ function useAnimate() {
   // console.table(initialGrid);
   // initialGrid[8][10] = 1;
 
-  const [nextGrid, setNextGrid] = useState(Presets("blinker", 625, 625, 25));
+  const [nextGrid, setNextGrid] = useState(Presets("beacon", 625, 625, 25));
   // console.table(presetGrid);
 
   useEffect(() => {
