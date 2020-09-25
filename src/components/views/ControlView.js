@@ -15,6 +15,15 @@ const NewButton = styled(Button)`
   height: 37px;
   background-color: #313131;
   color: #e03c8a;
+  border: 1px solid #e03c8a;
+  box-shadow: 5px 4px 9px #e03c8a;
+  &:hover {
+    color: #e67212;
+    border: 1px solid #e67212;
+    background-color: #313131;
+    margin-top: 5px;
+    box-shadow: 5px 4px 9px #e67212;
+  }
 `;
 
 const ControlView = (props) => {

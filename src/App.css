@@ -6,9 +6,11 @@
   /* text-align: center; */
 }
 
-.App-header {
+header,
+footer {
   padding: 30px;
-  font-size: 2rem;
+  font-size: 3rem;
+  text-align: center;
 }
 img {
   height: 100px;
@@ -20,29 +22,8 @@ img {
 .controls {
 }
 
-.boardGame {
-  display: flex;
-  width: 50%;
-  margin-top: 100px;
-  max-width: 830px;
-  margin: 0 auto;
-}
-
 canvas {
   margin-left: 150px;
   margin-top: 75px;
+  margin-bottom: 20px;
 }
-/* .grid {
-  margin-left: 50;
-  margin-top: 100px;
-  width: 100%;
-  text-align: center;
-} */
-
-/* .control-buttons {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin-top: 20px;
-  margin-left: 20px;
-} */
