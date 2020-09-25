@@ -1,13 +1,18 @@
-export default function Presets(choice) {
-  const width = 625;
-  const height = 625;
-  const cell_size = 25;
+export default function Presets(choice, height, width, cell_size) {
+  // const width = 625;
+  // const height = 625;
+  // const cell_size = 25;
   const COLS = Math.floor(width / cell_size);
   const ROWS = Math.floor(height / cell_size);
 
   let presetGrid = new Array(COLS)
     .fill(null)
     .map(() => new Array(ROWS).fill(0));
+
+  let WIDTH = 0;
+  let HEIGHT = 0;
+  let offsetX = 0;
+  let offsetY = 0;
 
   if (choice === "beehive") {
     presetGrid[10][11] = 1;
@@ -17,9 +22,10 @@ export default function Presets(choice) {
     presetGrid[12][11] = 1;
     presetGrid[12][12] = 1;
   } else if (choice === "blinker") {
-    // presetGrid[4][4] = 1;
-    // presetGrid[4][5] = 1;
-    // presetGrid[4][6] = 1;
+    // height = 625;
+    // width = 625;
+    // cell_size = 25;
+
     presetGrid[15][16] = 1;
     presetGrid[16][16] = 1;
     presetGrid[17][16] = 1;
@@ -72,8 +78,28 @@ export default function Presets(choice) {
     presetGrid[17][7] = 1;
     presetGrid[17][11] = 1;
     presetGrid[17][12] = 1;
+  } else if (choice === "random") {
+    presetGrid = new Array(COLS)
+      .fill(null)
+      .map(() =>
+        new Array(ROWS).fill(null).map(() => Math.floor(Math.random() * 2))
+      );
+  } else if (choice === "beacon") {
+    WIDTH = 4;
+    HEIGHT = 4;
+    offsetX = Math.floor(COLS / 2 - WIDTH / 2);
+    offsetY = Math.floor(COLS / 2 - WIDTH / 2);
+
+    presetGrid[offsetX][offsetY] = 1;
+    presetGrid[offsetX][+1] = 1;
+    presetGrid[offsetX + 1][offsetY] = 1;
+    presetGrid[offsetX + 1][offsetY + 1] = 1;
+    presetGrid[offsetX + 2][offsetY + 2] = 1;
+    presetGrid[offsetX + 2][offsetY + 3] = 1;
+    presetGrid[offsetX + 3][offsetY + 2] = 1;
+    presetGrid[offsetX + 3][offsetY + 3] = 1;
   }
 
-  // console.table(presetGrid);
+  console.table(presetGrid);
   return presetGrid;
 }

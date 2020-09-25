@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import ControlView from "./views/ControlView";
-import useAnimate from "./hooks/useAnimate";
+import { useAnimate } from "./hooks/useAnimate";
 import NewGen from "./NewGen";
+import Presets from "./utils/presets";
 import PresetView from "./views/PresetView";
 
 function ControlPanel() {
@@ -22,7 +23,7 @@ function ControlPanel() {
   ] = useAnimate();
 
   function updateGrid() {
-    setNextGrid((grid) => NewGen(grid, width, height, cell_size));
+    setNextGrid((grid) => NewGen(grid, height, width, cell_size));
     setGen((prevGen) => prevGen + 1);
   }
 
@@ -75,7 +76,8 @@ function ControlPanel() {
 
   function handlePresets(e) {
     stopGame();
-    setNextGrid(e.target.value);
+    setNextGrid(Presets(e.target.value, height, width, cell_size));
+
     setGen(0);
   }
 
@@ -106,9 +108,17 @@ function ControlPanel() {
           stopGame={stopGame}
           clearBoard={clearBoard}
           gameRunning={gameRunning}
+          handlePresets={handlePresets}
           gen={gen}
         />
-        <PresetView handlePresets={handlePresets} />
+        <PresetView
+          // startGame={startGame}
+          // stopGame={stopGame}
+          // clearBoard={clearBoard}
+          handlePresets={handlePresets}
+          // gameRunning={gameRunning}
+          // gen={gen}
+        />
       </div>
     </div>
   );

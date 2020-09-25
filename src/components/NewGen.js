@@ -1,4 +1,4 @@
-export default function NewGen(grid, width, height, cell_size) {
+export default function NewGen(grid, height, width, cell_size) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
   // console.table(newGenGrid);

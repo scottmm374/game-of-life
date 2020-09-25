@@ -11,19 +11,29 @@ const NewDiv = styled.div`
 
 const ControlView = (props) => {
   return (
-    <NewDiv>
-      {/* <span className="control-buttons"> */}
-      <Button color="success" onClick={props.startGame}>
-        Start
-      </Button>
-      <Button color="success" onClick={props.stopGame}>
-        Stop
-      </Button>
-      <Button color="success" onClick={props.clearBoard}>
-        Clear
-      </Button>
-      {/* </span> */}
-    </NewDiv>
+    <div>
+      <NewDiv>
+        {/* <span className="control-buttons"> */}
+        <Button color="success" onClick={props.startGame}>
+          Start
+        </Button>
+        <Button color="success" onClick={props.stopGame}>
+          Stop
+        </Button>
+        <Button color="success" onClick={props.clearBoard}>
+          Clear
+        </Button>
+      </NewDiv>
+      <NewDiv>
+        <Button
+          value="cloverleaf"
+          color="success"
+          onClick={props.handlePresets}
+        >
+          Beehive
+        </Button>
+      </NewDiv>
+    </div>
   );
 };
 

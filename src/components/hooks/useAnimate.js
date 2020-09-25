@@ -5,11 +5,13 @@ export const width = 625;
 export const height = 625;
 export const cell_size = 25;
 
-function useAnimate() {
+export function useAnimate() {
   const canvasRef = useRef(null);
 
   const [gen, setGen] = useState(0);
-  const [nextGrid, setNextGrid] = useState(Presets("cloverleaf"));
+  const [nextGrid, setNextGrid] = useState(
+    Presets("beehive", height, width, cell_size)
+  );
   console.table(nextGrid, "nextgrid");
   // console.log(gen, "gen");
 
@@ -66,5 +68,3 @@ function useAnimate() {
     height,
   ];
 }
-
-export default useAnimate;

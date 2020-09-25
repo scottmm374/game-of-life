@@ -1,6 +1,7 @@
 import React from "react";
 import clover from "../../assets/clover_leaf.png";
 import styled from "styled-components";
+// import Presets from "../";
 
 const NewImg = styled.img`
   height: 100px;
@@ -15,16 +16,24 @@ const NewImg = styled.img`
 //   border: solid 1px red;
 // `;
 
-function PresetView(props) {
+const PresetView = (props) => {
   return (
     <div>
       <div className="presets">
-        <NewImg onClick={props.handlePresets} value="cloverleaf" src={clover} />
+        <button value="cloverleaf" onClick={props.handlePresets}>
+          Test
+        </button>
+        <img
+          onClick={props.handlePresets}
+          alt="nothing"
+          value="cloverleaf"
+          src={clover}
+        />
         <NewImg onClick={props.handlePresets} value="blinker" src={clover} />
         <NewImg onClick={props.handlePresets} value="beehive" src={clover} />
-        <NewImg src={clover} />
-        <NewImg src={clover} />
-        <NewImg src={clover} />
+        <NewImg onClick={props.handlePresets} value="beacon" src={clover} />
+        <NewImg onClick={props.handlePresets} value="random" src={clover} />
+        <NewImg onClick={props.handlePresets} value="cloverleaf" src={clover} />
       </div>
       <div>
         <h3>Rules of Conways</h3>
@@ -36,6 +45,6 @@ function PresetView(props) {
       </div>
     </div>
   );
-}
+};
 
 export default PresetView;
