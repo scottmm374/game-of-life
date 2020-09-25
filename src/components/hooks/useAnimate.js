@@ -9,7 +9,7 @@ function useAnimate() {
   const canvasRef = useRef(null);
 
   const [gen, setGen] = useState(0);
-  const [nextGrid, setNextGrid] = useState(Presets(" ", 625, 625, 25));
+  const [nextGrid, setNextGrid] = useState(Presets("cloverleaf"));
   console.table(nextGrid, "nextgrid");
   // console.log(gen, "gen");
 
@@ -36,7 +36,7 @@ function useAnimate() {
 
           context.rect(col * cell_size, row * cell_size, cell_size, cell_size);
 
-          if (cell) {
+          if (cell === 1) {
             context.fillStyle = "black";
           } else {
             context.fillStyle = "white";

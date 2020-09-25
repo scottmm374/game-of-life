@@ -6,7 +6,7 @@ export default function NewGen(grid, width, height, cell_size) {
   for (let col = 0; col < grid.length; col++) {
     for (let row = 0; row < grid[col].length; row++) {
       const cell = grid[col][row];
-      // console.log(cell);
+      console.log(grid[col][row], "cell");
       let neighbors = 0;
 
       for (let i = -1; i < 2; i++) {
@@ -14,6 +14,7 @@ export default function NewGen(grid, width, height, cell_size) {
           if (i === 0 || j === 0) {
             continue;
           }
+
           const x_cood = col + i;
           const y_cood = row + j;
 
@@ -26,7 +27,7 @@ export default function NewGen(grid, width, height, cell_size) {
             // console.log("Things are good");
             const alive = grid[col + i][row + j];
             neighbors += alive;
-            console.log(alive, "alive");
+            // console.log(alive, "alive");
           }
         }
       }
