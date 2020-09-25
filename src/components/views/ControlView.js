@@ -6,32 +6,25 @@ const NewDiv = styled.div`
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  border: 1px solid yellow;
+  max-width: 75%;
+  margin-left: 93px;
+`;
+
+const NewButton = styled(Button)`
+  width: 115px;
+  height: 37px;
+  background-color: #313131;
+  color: #e03c8a;
 `;
 
 const ControlView = (props) => {
   return (
     <div>
       <NewDiv>
-        {/* <span className="control-buttons"> */}
-        <Button color="success" onClick={props.startGame}>
-          Start
-        </Button>
-        <Button color="success" onClick={props.stopGame}>
-          Stop
-        </Button>
-        <Button color="success" onClick={props.clearBoard}>
-          Clear
-        </Button>
-      </NewDiv>
-      <NewDiv>
-        <Button
-          value="cloverleaf"
-          color="success"
-          onClick={props.handlePresets}
-        >
-          Beehive
-        </Button>
+        <NewButton onClick={props.startGame}>Start</NewButton>
+        <NewButton onClick={props.stopGame}>Stop</NewButton>
+        <NewButton onClick={props.clearBoard}>Clear</NewButton>
+        <h5>Generation: {props.gen}</h5>
       </NewDiv>
     </div>
   );

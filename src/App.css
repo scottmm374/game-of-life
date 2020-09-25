@@ -15,24 +15,34 @@ img {
   width: 100px;
   border-radius: 5px;
 }
+.game {
+}
+.controls {
+}
 
 .boardGame {
   display: flex;
-
+  width: 50%;
   margin-top: 100px;
   max-width: 830px;
   margin: 0 auto;
 }
-.grid {
+
+canvas {
+  margin-left: 150px;
+  margin-top: 75px;
+}
+/* .grid {
   margin-left: 50;
   margin-top: 100px;
   width: 100%;
   text-align: center;
-}
+} */
 
-.control-buttons {
+/* .control-buttons {
   display: flex;
   justify-content: center;
+  width: 50%;
   margin-top: 20px;
   margin-left: 20px;
-}
+} */
