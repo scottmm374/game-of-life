@@ -8,7 +8,7 @@ import NewGen from "./NewGen";
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
-  const [speed, setSpeed] = useState(1000);
+  const [speed] = useState(500);
 
   const [
     canvasRef,
@@ -73,13 +73,6 @@ function ControlPanel() {
     setNextGrid(initialGrid);
     setGen(0);
   }
-
-  // function handleConfig(e) {
-  //   stopGame();
-  //   setNextGrid(initialGrid);
-  //   Presets(e.target.value, 625, 625, 25);
-  //   setGen(0);
-  // }
 
   // Mouse coodinates when Clicking
   function getCoodinates(e, canvasRef, cell_size) {
