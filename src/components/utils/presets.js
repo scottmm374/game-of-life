@@ -23,7 +23,6 @@ export default function Presets(choice) {
     presetGrid[15][16] = 1;
     presetGrid[16][16] = 1;
     presetGrid[17][16] = 1;
-    console.log(presetGrid, "inside blinker");
   } else if (choice === "cloverleaf") {
     presetGrid[9][6] = 1;
     presetGrid[9][7] = 1;
