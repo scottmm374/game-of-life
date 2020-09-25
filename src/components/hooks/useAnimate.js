@@ -37,13 +37,13 @@ function useAnimate() {
           context.rect(col * cell_size, row * cell_size, cell_size, cell_size);
 
           if (cell === 1) {
-            context.fillStyle = "black";
+            context.fillStyle = "#2590da";
           } else {
-            context.fillStyle = "white";
+            context.fillStyle = "#313131";
           }
           context.fill();
           context.lineWidth = 1;
-          context.strokeStyle = "#ff751a";
+          context.strokeStyle = "#e67212";
           context.stroke();
         }
       }

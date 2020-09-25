@@ -2,8 +2,7 @@ import React, { useState, useRef } from "react";
 import ControlView from "./views/ControlView";
 import useAnimate from "./hooks/useAnimate";
 import NewGen from "./NewGen";
-// import Presets from "./utils/presets";
-// const cell_size = 25;
+import PresetView from "./views/PresetView";
 
 function ControlPanel() {
   const interval = useRef(null);
@@ -74,6 +73,12 @@ function ControlPanel() {
     setGen(0);
   }
 
+  function handlePresets(e) {
+    stopGame();
+    setNextGrid(e.target.value);
+    setGen(0);
+  }
+
   // Mouse coodinates when Clicking
   function getCoodinates(e, canvasRef, cell_size) {
     let bound = canvasRef.current.getBoundingClientRect();
@@ -86,7 +91,7 @@ function ControlPanel() {
 
   return (
     <div>
-      <div className="grid">
+      <div className="boardgame">
         <canvas
           ref={canvasRef}
           id="canvas"
@@ -100,11 +105,10 @@ function ControlPanel() {
           startGame={startGame}
           stopGame={stopGame}
           clearBoard={clearBoard}
-          // handleConfig={handleConfig}
           gameRunning={gameRunning}
-          // handleNext={handleNext}
           gen={gen}
         />
+        <PresetView handlePresets={handlePresets} />
       </div>
     </div>
   );
