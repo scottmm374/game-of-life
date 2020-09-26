@@ -3,13 +3,13 @@ import Presets from "../utils/presets";
 
 export const height = 700;
 export const width = 700;
-export const cell_size = 10;
+export const cell_size = 14;
 
 export function useAnimate() {
   const canvasRef = useRef(null);
 
   const [gen, setGen] = useState(0);
-  const [nextGrid, setNextGrid] = useState(Presets(" ", height, width, cell_size));
+  const [nextGrid, setNextGrid] = useState(Presets("Mash_up", height, width, cell_size));
   // console.log(JSON.stringify(nextGrid), "next grid");
   // console.log(gen, "gen");
 
