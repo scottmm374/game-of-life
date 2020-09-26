@@ -8,19 +8,9 @@ import PresetView from "./views/PresetView";
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
-  const [speed] = useState(500);
+  const [speed] = useState(250);
 
-  const [
-    canvasRef,
-    cell_size,
-    initialGrid,
-    nextGrid,
-    setNextGrid,
-    gen,
-    setGen,
-    width,
-    height,
-  ] = useAnimate();
+  const [canvasRef, cell_size, initialGrid, nextGrid, setNextGrid, gen, setGen, width, height] = useAnimate();
 
   function updateGrid() {
     setNextGrid((grid) => NewGen(grid, height, width, cell_size));
@@ -35,7 +25,6 @@ function ControlPanel() {
       x: mousePos.x,
       y: mousePos.y,
     };
-    console.log(currentCood, "coodinates");
 
     const newGrid = nextGrid.map((row, key) => {
       if (key === currentCood.y / cell_size) {
@@ -59,16 +48,11 @@ function ControlPanel() {
   }
 
   function startGame() {
-    console.log("start");
     setGameRunning(true);
-    interval.current = setInterval(
-      () => requestAnimationFrame(updateGrid),
-      speed
-    );
+    interval.current = setInterval(() => requestAnimationFrame(updateGrid), speed);
   }
 
   function clearBoard() {
-    console.log("clear");
     stopGame();
     setNextGrid(initialGrid);
     setGen(0);
@@ -95,13 +79,7 @@ function ControlPanel() {
     <div className="game">
       <div className="boardgame">
         <div>
-          <canvas
-            ref={canvasRef}
-            id="canvas"
-            width={width}
-            height={height}
-            onClick={handleClick}
-          />
+          <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
         </div>
         <div className="controls">
           <ControlView

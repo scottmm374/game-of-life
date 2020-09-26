@@ -23,7 +23,7 @@ const PresetView = (props) => {
       <div className="presets">
         <div className="preset-buttons">
           <NewImg alt="cloverleaf" src={clover} />
-          <NewButton onClick={props.handlePresets} value="cloverleaf">
+          <NewButton onClick={props.handlePresets} value="hammerhead">
             Choose
           </NewButton>
         </div>

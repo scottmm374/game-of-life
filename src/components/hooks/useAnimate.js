@@ -1,26 +1,22 @@
 import { useEffect, useState, useRef } from "react";
 import Presets from "../utils/presets";
 
-export const height = 100;
-export const width = 100;
-export const cell_size = 20;
+export const height = 700;
+export const width = 700;
+export const cell_size = 10;
 
 export function useAnimate() {
   const canvasRef = useRef(null);
 
   const [gen, setGen] = useState(0);
-  const [nextGrid, setNextGrid] = useState(
-    Presets(" ", height, width, cell_size)
-  );
-  console.log(JSON.stringify(nextGrid), "next grid");
+  const [nextGrid, setNextGrid] = useState(Presets(" ", height, width, cell_size));
+  // console.log(JSON.stringify(nextGrid), "next grid");
   // console.log(gen, "gen");
 
   const ROWS = Math.floor(height / cell_size);
   const COLS = Math.floor(width / cell_size);
 
-  const [initialGrid] = useState(
-    new Array(ROWS).fill(null).map(() => new Array(COLS).fill(0))
-  );
+  const [initialGrid] = useState(new Array(ROWS).fill(null).map(() => new Array(COLS).fill(0)));
 
   // console.table(presetGrid);
 
@@ -56,15 +52,5 @@ export function useAnimate() {
     render(nextGrid, ctx);
   }, [nextGrid, gen]);
 
-  return [
-    canvasRef,
-    cell_size,
-    initialGrid,
-    nextGrid,
-    setNextGrid,
-    gen,
-    setGen,
-    width,
-    height,
-  ];
+  return [canvasRef, cell_size, initialGrid, nextGrid, setNextGrid, gen, setGen, width, height];
 }
