@@ -1,45 +1,41 @@
 export default function NewGen(grid, height, width, cell_size) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
-  // console.table(newGenGrid);
 
-  for (let col = 0; col < grid.length; col++) {
-    for (let row = 0; row < grid[col].length; row++) {
-      const cell = grid[col][row];
-      console.log(grid[col][row], "cell");
+  for (let row = 0; row < grid.length; row++) {
+    for (let col = 0; col < grid[row].length; col++) {
+      const cell = grid[row][col];
+      // console.log(grid[col][row], "cell");
       let neighbors = 0;
 
-      for (let i = -1; i < 2; i++) {
-        for (let j = -1; j < 2; j++) {
-          if (i === 0 || j === 0) {
-            continue;
-          }
+      // check if in bounds
+      if (row >= 0 && col >= 0 && row < grid.length && col < grid[0].length) {
+        console.log(`[${row}][${col}] alive value: ${grid[row][col]}`);
+        const alive = grid[row][col];
+        neighbors += alive;
+        // need to add conditional because first one is out of bounds
+        // grid[][] will equal either 1 or 0.
+        neighbors += grid[row - 1][col - 1];
+        neighbors += grid[row][col - 1];
+        neighbors += grid[row + 1][col - 1];
 
-          const x_cood = col + i;
-          const y_cood = row + j;
+        neighbors += grid[row - 1][col];
+        neighbors += grid[row + 1][col];
 
-          if (
-            x_cood >= 0 &&
-            y_cood >= 0 &&
-            x_cood < Math.floor(width / cell_size) &&
-            y_cood < Math.floor(height / cell_size)
-          ) {
-            // console.log("Things are good");
-            const alive = grid[col + i][row + j];
-            neighbors += alive;
-            // console.log(alive, "alive");
-          }
-        }
+        neighbors += grid[row - 1][col + 1];
+        neighbors += grid[row][col + 1];
+        neighbors += grid[row + 1][col + 1];
       }
 
-      // Game logic for Dead/Alive
+      console.log(`[${row}][${col}] num neighbors: ${neighbors}`);
+      // Game Rules for Dead/Alive
 
       if (cell === 1 && neighbors <= 1) {
-        newGenGrid[col][row] = 0;
+        newGenGrid[row][col] = 0;
       } else if (cell === 0 && neighbors === 3) {
-        newGenGrid[col][row] = 1;
+        newGenGrid[row][col] = 1;
       } else if (cell === 1 && neighbors >= 4) {
-        newGenGrid[col][row] = 0;
+        newGenGrid[row][col] = 0;
       }
     }
   }

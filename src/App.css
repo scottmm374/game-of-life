@@ -12,18 +12,36 @@ footer {
   font-size: 3rem;
   text-align: center;
 }
+
+.boardgame {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 2px solid rgb(242, 89, 132); */
+}
+.controls {
+  /* display: flex;
+  justify-content: space-between; */
+}
 img {
   height: 100px;
   width: 100px;
   border-radius: 5px;
 }
 .game {
+  display: flex;
+  width: 100%;
+  border: 2px solid white;
 }
-.controls {
-}
+/* .presets {
+  justify-content: center;
+} */
 
 canvas {
   margin-left: 150px;
-  margin-top: 75px;
+  margin-top: 85px;
   margin-bottom: 20px;
+  border: 2px solid #e67212;
+  /* box-shadow: 5px 4px 15px #e671128d; */
+  border-radius: 5px;
 }

@@ -5,9 +5,10 @@ import styled from "styled-components";
 const NewDiv = styled.div`
   padding: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 75%;
   margin-left: 93px;
+  border: 1px solid yellow;
 `;
 
 const NewButton = styled(Button)`

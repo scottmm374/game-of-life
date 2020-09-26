@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import Presets from "../utils/presets";
 
-export const width = 700;
-export const height = 700;
+export const height = 80;
+export const width = 80;
 export const cell_size = 20;
 
 export function useAnimate() {
@@ -10,16 +10,16 @@ export function useAnimate() {
 
   const [gen, setGen] = useState(0);
   const [nextGrid, setNextGrid] = useState(
-    Presets("beehive", height, width, cell_size)
+    Presets(" ", height, width, cell_size)
   );
-  console.table(nextGrid, "nextgrid");
+  console.log(JSON.stringify(nextGrid));
   // console.log(gen, "gen");
 
-  const COLS = Math.floor(width / cell_size);
   const ROWS = Math.floor(height / cell_size);
+  const COLS = Math.floor(width / cell_size);
 
   const [initialGrid] = useState(
-    new Array(COLS).fill(null).map(() => new Array(ROWS).fill(0))
+    new Array(ROWS).fill(null).map(() => new Array(COLS).fill(0))
   );
 
   // console.table(presetGrid);
@@ -30,9 +30,9 @@ export function useAnimate() {
     const ctx = canvas.getContext("2d");
 
     function render(grid, context) {
-      for (let col = 0; col < grid.length; col++) {
-        for (let row = 0; row < grid[col].length; row++) {
-          const cell = grid[col][row];
+      for (let row = 0; row < grid.length; row++) {
+        for (let col = 0; col < grid[row].length; col++) {
+          const cell = grid[row][col];
 
           context.beginPath();
 
@@ -44,7 +44,7 @@ export function useAnimate() {
             context.fillStyle = "#313131";
           }
           context.fill();
-          context.lineWidth = 1;
+          context.lineWidth = 2;
           context.strokeStyle = "#e67212";
           context.stroke();
         }

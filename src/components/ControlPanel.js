@@ -38,12 +38,12 @@ function ControlPanel() {
     console.log(currentCood, "coodinates");
 
     const newGrid = nextGrid.map((row, key) => {
-      if (key === currentCood.x / cell_size) {
-        return row.map((item, col_key) => {
-          if (col_key === currentCood.y / cell_size) {
-            return item === 0 ? 1 : 0;
+      if (key === currentCood.y / cell_size) {
+        return row.map((col, col_key) => {
+          if (col_key === currentCood.x / cell_size) {
+            return col === 0 ? 1 : 0;
           } else {
-            return item;
+            return col;
           }
         });
       } else {
@@ -94,23 +94,28 @@ function ControlPanel() {
   return (
     <div className="game">
       <div className="boardgame">
-        <canvas
-          ref={canvasRef}
-          id="canvas"
-          width={width}
-          height={height}
-          onClick={handleClick}
-        />
+        <div>
+          <canvas
+            ref={canvasRef}
+            id="canvas"
+            width={width}
+            height={height}
+            onClick={handleClick}
+          />
+        </div>
+        <div className="controls">
+          <ControlView
+            startGame={startGame}
+            stopGame={stopGame}
+            clearBoard={clearBoard}
+            gameRunning={gameRunning}
+            handlePresets={handlePresets}
+            gen={gen}
+          />
+        </div>
       </div>
-      <div className="controls">
-        <ControlView
-          startGame={startGame}
-          stopGame={stopGame}
-          clearBoard={clearBoard}
-          gameRunning={gameRunning}
-          handlePresets={handlePresets}
-          gen={gen}
-        />
+
+      <div className="presets">
         <PresetView handlePresets={handlePresets} />
       </div>
     </div>
