@@ -47,12 +47,19 @@ const PresetView = (props) => {
         </div>
       </div>
       <div>
-        <h3>Rules of Conways</h3>
-        <ol>
-          <li>Dont Die</li>
-          <li>Dont Die</li>
-          <li>Dont Die</li>
-        </ol>
+        <h3>Rules of Conways Game of Life</h3>
+        <h5>DEATH</h5>
+        <p>If a cell is Alive it will die if:</p>
+        <ul>
+          <li>Overpopulation: if the cell has more then 3 neighbors.</li>
+          <li>Loneliness: If the cell less than 2 neighbors</li>
+        </ul>
+        <h5>BIRTH</h5>
+        <p>If a cell is Dead it will be born if:</p>
+        <ul>
+          <li>It has exactly three neighbors! (No more, no less)</li>
+        </ul>
+        <p>Thats it! Any other circumstances result in no change for the cell!</p>
       </div>
     </div>
   );
