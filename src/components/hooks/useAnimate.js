@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import Presets from "../utils/presets";
 
-export const height = 80;
-export const width = 80;
+export const height = 100;
+export const width = 100;
 export const cell_size = 20;
 
 export function useAnimate() {
@@ -12,7 +12,7 @@ export function useAnimate() {
   const [nextGrid, setNextGrid] = useState(
     Presets(" ", height, width, cell_size)
   );
-  console.log(JSON.stringify(nextGrid));
+  console.log(JSON.stringify(nextGrid), "next grid");
   // console.log(gen, "gen");
 
   const ROWS = Math.floor(height / cell_size);
