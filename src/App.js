@@ -14,7 +14,7 @@ function App() {
         <ControlPanel />
       </div>
       <footer>
-        <h5>@Michelle Scott 2020</h5>
+        <h5>@ Michelle Scott 2020</h5>
       </footer>
     </div>
   );

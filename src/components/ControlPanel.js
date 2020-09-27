@@ -8,7 +8,7 @@ import PresetView from "./views/PresetView";
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
-  const [speed] = useState(250);
+  const [speed, setSpeed] = useState(50);
 
   const [canvasRef, cell_size, initialGrid, nextGrid, setNextGrid, gen, setGen, width, height] = useAnimate();
 
@@ -65,6 +65,12 @@ function ControlPanel() {
     setGen(0);
   }
 
+  function controlSpeed(e) {
+    stopGame();
+    setSpeed(e.target.value);
+    startGame();
+  }
+
   // Mouse coodinates when Clicking
   function getCoodinates(e, canvasRef, cell_size) {
     let bound = canvasRef.current.getBoundingClientRect();
@@ -82,7 +88,7 @@ function ControlPanel() {
           <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
         </div>
         <div className="controls">
-          <ControlView startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
+          <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
         </div>
       </div>
 

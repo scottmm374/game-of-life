@@ -1,7 +1,30 @@
 import React from "react";
-import { Button } from "reactstrap";
+import { Button, Label, Input } from "reactstrap";
+import { Slider, Typography, value } from "@material-ui/core";
 import styled from "styled-components";
 
+const ControlView = (props) => {
+  return (
+    <div>
+      <NewDiv>
+        <NewButton onClick={props.startGame}>Start</NewButton>
+        <NewButton onClick={props.stopGame}>Stop</NewButton>
+        <NewButton onClick={props.clearBoard}>Clear</NewButton>
+        <NewDecor>Generation: {props.gen}</NewDecor>
+      </NewDiv>
+      <NewSlider className="slider-speed">
+        <Label htmlFor="controlSpeed">Speed</Label>
+        <Input type="range" step="50" id="size" max="1000" min="25" onChange={props.controlSpeed} />
+      </NewSlider>
+    </div>
+  );
+};
+
+const NewSlider = styled.div`
+  margin-left: 100px;
+  width: 50%;
+  direction: rtl;
+`;
 const NewDiv = styled.div`
   padding: 10px;
   display: flex;
@@ -31,18 +54,5 @@ const NewButton = styled(Button)`
     box-shadow: 5px 4px 9px #e67212;
   }
 `;
-
-const ControlView = (props) => {
-  return (
-    <div>
-      <NewDiv>
-        <NewButton onClick={props.startGame}>Start</NewButton>
-        <NewButton onClick={props.stopGame}>Stop</NewButton>
-        <NewButton onClick={props.clearBoard}>Clear</NewButton>
-        <NewDecor>Generation: {props.gen}</NewDecor>
-      </NewDiv>
-    </div>
-  );
-};
 
 export default ControlView;

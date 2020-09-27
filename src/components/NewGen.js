@@ -1,6 +1,7 @@
 export default function NewGen(grid, height, width, cell_size) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
+
   console.log(JSON.stringify(newGenGrid));
 
   for (let row = 1; row < grid.length - 1; row++) {
