@@ -1,7 +1,7 @@
 /*  http://meyerweb.com/eric/tools/css/reset/ 
       v2.0 | 20110126
       License: none (public domain) */
-/* 
+
 html,
 body,
 div,
@@ -91,7 +91,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-/* article,
+article,
 aside,
 details,
 figcaption,
@@ -121,26 +121,23 @@ q:before,
 q:after {
   content: "";
   content: none;
-} */
-/* table {
+}
+table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 * {
   box-sizing: border-box;
-} */
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

@@ -6,6 +6,14 @@
   /* text-align: center; */
 }
 
+h3 {
+  margin-bottom: 1.5rem;
+}
+
+h5 {
+  color: #2590da;
+}
+
 header,
 footer {
   padding: 30px;
@@ -19,23 +27,38 @@ footer {
   flex-direction: column;
   /* border: 2px solid rgb(242, 89, 132); */
 }
-.controls {
-  /* display: flex;
-  justify-content: space-between; */
+.rules {
+  height: 80%;
+  margin-top: 25px;
+  margin-left: 35px;
 }
-img {
-  height: 100px;
-  width: 100px;
-  border-radius: 5px;
+.presets {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  height: 100%;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+}
+.preset-buttons {
+  margin-top: 25px;
+  display: flex;
+  /* justify-content: space-evenly; */
+  width: 100%;
+  height: 80%;
+}
+
 .game {
   display: flex;
   width: 100%;
-  border: 2px solid white;
 }
-/* .presets {
-  justify-content: center;
-} */
 
 canvas {
   margin-left: 150px;

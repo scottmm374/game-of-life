@@ -82,18 +82,11 @@ function ControlPanel() {
           <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
         </div>
         <div className="controls">
-          <ControlView
-            startGame={startGame}
-            stopGame={stopGame}
-            clearBoard={clearBoard}
-            gameRunning={gameRunning}
-            handlePresets={handlePresets}
-            gen={gen}
-          />
+          <ControlView startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
         </div>
       </div>
 
-      <div className="presets">
+      <div>
         <PresetView handlePresets={handlePresets} />
       </div>
     </div>

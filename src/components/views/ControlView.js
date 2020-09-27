@@ -6,10 +6,15 @@ const NewDiv = styled.div`
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  max-width: 75%;
-  margin-left: 93px;
-  border: 1px solid yellow;
+  max-width: 100%;
+  margin-left: 150px;
 `;
+
+const NewDecor = styled.h4`
+  margin-top: 10px;
+ border-bottom: 2px solid #e03c8a;
+}
+ `;
 
 const NewButton = styled(Button)`
   width: 115px;
@@ -34,7 +39,7 @@ const ControlView = (props) => {
         <NewButton onClick={props.startGame}>Start</NewButton>
         <NewButton onClick={props.stopGame}>Stop</NewButton>
         <NewButton onClick={props.clearBoard}>Clear</NewButton>
-        <h5>Generation: {props.gen}</h5>
+        <NewDecor>Generation: {props.gen}</NewDecor>
       </NewDiv>
     </div>
   );
