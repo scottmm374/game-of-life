@@ -82,20 +82,21 @@ function ControlPanel() {
   }
 
   return (
-    <div className="game">
-      <div className="boardgame">
-        <div>
-          <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
+    <>
+      <div className="game">
+        <div className="boardgame">
+          <div>
+            <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
+          </div>
+          <div className="controls">
+            <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
+          </div>
         </div>
-        <div className="controls">
-          <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
+        <div className="App">
+          <PresetView handlePresets={handlePresets} />
         </div>
       </div>
-
-      <div>
-        <PresetView handlePresets={handlePresets} />
-      </div>
-    </div>
+    </>
   );
 }
 

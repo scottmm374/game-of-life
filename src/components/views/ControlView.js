@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Label, Input } from "reactstrap";
-import { Slider, Typography, value } from "@material-ui/core";
 import styled from "styled-components";
 
 const ControlView = (props) => {
@@ -21,7 +20,7 @@ const ControlView = (props) => {
 };
 
 const NewSlider = styled.div`
-  margin-left: 100px;
+  margin-left: 160px;
   width: 50%;
   direction: rtl;
 `;

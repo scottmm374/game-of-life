@@ -35,8 +35,8 @@ const PresetView = (props) => {
   return (
     <>
       <div className="presets">
-        <h5>Choose a Preset</h5>
         <div className="preset-buttons">
+          <h2>Choose a Preset</h2>
           <div className="buttons">
             <div>
               {/* <NewImg alt="thunderbird" src={thunderbird} /> */}
