@@ -1,12 +1,20 @@
 import React from "react";
 import "./App.css";
 import ControlPanel from "./components/ControlPanel";
+import GoL from "./images/GoL.png";
+import styled from "styled-components";
+
+const HeadImg = styled.img`
+  width: 50%;
+  box-shadow: 13px 15px 9px #0000008c;
+`;
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>Game of Life</h1>
+        <HeadImg id="header-img" src={GoL} alt="GoL" />
+        {/* <h1>Game of Life</h1> */}
       </header>
 
       <ControlPanel />

@@ -8,7 +8,7 @@ export const cell_size = 14;
 export function useAnimate() {
   const canvasRef = useRef(null);
   const [gen, setGen] = useState(0);
-  const [nextGrid, setNextGrid] = useState(Presets("game_of_life", height, width, cell_size));
+  const [nextGrid, setNextGrid] = useState(Presets("clock", height, width, cell_size));
 
   const ROWS = Math.floor(height / cell_size);
   const COLS = Math.floor(width / cell_size);

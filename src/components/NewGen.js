@@ -36,6 +36,7 @@ export default function NewGen(grid, height, width, cell_size) {
       }
     }
   }
+  console.log(JSON.stringify(newGenGrid));
 
   return newGenGrid;
 }
