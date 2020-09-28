@@ -4,7 +4,7 @@
 
 # [Michelle's Game of Life](https://game-of-life.scottmm374.vercel.app)
 
-![Game Of Life](/src/images/GoL.png)
+![Game Of Life](/src/images/demo.gif)
 
 ---
 
@@ -15,28 +15,7 @@ aspects of computer science and nature.
 
 ![example-patterns](https://media.giphy.com/media/4VVZTvTqzRR0BUwNIH/giphy.gif)
 
-## Objectives
-
-- Student should be able to create a unique, high-quality project that
-  can be added to a professional portfolio
-- [Student should be able to describe the rules of Conway’s “Game of
-  Life”](objectives/rules-game-life)
-- [Student should be able to explain what cellular automata are and
-  describe how they are useful in real
-  life](objectives/explain-describe-ca)
-- [Student should be able to correctly analyze the ‘Turing Completeness’
-  of Conway’s “Game of Life”](objectives/turing-complete)
-- Student should be able to implement a visualization of Conway’s “Game
-  of Life” using technologies related to their specific
-  track.
-- [Student should be able to utilize "double buffering" to implement
-  the game](objectives/double-buffer)
-
-## MVP Features
-
-### Building Your App
-
-#### Visualizing the "Game of Life"
+# Visualizing the "Game of Life"
 
 The main entry point of your application should house the visualization
 of this cellular automaton. Include necessary components, such as:
@@ -87,6 +66,14 @@ Write an algorithm that:
 - [x] Add an option that creates a random cell configuration that users can run
 
 - [x] Allow users to specify the speed of the simulation
+- [x] Add additional cell properties, I added Color.
+
+# Additional Features I would like to add in the future.
+
+- Step through frame feature
+- Save pattern feature
+- Adjust Grid/Board size
+- Choose Color Theme
 
 ## Stretch Goals
 
