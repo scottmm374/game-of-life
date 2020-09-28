@@ -4,6 +4,8 @@
 
 # [Michelle's Game of Life](https://game-of-life.scottmm374.vercel.app)
 
+![Game Of Life](/src/images/GoL.png)
+
 ---
 
 Welcome to John Conway's "Game of Life"! This is a computer science
