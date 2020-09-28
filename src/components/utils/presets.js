@@ -379,6 +379,5 @@ export default function Presets(choice, height, width, cell_size) {
     presetGrid = new Array(ROWS).fill(null).map(() => new Array(COLS).fill(null).map(() => Math.floor(Math.random() * 2)));
   }
 
-  // console.log(JSON.stringify(presetGrid));
   return presetGrid;
 }

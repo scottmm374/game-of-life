@@ -17,6 +17,7 @@ function ControlPanel() {
     setGen((prevGen) => prevGen + 1);
   }
 
+  // handles the function, clicking on grid.
   function handleClick(e) {
     stopGame();
     let mousePos = getCoodinates(e, canvasRef, cell_size);

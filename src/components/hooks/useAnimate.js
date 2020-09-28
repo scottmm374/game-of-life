@@ -7,24 +7,19 @@ export const cell_size = 14;
 
 export function useAnimate() {
   const canvasRef = useRef(null);
-
   const [gen, setGen] = useState(0);
   const [nextGrid, setNextGrid] = useState(Presets("game_of_life", height, width, cell_size));
-  // console.log(JSON.stringify(nextGrid), "next grid");
-  // console.log(gen, "gen");
 
   const ROWS = Math.floor(height / cell_size);
   const COLS = Math.floor(width / cell_size);
 
   const [initialGrid] = useState(new Array(ROWS).fill(null).map(() => new Array(COLS).fill(0)));
 
-  // console.table(presetGrid);
-
   useEffect(() => {
-    // const canvas = document.getElementById("canvas");
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
+    // controls drawing of the grid on canvas.
     function render(grid, context) {
       for (let row = 0; row < grid.length; row++) {
         for (let col = 0; col < grid[row].length; col++) {
@@ -48,7 +43,7 @@ export function useAnimate() {
     }
     // clear canvas before next render
     ctx.clearRect(0, 0, height, width);
-    // Change when I have presets done
+
     render(nextGrid, ctx);
   }, [nextGrid, gen]);
 
