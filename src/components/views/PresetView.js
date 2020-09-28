@@ -2,23 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "reactstrap";
 
-const NewButton = styled(Button)`
-  margin: 10px;
-  width: 200px;
-  height: 37px;
-  background-color: #313131;
-  color: #e67212;
-  border: 1px solid #e67212;
-  box-shadow: 5px 4px 9px #e67212;
-  &:hover {
-    color: #e03c8a;
-    border: 1px solid #e03c8a;
-    background-color: #313131;
-    margin-top: 5px;
-    box-shadow: 5px 4px 9px #e03c8a;
-  }
-`;
-
 const PresetView = (props) => {
   return (
     <>
@@ -90,4 +73,20 @@ const PresetView = (props) => {
   );
 };
 
+const NewButton = styled(Button)`
+  margin: 10px;
+  width: 200px;
+  height: 37px;
+  background-color: #313131;
+  color: #e67212;
+  border: 1px solid #e67212;
+  box-shadow: 5px 4px 9px #e67212;
+  &:hover {
+    color: #e03c8a;
+    border: 1px solid #e03c8a;
+    background-color: #313131;
+    margin-top: 5px;
+    box-shadow: 5px 4px 9px #e03c8a;
+  }
+`;
 export default PresetView;

@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.css";
 import ControlPanel from "./components/ControlPanel";
-import styled from "styled-components";
-import PresetView from "./components/views/PresetView";
 
 function App() {
   return (
@@ -12,7 +10,6 @@ function App() {
       </header>
 
       <ControlPanel />
-      {/* <PresetView /> */}
 
       <footer>
         <h5>@ Michelle Scott 2020</h5>
