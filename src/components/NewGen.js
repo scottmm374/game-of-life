@@ -12,6 +12,7 @@ export default function NewGen(grid, height, width, cell_size) {
 
       // check if in bounds, Then add up neighbors
       if (row >= 0 && col >= 0 && row < grid.length && col < grid[0].length) {
+        // grid[][] will always return either 1 or 0, so we just add it to neighbors.
         neighbors += grid[row - 1][col - 1];
         neighbors += grid[row][col - 1];
         neighbors += grid[row + 1][col - 1];
@@ -26,12 +27,12 @@ export default function NewGen(grid, height, width, cell_size) {
 
       // Game Rules for Dead/Alive
       const cell = grid[row][col];
-      if (cell === 1 && neighbors <= 1) {
+      if ((cell === 1 && neighbors <= 1) || neighbors >= 4) {
         newGenGrid[row][col] = 0;
       } else if (cell === 0 && neighbors === 3) {
         newGenGrid[row][col] = 1;
-      } else if (cell === 1 && neighbors >= 4) {
-        newGenGrid[row][col] = 0;
+        // } else if (cell === 1 && neighbors >= 4) {
+        //   newGenGrid[row][col] = 0;
       }
     }
   }
