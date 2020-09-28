@@ -85,7 +85,7 @@ const NewButton = styled(Button)`
     color: #e03c8a;
     border: 1px solid #e03c8a;
     background-color: #313131;
-    margin-top: 5px;
+    // margin-top: 5px;
     box-shadow: 5px 4px 9px #e03c8a;
   }
 `;
