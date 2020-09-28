@@ -93,7 +93,7 @@ function ControlPanel() {
             <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
           </div>
         </div>
-        <div className="App">
+        <div>
           <PresetView handlePresets={handlePresets} />
         </div>
       </div>
