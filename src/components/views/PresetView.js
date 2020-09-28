@@ -48,23 +48,18 @@ const PresetView = (props) => {
         <div className="rules">
           <h3 className="rules-header">Rules of Conways Game of Life</h3>
 
-          {/* <ul> */}
           <h5 className="rules-subtitle">DEATH</h5>
           <ul>
             <h6>If a cell is Alive it will die if:</h6>
             <li>If the cell has more then 3 neighbors.</li>
             <li>If the cell less than 2 neighbors</li>
           </ul>
-          {/* </ul> */}
-          {/* <ul> */}
           <h5 className="rules-subtitle">BIRTH</h5>
 
           <ul>
             <h6>If a cell is Dead it will be born if:</h6>
             <li>If the cell has exactly three neighbors, it will come to Life!</li>
           </ul>
-          {/* </ul> */}
-          {/* <p>Thats it! Any other circumstances result in no change for the cell!</p> */}
         </div>
       </div>
     </>
