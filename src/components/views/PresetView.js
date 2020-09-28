@@ -61,7 +61,7 @@ const PresetView = (props) => {
 
           <ul>
             <h6>If a cell is Dead it will be born if:</h6>
-            <li>It has exactly three neighbors! (No more, no less)</li>
+            <li>If the cell has exactly three neighbors, it will come to Life!</li>
           </ul>
           {/* </ul> */}
           {/* <p>Thats it! Any other circumstances result in no change for the cell!</p> */}

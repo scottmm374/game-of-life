@@ -19,14 +19,16 @@ h4 {
 }
 h6 {
   color: #e67212;
+  margin-left: 22px;
 }
 
 li {
-  margin-left: 35px;
+  margin-left: 50px;
 }
 .rules-header {
   margin-bottom: 40px;
-  text-align: center;
+  margin-left: 60px;
+  /* text-align: center; */
 }
 
 canvas {
@@ -58,7 +60,7 @@ footer a:hover {
 
 header {
   width: 100%;
-  padding: 30px;
+  padding: 80px;
   text-align: center;
 }
 
@@ -124,19 +126,19 @@ button:hover {
   margin-left: 45;
 }
 .presets {
-  margin-left: 52px;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
   max-width: 100%;
 }
 .preset-title {
-  margin-left: 100px;
+  margin-left: 93px;
   /* text-align: center; */
-  margin-top: 5rem;
+  margin-top: 5.25rem;
 }
 
 .rules-subtitle {
-  margin-left: 40px;
+  margin-left: 60px;
   margin-bottom: 15px;
 }
 .preset-button-container {
@@ -147,9 +149,7 @@ button:hover {
 
 .buttons {
   display: flex;
-  /* justify-content: space-around; */
   flex-direction: column;
-  /* text-align: center; */
   margin-top: 40px;
 }
 
