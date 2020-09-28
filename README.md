@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cellular Automata and Conway's "Game of Life"
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# [Michelle's Game of Life](https://game-of-life.scottmm374.vercel.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Welcome to John Conway's "Game of Life"! This is a computer science
+classic from 1970, a program that simulates a _cellular automaton_
+(plural _automata_). It has connections to all kinds of different
+aspects of computer science and nature.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![example-patterns](https://media.giphy.com/media/4VVZTvTqzRR0BUwNIH/giphy.gif)
 
-### `npm test`
+## Objectives
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Student should be able to create a unique, high-quality project that
+  can be added to a professional portfolio
+- [Student should be able to describe the rules of Conway’s “Game of
+  Life”](objectives/rules-game-life)
+- [Student should be able to explain what cellular automata are and
+  describe how they are useful in real
+  life](objectives/explain-describe-ca)
+- [Student should be able to correctly analyze the ‘Turing Completeness’
+  of Conway’s “Game of Life”](objectives/turing-complete)
+- Student should be able to implement a visualization of Conway’s “Game
+  of Life” using technologies related to their specific
+  track.
+- [Student should be able to utilize "double buffering" to implement
+  the game](objectives/double-buffer)
 
-### `npm run build`
+## MVP Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Building Your App
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Visualizing the "Game of Life"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The main entry point of your application should house the visualization
+of this cellular automaton. Include necessary components, such as:
 
-### `npm run eject`
+- [x] Grid to display cells.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [x] Cell objects or components that, at a minimum, should have:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Properties
+  - [x] current state: (alive, dead), (black, white)
+  - [x] Clickable/Tappable: -[x] can be clicked to allow user to setup initial cell configuration
+    - [x] should NOT be clickable while simulation is running
+- Behaviors
+- [x] Toggle state functionality: switch between alive & dead either
+      because user manually toggled cell before starting simulation or
+      simulation is running and rules of life caused cell to change
+      state
+- [x] An appropriate data structure to hold a grid of cells that is at least
+      25x25. Go as big as you want.
+- [x] Text to display current generation # being displayed
+  - [x] Utilize a timeout function to build the next generation of cells &
+        update the display at the chosen time interval
+- [x] Button(s) that start & stop the animation
+- [x] Button to clear the grid
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Write an algorithm that:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Implements the following basic steps:
+  - For each cell in the current generation's grid:
+    - [x] Examine state of all eight neighbors (it's up to you whether you
+          want cells to wrap around the grid and consider cells on the
+          other side or not)
+    - [x] Apply rules of life to determine if this cell will change states
+    - [x] When main loop completes:
+    - [x] Swap current and next grids
+    - [x] Repeat until simulation stopped
+- [x] Breaks down above steps into appropriate sub-tasks implemented with
+      helper functions to improve readability
+- [x] Uses double buffering to update grid with next generation.
+- [x] Does something well-documented with the edge of the grid. (e.g. wrap
+      around to the far side--most fun!--or assumes all edge cells are
+      permanently dead.)
 
-## Learn More
+# Custom Features I implemented
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [x] Create a few sample cell configurations that users can load and run
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [x] Add an option that creates a random cell configuration that users can run
 
-### Code Splitting
+- [x] Allow users to specify the speed of the simulation
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Stretch Goals
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Implement 2+ additional custom features, above
+- [x] Deploy your app to a hosting service or, for iOS, to TestFlight (or
+      the App Store!). Web devs can see [more deployment info
+      here](resources/web/deployment).
+- Explore alternate algorithms for finding the nth generation, such
+  as [Hashlife](https://en.wikipedia.org/wiki/Hashlife)
