@@ -16,11 +16,17 @@ h6 {
   color: #e67212;
 }
 
-header,
+header {
+  width: 100%;
+  padding: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
 footer {
   width: 100%;
   padding: 30px;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
