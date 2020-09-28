@@ -14,13 +14,14 @@ function App() {
     <div className="App">
       <header>
         <HeadImg id="header-img" src={gameOfLife} alt="gameOfLife" />
-        {/* <h1>Game of Life</h1> */}
       </header>
 
       <ControlPanel />
 
       <footer>
-        <h5>@ Michelle Scott 2020</h5>
+        <h5>
+          This version of Conways Game of Life created by <a href="https://github.com/scottmm374/game-of-life">Michelle Scott</a> @2020
+        </h5>
       </footer>
     </div>
   );

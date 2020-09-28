@@ -16,14 +16,32 @@ h6 {
   color: #e67212;
 }
 
-header {
-  width: 100%;
-  padding: 30px;
-  font-size: 2rem;
-  text-align: center;
+canvas {
+  margin-left: 150px;
+  margin-top: 85px;
+  margin-bottom: 20px;
+  border: 2px solid #e67212;
+  box-shadow: 5px 4px 15px #e671128d;
+  border-radius: 5px;
 }
 
 footer {
+  width: 100%;
+  margin-top: 70px;
+  padding: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+footer a {
+  font-size: 1.25rem;
+  color: #e67212;
+}
+footer a:hover {
+  color: #e03c8a;
+}
+
+header {
   width: 100%;
   padding: 30px;
   font-size: 2rem;
@@ -68,13 +86,4 @@ footer {
 .game {
   display: flex;
   width: 100%;
-}
-
-canvas {
-  margin-left: 150px;
-  margin-top: 85px;
-  margin-bottom: 20px;
-  border: 2px solid #e67212;
-  box-shadow: 5px 4px 15px #e671128d;
-  border-radius: 5px;
 }
