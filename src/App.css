@@ -12,6 +12,11 @@ h2,
 h5 {
   color: #2590da;
 }
+
+h4 {
+  margin-top: 10px;
+  border-bottom: 2px solid #e03c8a;
+}
 h6 {
   color: #e67212;
 }
@@ -47,6 +52,56 @@ header {
   text-align: center;
 }
 
+button {
+  width: 115px;
+  height: 37px;
+  background-color: #313131;
+  color: #e03c8a;
+  border: 1px solid #e03c8a;
+  box-shadow: 5px 4px 9px #e03c8a;
+}
+
+button:hover {
+  color: #e67212;
+  border: 1px solid #e67212;
+  background-color: #313131;
+  /* // margin-top: 5px; */
+  box-shadow: 5px 4px 9px #e67212;
+}
+
+.slider-speed {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 160px;
+  width: 100%;
+  direction: rtl;
+}
+
+.preset-button {
+  margin: 10px;
+  width: 200px;
+  height: 37px;
+  background-color: #313131;
+  color: #e67212;
+  border: 1px solid #e67212;
+  box-shadow: 5px 4px 9px #e67212;
+}
+.preset-button:hover {
+  color: #e03c8a;
+  border: 1px solid #e03c8a;
+  background-color: #313131;
+
+  box-shadow: 5px 4px 9px #e03c8a;
+}
+
+.control-buttons {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin-left: 150px;
+}
+
 .boardgame {
   display: flex;
   justify-content: center;
@@ -68,6 +123,11 @@ header {
   text-align: center;
   margin-top: 5rem;
 }
+.preset-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 .buttons {
   display: flex;
@@ -75,11 +135,6 @@ header {
   flex-direction: column;
   text-align: center;
   margin-top: 100px;
-}
-.preset-buttons {
-  display: flex;
-  width: 100%;
-  justify-content: center;
 }
 
 .game {

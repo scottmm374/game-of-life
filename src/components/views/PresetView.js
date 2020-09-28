@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { Button } from "reactstrap";
 
 const PresetView = (props) => {
   return (
@@ -10,40 +8,40 @@ const PresetView = (props) => {
       </div>
 
       <div className="presets">
-        <div className="preset-buttons">
+        <div className="preset-button-container">
           <div className="buttons">
             <div>
-              <NewButton onClick={props.handlePresets} value="thunderbird">
+              <button className="preset-button" onClick={props.handlePresets} value="thunderbird">
                 Thunderbird
-              </NewButton>
+              </button>
             </div>
             <div>
-              <NewButton onClick={props.handlePresets} value="quad_thunderbird">
+              <button button className="preset-button" onClick={props.handlePresets} value="quad_thunderbird">
                 Quad-Thunderbird
-              </NewButton>
+              </button>
             </div>
 
             <div>
-              <NewButton onClick={props.handlePresets} value="infinite">
+              <button className="preset-button" onClick={props.handlePresets} value="infinite">
                 Infinite
-              </NewButton>
+              </button>
             </div>
           </div>
           <div className="buttons">
             <div>
-              <NewButton onClick={props.handlePresets} value="gospers_glider_gun">
+              <button className="preset-button" onClick={props.handlePresets} value="gospers_glider_gun">
                 Gospers Glider Gun
-              </NewButton>
+              </button>
             </div>
             <div>
-              <NewButton onClick={props.handlePresets} value="mash_up">
+              <button className="preset-button" onClick={props.handlePresets} value="mash_up">
                 Mash-up
-              </NewButton>
+              </button>
             </div>
             <div>
-              <NewButton onClick={props.handlePresets} value="random">
+              <button className="preset-button" onClick={props.handlePresets} value="random">
                 Random
-              </NewButton>
+              </button>
             </div>
           </div>
         </div>
@@ -73,20 +71,4 @@ const PresetView = (props) => {
   );
 };
 
-const NewButton = styled(Button)`
-  margin: 10px;
-  width: 200px;
-  height: 37px;
-  background-color: #313131;
-  color: #e67212;
-  border: 1px solid #e67212;
-  box-shadow: 5px 4px 9px #e67212;
-  &:hover {
-    color: #e03c8a;
-    border: 1px solid #e03c8a;
-    background-color: #313131;
-    // margin-top: 5px;
-    box-shadow: 5px 4px 9px #e03c8a;
-  }
-`;
 export default PresetView;
