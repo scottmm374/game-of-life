@@ -6,6 +6,8 @@
 
 ![Game Of Life](/src/images/demo.gif)
 
+**I was curious what pattern filling in all the edges would render, This was the result. I call it Clock!**
+
 ---
 
 Welcome to John Conway's "Game of Life"! This is a computer science
