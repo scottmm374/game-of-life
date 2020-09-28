@@ -19,9 +19,9 @@ function App() {
       <ControlPanel />
 
       <footer>
-        <h5>
+        <p className="footer">
           This version of Conways Game of Life created by <a href="https://github.com/scottmm374/game-of-life">Michelle Scott</a> @2020
-        </h5>
+        </p>
       </footer>
     </div>
   );
