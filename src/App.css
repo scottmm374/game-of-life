@@ -58,6 +58,11 @@ footer a:hover {
   color: #e03c8a;
 }
 
+header img {
+  width: 40%;
+  box-shadow: 13px 15px 9px #0000008c;
+}
+
 header {
   width: 100%;
   padding: 80px;
@@ -132,7 +137,6 @@ button:hover {
 }
 .preset-title {
   margin-left: 93px;
-  /* text-align: center; */
   margin-top: 5.25rem;
 }
 
