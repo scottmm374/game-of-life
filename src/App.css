@@ -166,3 +166,9 @@ button:hover {
   display: flex;
   width: 100%;
 }
+
+@media (max-width: 375px) {
+  .canvas {
+    max-width: 50%;
+  }
+}

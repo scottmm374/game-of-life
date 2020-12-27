@@ -52,7 +52,7 @@ const PresetView = (props) => {
           <ul>
             <h6>If a cell is Alive it will die if:</h6>
             <li>If the cell has more then 3 neighbors.</li>
-            <li>If the cell less than 2 neighbors</li>
+            <li>If the cell has less then 2 neighbors</li>
           </ul>
           <h5 className="rules-subtitle">BIRTH</h5>
 

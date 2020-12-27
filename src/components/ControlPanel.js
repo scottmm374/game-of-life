@@ -8,7 +8,7 @@ import PresetView from "./views/PresetView";
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
-  const [speed, setSpeed] = useState(50);
+  const [speed, setSpeed] = useState();
 
   const [canvasRef, cell_size, initialGrid, nextGrid, setNextGrid, gen, setGen, width, height] = useAnimate();
 
@@ -49,6 +49,7 @@ function ControlPanel() {
   }
 
   function startGame() {
+    stopGame();
     setGameRunning(true);
     interval.current = setInterval(() => requestAnimationFrame(updateGrid), speed);
   }
@@ -91,6 +92,7 @@ function ControlPanel() {
           </div>
           <div className="controls">
             <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
+            <p>{speed}</p>
           </div>
         </div>
         <div>

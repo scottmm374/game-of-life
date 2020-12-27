@@ -12,8 +12,9 @@ const ControlView = (props) => {
       </div>
       <slider className="slider-speed">
         <Label htmlFor="controlSpeed">Speed</Label>
-        <Input type="range" step="50" max="1000" min="50" onChange={props.controlSpeed} />
+        <input type="range" min="50"  max="1000" step="50" onChange={props.controlSpeed} />
       </slider>
+     
     </div>
   );
 };
