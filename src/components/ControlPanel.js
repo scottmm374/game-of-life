@@ -1,16 +1,27 @@
-import React, { useState, useRef } from "react";
-import ControlView from "../containers/ControlsView/index";
-import { useAnimate } from "../utils/useAnimate";
-// import NewGen from "./NewGen";
-import Presets from "../utils/presets";
-import PresetView from "../containers/PresetPanelView/index";
+import React, { useState, useRef } from 'react';
+import BoardGameView from '../containers/BoardGameView/index';
+// import ControlView from "../containers/ControlsView/index";
+import { useAnimate } from '../utils/useAnimate';
+import NewGen from './NewGen';
+import Presets from '../utils/presets';
+// import PresetView from "../containers/PresetPanelView/index";
 
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
   const [speed, setSpeed] = useState();
 
-  const [canvasRef, cell_size, initialGrid, nextGrid, setNextGrid, gen, setGen, width, height] = useAnimate();
+  const [
+    canvasRef,
+    cell_size,
+    initialGrid,
+    nextGrid,
+    setNextGrid,
+    gen,
+    setGen,
+    width,
+    height,
+  ] = useAnimate();
 
   function updateGrid() {
     setNextGrid((grid) => NewGen(grid, height, width, cell_size));
@@ -51,7 +62,10 @@ function ControlPanel() {
   function startGame() {
     stopGame();
     setGameRunning(true);
-    interval.current = setInterval(() => requestAnimationFrame(updateGrid), speed);
+    interval.current = setInterval(
+      () => requestAnimationFrame(updateGrid),
+      speed
+    );
   }
 
   function clearBoard() {
@@ -84,22 +98,22 @@ function ControlPanel() {
   }
 
   return (
-    <>
-      <div className="game">
-        <div className="boardgame">
-          <div>
-            <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
-          </div>
-          <div className="controls">
-            <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
-            <p>{speed}</p>
-          </div>
-        </div>
-        <div>
-          <PresetView handlePresets={handlePresets} />
-        </div>
-      </div>
-    </>
+    <div>
+      <BoardGameView
+        canvasRef={canvasRef}
+        width={width}
+        height={height}
+        onClick={handleClick}
+        controlSpeed={controlSpeed}
+        startGame={startGame}
+        stopGame={stopGame}
+        clearBoard={clearBoard}
+        gameRunning={gameRunning}
+        handlePresets={handlePresets}
+        gen={gen}
+        speed={speed}
+      />
+    </div>
   );
 }
 
