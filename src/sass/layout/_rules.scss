@@ -1,0 +1,19 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+.card-body {
+  .card-title {
+    color: v.$bright-pink;
+  }
+
+  .card-subtitle {
+    color: v.$bright-blue;
+  }
+
+  h6 {
+    color: v.$bright-orange;
+  }
+  li {
+    color: v.$bright-pink;
+  }
+}

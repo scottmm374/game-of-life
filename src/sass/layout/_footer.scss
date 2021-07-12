@@ -1,0 +1,22 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+footer {
+  @include m.misc-shadow($x: 1px, $y: 6px, $blur: 30px, $color: v.$bright-pink);
+  background-color: v.$background;
+  width: 100%;
+  margin-top: 70px;
+  padding: 50px;
+  font-size: 1rem;
+  text-align: center;
+  border-top: ridge;
+
+  a {
+    font-size: 1.25rem;
+    color: v.$bright-orange;
+
+    &:hover {
+      color: v.$bright-pink;
+    }
+  }
+}

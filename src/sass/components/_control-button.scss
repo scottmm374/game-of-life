@@ -1,0 +1,18 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+.control-button {
+  @include m.btn-shadow($color: v.$bright-pink);
+  @include m.borders($size: 1px, $type: solid, $color: v.$bright-pink);
+  color: v.$bright-pink;
+  width: 115px;
+  height: 37px;
+  background-color: v.$background;
+
+  &:hover {
+    @include m.btn-shadow($color: v.$bright-orange);
+    @include m.borders($size: 1px, $type: solid, $color: v.$bright-orange);
+    color: v.$bright-orange;
+    background-color: v.$background;
+  }
+}
