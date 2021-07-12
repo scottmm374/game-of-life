@@ -103,7 +103,7 @@ function ControlPanel() {
         canvasRef={canvasRef}
         width={width}
         height={height}
-        hanldeClick={handleClick}
+        onClick={handleClick}
         controlSpeed={controlSpeed}
         startGame={startGame}
         stopGame={stopGame}
