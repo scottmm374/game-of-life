@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import Presets from "../utils/presets";
+import Presets from "./presets";
 
 export const height = 700;
 export const width = 700;
