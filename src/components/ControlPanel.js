@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
-import ControlView from "./views/ControlView";
-import { useAnimate } from "./hooks/useAnimate";
-import NewGen from "./NewGen";
-import Presets from "./utils/presets";
-import PresetView from "./views/PresetView";
+import ControlView from "../containers/ControlsView/index";
+import { useAnimate } from "../utils/useAnimate";
+// import NewGen from "./NewGen";
+import Presets from "../utils/presets";
+import PresetView from "../containers/PresetPanelView/index";
 
 function ControlPanel() {
   const interval = useRef(null);

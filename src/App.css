@@ -58,14 +58,14 @@ footer a:hover {
   color: #e03c8a;
 }
 
-header img {
+.header-img {
   margin-bottom: 30px;
   width: 40%;
   /* box-shadow: 4px 4px 30px #e67212; */
   box-shadow: 6px 11px 14px #e67212b5;
 }
 
-header {
+.header {
   margin-bottom: 30px;
   background-color: #0000007a;
   box-shadow: 1px 6px 30px #e03c8a;
