@@ -1,0 +1,11 @@
+@mixin btn-shadow($x: 5px, $y: 4px, $blur: 9px, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin misc-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin borders($size, $type, $color) {
+  border: $size $type $color;
+}

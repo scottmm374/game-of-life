@@ -70,22 +70,6 @@ const PresetView = (props) => {
             </div>
           </div>
         </div>
-        {/* <div className="rules">
-          <h3 className="rules-header">Rules of Conways Game of Life</h3>
-
-          <h5 className="rules-subtitle">DEATH</h5>
-          <ul>
-            <h6>If a cell is Alive it will die if:</h6>
-            <li>If the cell has more then 3 neighbors.</li>
-            <li>If the cell has less then 2 neighbors</li>
-          </ul>
-          <h5 className="rules-subtitle">BIRTH</h5>
-
-          <ul>
-            <h6>If a cell is Dead it will be born if:</h6>
-            <li>If the cell has exactly three neighbors, it will come to Life!</li>
-          </ul>
-        </div> */}
       </div>
     </>
   );

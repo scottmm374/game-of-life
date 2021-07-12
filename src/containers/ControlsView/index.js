@@ -4,12 +4,16 @@ import React from 'react';
 const ControlView = (props) => {
   return (
     <div>
-      <div className='control-buttons'>
-        <button onClick={props.start}>Start</button>
-        <button onClick={props.stop}>Stop</button>
-        <button onClick={props.clear}>Clear</button>
-        <h4>Generation: {props.gen}</h4>
-      </div>
+      <button className='control-button' onClick={props.start}>
+        Start
+      </button>
+      <button className='control-button' onClick={props.stop}>
+        Stop
+      </button>
+      <button className='control-button' onClick={props.clear}>
+        Clear
+      </button>
+      <h4>Generation: {props.gen}</h4>
       {/* <slider className='slider-speed'>
         <Label htmlFor='controlSpeed'>Speed</Label>
         <input

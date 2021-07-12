@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './sass/main.scss';
 import ControlPanel from './components/ControlPanel';
 import Header from './containers/Header/index';
 import Footer from './containers/Footer/index';

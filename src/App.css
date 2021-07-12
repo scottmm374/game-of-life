@@ -1,6 +1,6 @@
 .App {
   background-color: #302e2e;
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   color: #e03c8a;
 }
 
@@ -25,21 +25,21 @@ h6 {
 li {
   margin-left: 50px;
 }
-.rules-header {
+/* .rules-header {
   margin-bottom: 40px;
   margin-left: 60px;
-}
+} */
 
-canvas {
+/* canvas {
   margin-left: 150px;
   margin-top: 85px;
   margin-bottom: 20px;
   border: 2px solid #e67212;
   box-shadow: 5px 4px 15px #e671128d;
   border-radius: 5px;
-}
+} */
 
-footer {
+/* footer {
   background-color: #0000007a;
   width: 100%;
   margin-top: 70px;
@@ -56,7 +56,7 @@ footer a {
 }
 footer a:hover {
   color: #e03c8a;
-}
+} */
 
 #header-img {
   margin-bottom: 30px;
@@ -129,12 +129,12 @@ button:hover {
   justify-content: center;
   flex-direction: column;
 }
-.rules {
+/* .rules {
   display: flex;
   flex-direction: column;
   padding-top: 5rem;
   margin-left: 45;
-}
+} */
 .presets {
   margin-left: 30px;
   display: flex;
@@ -146,10 +146,10 @@ button:hover {
   margin-top: 5.25rem;
 }
 
-.rules-subtitle {
+/* .rules-subtitle {
   margin-left: 60px;
   margin-bottom: 15px;
-}
+} */
 .preset-button-container {
   display: flex;
   width: 100%;
