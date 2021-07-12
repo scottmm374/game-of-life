@@ -3,12 +3,12 @@
 
 header {
   @include m.misc-shadow($x: 1px, $y: 6px, $blur: 30px, $color: v.$bright-pink);
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   background-color: v.$background;
   border-bottom: 2px solid v.$bright-pink;
-  width: 100%;
-  padding: 30px;
-  text-align: center;
+  // width: 100%;
+  // padding: 30px;
+  // text-align: center;
 
   img {
     @include m.misc-shadow(
@@ -18,8 +18,7 @@ header {
       $color: v.$transparent-orange
     );
 
-    margin-bottom: 30px;
-    width: 40%;
-    // box-shadow: 6px 11px 14px #e67212b5;
+    // margin-bottom: 30px;
+    // width: 40%;
   }
 }
