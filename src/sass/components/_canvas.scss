@@ -2,7 +2,7 @@
 @use '../utils/mixins' as m;
 
 canvas {
-  @include m.borders($size: 2px, $type: solid, $color: v.$bright-orange);
+  @include m.borders($size: 5px, $type: ridge, $color: v.$bright-blue);
   @include m.misc-shadow(
     $x: 5px,
     $y: 4px,
@@ -12,6 +12,10 @@ canvas {
   //   margin-left: 150px;
   //   margin-top: 85px;
   //   margin-bottom: 20px;
-
+  // border: 5px solid rgba(72, 255, 0, 0.945);
   border-radius: 5px;
+  overflow: hidden;
+  // @media (max-width: v.$media-small) {
+  //   max-width: 90%;
+  // }
 }

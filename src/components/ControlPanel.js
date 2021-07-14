@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react';
 import BoardGameView from '../containers/BoardGameView/index';
-// import ControlView from "../containers/ControlsView/index";
 import { useAnimate } from '../utils/useAnimate';
+import { Container, Col, Row } from 'react-bootstrap';
 import NewGen from './NewGen';
 import Presets from '../utils/presets';
-// import PresetView from "../containers/PresetPanelView/index";
 
 function ControlPanel() {
   const interval = useRef(null);
@@ -98,12 +97,14 @@ function ControlPanel() {
   }
 
   return (
-    <div>
+    <div className='boardgame-component-control-panel'>
+      {/* <Row>
+        <Col> */}
       <BoardGameView
         canvasRef={canvasRef}
         width={width}
         height={height}
-        hanldeClick={handleClick}
+        onClick={handleClick}
         controlSpeed={controlSpeed}
         startGame={startGame}
         stopGame={stopGame}
@@ -113,6 +114,8 @@ function ControlPanel() {
         gen={gen}
         speed={speed}
       />
+      {/* </Col>
+      </Row> */}
     </div>
   );
 }
