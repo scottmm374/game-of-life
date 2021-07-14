@@ -31,8 +31,8 @@ const BoardGameView = ({
           <PresetPanelView />
         </Col>
       </Row>
-      <Row>
-        <Col xl={2}>
+      <Row className='controls-and-game'>
+        <Col xl={2} className='controls'>
           <ControlView
             stop={stopGame}
             start={startGame}

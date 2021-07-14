@@ -4,11 +4,11 @@ import { Navbar, Container, Row, Col } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <Container className='header'>
+    <div className='header'>
       <Navbar className='justify-content-center'>
         <img id='header-img' src={gameOfLife} alt='gameOfLife' />
       </Navbar>
-    </Container>
+    </div>
   );
 };
 

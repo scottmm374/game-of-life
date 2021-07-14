@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const CanvasView = ({ canvasRef, width, height, onClick }) => {
   return (
-    <Container className='canvasview'>
+    <Container fluid className='canvasview'>
       <Row>
         <Col>
           <canvas

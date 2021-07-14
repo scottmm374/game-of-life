@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <Container className='footer'>
+    <div className='footer'>
       <footer>
         <p className='footer'>
           This version of Conways Game of Life created by{' '}
@@ -13,7 +13,7 @@ const Footer = () => {
           @2020
         </p>
       </footer>
-    </Container>
+    </div>
   );
 };
 

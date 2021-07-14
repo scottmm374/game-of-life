@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap';
 
+// TODO: Plug this into canvas maybe to align with canvas
+
 const PresetView = (props) => {
   return (
     <Container className='presets'>

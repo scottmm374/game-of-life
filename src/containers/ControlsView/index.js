@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const ControlView = (props) => {
   return (
     <Container className='controls'>
-      <Row>
+      <Row className='justify-content-center '>
         <Col xl={2}>
           <Row>
             <Col>

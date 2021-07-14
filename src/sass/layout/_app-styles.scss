@@ -4,7 +4,7 @@
 .App {
   background-color: v.$black;
   color: v.$bright-pink;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 * {
@@ -20,13 +20,24 @@ body {
 //   overflow: hidden;
 // }
 
-.boardgame-component-control-panel {
-  border: 2px dashed yellow;
-}
+// .boardgame-component-control-panel {
+//   border: 2px dashed yellow;
+// }
 
-.controls {
-  border: 3px solid green;
-}
-.canvasview {
-  border: 3px dashed rgb(226, 47, 158);
-}
+// .controls {
+//   border: 3px solid green;
+// }
+// .canvasview {
+//   border: 3px dashed rgb(226, 47, 158);
+// }
+// .controls-and-game {
+//   border: 5px solid white;
+// }
+
+// .presets {
+//   border: 2px solid blue;
+// }
+
+// .rules {
+//   border: 2px solid white;
+// }

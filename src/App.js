@@ -7,25 +7,28 @@ import Footer from './containers/Footer/index';
 
 function App() {
   return (
-    <Container fluid className='App'>
-      <Row>
+    <div className='App'>
+      <Header />
+      {/* <Row>
         <Col>
           <Header />
         </Col>
-      </Row>
+      </Row> */}
+      {/* <Container>
+        <Row>
+          <Col> */}
+      <ControlPanel />
+      {/* </Col>
+        </Row>
+      </Container> */}
 
-      <Row>
+      {/* <Row>
         <Col>
-          <ControlPanel />
+          
         </Col>
-      </Row>
-
-      <Row>
-        <Col>
-          <Footer />
-        </Col>
-      </Row>
-    </Container>
+      </Row> */}
+      <Footer />
+    </div>
   );
 }
 
