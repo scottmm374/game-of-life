@@ -2,6 +2,7 @@ import React from 'react';
 import ControlView from '../ControlsView';
 import PresetPanelView from '../PresetPanelView';
 import RulesView from '../RulesView/index';
+import CanvasView from '../Canvas';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const BoardGameView = ({
@@ -19,15 +20,19 @@ const BoardGameView = ({
   speed,
 }) => {
   return (
-    <Container fluid>
+    <Container fluid className='justify-content-center boardgame'>
       <Row>
         <Col>
-          <canvas
-            ref={canvasRef}
-            width={width}
-            height={height}
-            onClick={onClick}
-          />
+          <RulesView />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <PresetPanelView />
+        </Col>
+      </Row>
+      <Row>
+        <Col xl={2}>
           <ControlView
             stop={stopGame}
             start={startGame}
@@ -35,9 +40,13 @@ const BoardGameView = ({
             gen={gen}
           />
         </Col>
-        <Col>
-          <PresetPanelView handlePresets={handlePresets} />
-          <RulesView />
+        <Col xl={10}>
+          <CanvasView
+            canvasRef={canvasRef}
+            width={width}
+            height={height}
+            onClick={onClick}
+          />
         </Col>
       </Row>
     </Container>

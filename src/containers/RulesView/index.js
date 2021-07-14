@@ -1,45 +1,52 @@
 import React from 'react';
-import { Container, Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const RulesView = () => {
   return (
-    <Container fluid>
-      <Card.Body>
-        <Card.Title>
-          Rules of Conways Game of Life
-          <Card.Subtitle>Birth</Card.Subtitle>
-          <Card.Text>
-            <ul>
-              <h6>If a cell is Dead it will be born if:</h6>
-              <li>
-                If the cell has exactly three neighbors, it will come to Life!
-              </li>
-            </ul>
-          </Card.Text>
-          <Card.Subtitle>Death</Card.Subtitle>
-          <Card.Text>
-            <ul>
-              <h6>If a cell is Alive it will die if:</h6>
-              <li>If the cell has more then 3 neighbors.</li>
-              <li>If the cell has less then 2 neighbors</li>
-            </ul>
-          </Card.Text>
-        </Card.Title>
-      </Card.Body>
-      {/* <h3 className="rules-header">Rules of Conways Game of Life</h3>
+    <Container className='rules'>
+      <Row>
+        <Col>
+          <Row>
+            <Col>
+              <h2> The Rules! </h2>
+              <p>
+                The Game of Life originally created by John Conway is an
+                infinite, two-dimenstional grid of cells, each of shich can only
+                exist in one of two states, "Alive" or "Dead." Every cell
+                interactcs with its neighbor, (the 8 cells immediatly
+                sourounding the cell ).
+              </p>
+              <p>With each "birth or 'death" the follwing happens:</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p>When a cell is Dead it will be "Born"</p>
 
-          <h5 className="rules-subtitle">DEATH</h5>
-          <ul>
-            <h6>If a cell is Alive it will die if:</h6>
-            <li>If the cell has more then 3 neighbors.</li>
-            <li>If the cell has less then 2 neighbors</li>
-          </ul>
-          <h5 className="rules-subtitle">BIRTH</h5>
+              <ul>
+                <li>If the cell has exactly three neighbors</li>
+              </ul>
+            </Col>
+            <Col>
+              <p>When a cell is "Alive" it will "DIE"</p>
+              <ul>
+                <li>If the cell has more then 3 neighbors.</li>
+                <li>If the cell has less then 2 neighbors</li>
+              </ul>
+            </Col>
+          </Row>
 
-          <ul>
-            <h6>If a cell is Dead it will be born if:</h6>
-            <li>If the cell has exactly three neighbors, it will come to Life!</li>
-          </ul> */}
+          <Row>
+            <Col>
+              <p>
+                Can you keep your generations ticking? Try your own pattern on
+                the board following the rules.
+              </p>
+              <p>Yeah really, thats it!</p>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
     </Container>
   );
 };

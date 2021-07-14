@@ -1,19 +1,15 @@
-import React from 'react'
-import gameOfLife from "../../assets/gameOfLife.png";
-import { Navbar, Container } from 'react-bootstrap';
+import React from 'react';
+import gameOfLife from '../../assets/gameOfLife.png';
+import { Navbar, Container, Row, Col } from 'react-bootstrap';
 
-// TODO: Center Image, and Bar not sticky. 
 const Header = () => {
-    return (
-        <header >
-            <Navbar >
-                
-                <img id="header-img" src={gameOfLife} alt="gameOfLife" />
-                
-            </Navbar>
-        </header>
+  return (
+    <Container className='header'>
+      <Navbar className='justify-content-center'>
+        <img id='header-img' src={gameOfLife} alt='gameOfLife' />
+      </Navbar>
+    </Container>
+  );
+};
 
-    )
-}
-
-export default Header
+export default Header;

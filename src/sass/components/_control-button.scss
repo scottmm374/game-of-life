@@ -5,9 +5,10 @@
   @include m.btn-shadow($color: v.$bright-pink);
   @include m.borders($size: 1px, $type: solid, $color: v.$bright-pink);
   color: v.$bright-pink;
-  width: 115px;
-  height: 37px;
+  width: 95px;
+  height: 95px;
   background-color: v.$background;
+  border-radius: 50%;
 
   &:hover {
     @include m.btn-shadow($color: v.$bright-orange);

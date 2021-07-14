@@ -1,14 +1,17 @@
 @use '../utils/variables' as v;
 @use '../utils/mixins' as m;
 
-header {
-  @include m.misc-shadow($x: 1px, $y: 6px, $blur: 30px, $color: v.$bright-pink);
-  // margin-bottom: 30px;
+.navbar {
+  @include m.misc-shadow(
+    $x: 1px,
+    $y: -4px,
+    $blur: 30px,
+    $color: v.$bright-pink
+  );
+  margin-bottom: 30px;
   background-color: v.$background;
-  border-bottom: 2px solid v.$bright-pink;
-  // width: 100%;
-  // padding: 30px;
-  // text-align: center;
+  border-bottom: 10px ridge v.$bright-pink;
+  padding: 30px;
 
   img {
     @include m.misc-shadow(
@@ -18,7 +21,6 @@ header {
       $color: v.$transparent-orange
     );
 
-    // margin-bottom: 30px;
-    // width: 40%;
+    margin-bottom: 30px;
   }
 }

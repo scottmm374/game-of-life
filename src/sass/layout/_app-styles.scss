@@ -2,6 +2,31 @@
 @use '../utils/mixins' as m;
 
 .App {
-  background-color: v.$charcoal-grey;
+  background-color: v.$black;
   color: v.$bright-pink;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// .container {
+//   overflow: hidden;
+// }
+
+.boardgame-component-control-panel {
+  border: 2px dashed yellow;
+}
+
+.controls {
+  border: 3px solid green;
+}
+.canvasview {
+  border: 3px dashed rgb(226, 47, 158);
 }

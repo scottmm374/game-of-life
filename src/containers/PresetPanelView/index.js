@@ -1,76 +1,76 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap';
 
 const PresetView = (props) => {
   return (
-    <Container fluid>
+    <Container className='presets'>
       <Row>
         <Col>
-          <h3>Choose a Preset</h3>
+          <h4>Generation: {props.gen}</h4>
         </Col>
-      </Row>
 
-      <Row>
         <Col>
-          <button
-            className='preset-button'
-            onClick={props.handlePresets}
-            value='thunderbird'
-          >
-            Thunderbird
-          </button>
-        </Col>
-        <Col>
-          <button
-            button
-            className='preset-button'
-            onClick={props.handlePresets}
-            value='quad_thunderbird'
-          >
-            Quad-Thunderbird
-          </button>
-        </Col>
-      </Row>
+          <DropdownButton id='preset-dropdown' title='Choose a Preset'>
+            <Dropdown.Item
+              as='button'
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='thunderbird'
+            >
+              {' '}
+              Thunderbird
+            </Dropdown.Item>
 
-      <Row>
-        <Col>
-          <button
-            className='preset-button'
-            onClick={props.handlePresets}
-            value='infinite'
-          >
-            Infinite
-          </button>
-        </Col>
-        <Col>
-          <button
-            className='preset-button'
-            onClick={props.handlePresets}
-            value='gospers_glider_gun'
-          >
-            Gospers Glider Gun
-          </button>
-        </Col>
-      </Row>
+            <Dropdown.Item
+              as='button'
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='quad_thunderbird'
+            >
+              {' '}
+              Quad Thunderbird
+            </Dropdown.Item>
 
-      <Row>
-        <Col>
-          <button
-            className='preset-button'
-            onClick={props.handlePresets}
-            value='mash_up'
-          >
-            Mash-up
-          </button>
-        </Col>
-        <Col>
-          <button
-            className='preset-button'
-            onClick={props.handlePresets}
-            value='random'
-          >
-            Random
-          </button>
+            <Dropdown.Item
+              as='button'
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='infinite'
+            >
+              {' '}
+              Infinite
+            </Dropdown.Item>
+
+            <Dropdown.Item
+              as='button'
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='gospers_glider_gun'
+            >
+              {' '}
+              Gospers Glider Gun
+            </Dropdown.Item>
+
+            <Dropdown.Item
+              as='button'
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='mash_up'
+            >
+              {' '}
+              Mash Up
+            </Dropdown.Item>
+
+            <Dropdown.Item
+              as='button'
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='random'
+            >
+              {' '}
+              Random
+            </Dropdown.Item>
+          </DropdownButton>
         </Col>
       </Row>
     </Container>
