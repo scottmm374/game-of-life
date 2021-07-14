@@ -3,7 +3,7 @@ import Presets from './presets';
 
 export const height = 700;
 export const width = 1400;
-export const cell_size = 20;
+export const cell_size = 14;
 
 export function useAnimate() {
   const canvasRef = useRef(null);

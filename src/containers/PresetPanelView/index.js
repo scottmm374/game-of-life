@@ -6,7 +6,7 @@ import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap';
 const PresetView = (props) => {
   return (
     <Container className='presets'>
-      <Row>
+      <Row className='d-flex justify-content-center'>
         <Col>
           <h4>Generation: {props.gen}</h4>
         </Col>

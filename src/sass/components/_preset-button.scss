@@ -1,7 +1,7 @@
 @use '../utils/variables' as v;
 @use '../utils/mixins' as m;
 
-.preset-button {
+.notsureyet {
   @include m.btn-shadow($color: v.$bright-orange);
   @include m.borders($size: 1px, $type: solid, $color: v.$bright-orange);
   margin-bottom: 30px;
@@ -19,4 +19,8 @@
   }
 
   // border: 5px solid rgba(72, 255, 0, 0.945);
+}
+
+.presets {
+  margin: 20px;
 }

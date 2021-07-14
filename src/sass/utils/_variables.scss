@@ -6,7 +6,13 @@ $black: #000000;
 $transparent-black: #0000007a;
 $transparent-orange: #e671128d;
 
+// '#e03c8a', '#2590da', '#e67212', '#5e936f', '#d3c041'
+
 $background: $black;
 $orange-shadow: $transparent-orange;
 
 $font-family: 'Fira Code', monospace;
+
+$media-small: 375px;
+$media-medium: 600px;
+$media-large: 1080px;

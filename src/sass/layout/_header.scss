@@ -10,8 +10,8 @@
   );
   margin-bottom: 30px;
   background-color: v.$background;
-  border-bottom: 10px ridge v.$bright-pink;
-  padding: 30px;
+  border-bottom: 3px ridge v.$bright-pink;
+  // padding: 30px;
 
   img {
     @include m.misc-shadow(
@@ -21,6 +21,6 @@
       $color: v.$transparent-orange
     );
 
-    margin-bottom: 30px;
+    margin: 30px 0px;
   }
 }
