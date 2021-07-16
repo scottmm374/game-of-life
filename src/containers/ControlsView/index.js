@@ -1,37 +1,22 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, ButtonGroup, Button } from 'react-bootstrap';
 // import { Label } from "reactstrap";
 
 const ControlView = (props) => {
   return (
-    <Container className='controls'>
-      <Row className='d-flex justify-content-center'>
-        <Col xl={2}>
-          <Row>
-            <Col>
-              <button className='control-button' onClick={props.start}>
-                Start
-              </button>
-            </Col>
-          </Row>
+    <ButtonGroup className='controls d-flex justify-content-center'>
+      <Button className='control-button' onClick={props.start}>
+        Start
+      </Button>
 
-          <Row>
-            <Col>
-              <button className='control-button' onClick={props.stop}>
-                Stop
-              </button>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <button className='control-button' onClick={props.clear}>
-                Clear
-              </button>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+      <Button className='control-button' onClick={props.stop}>
+        Stop
+      </Button>
+
+      <Button className='control-button' onClick={props.clear}>
+        Clear
+      </Button>
+    </ButtonGroup>
   );
 };
 

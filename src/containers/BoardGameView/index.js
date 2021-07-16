@@ -22,17 +22,27 @@ const BoardGameView = ({
   return (
     <Container fluid className='justify-content-center boardgame'>
       <Row>
-        <Col xs={12}>
+        <Col>
           <RulesView />
         </Col>
       </Row>
-      <Row>
-        <Col xs={12}>
+      {/* <Row>
+        <Col>
           <PresetPanelView handlePresets={handlePresets} gen={gen} />
         </Col>
-      </Row>
+      </Row> */}
       <Row className='controls-and-game'>
-        <Col xs={12} xl={2} className='controls'>
+        <Col>
+          <CanvasView
+            canvasRef={canvasRef}
+            width={width}
+            height={height}
+            onClick={onClick}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col className='controls'>
           <ControlView
             stop={stopGame}
             start={startGame}
@@ -40,13 +50,8 @@ const BoardGameView = ({
             gen={gen}
           />
         </Col>
-        <Col xs={12} xl={10}>
-          <CanvasView
-            canvasRef={canvasRef}
-            width={width}
-            height={height}
-            onClick={onClick}
-          />
+        <Col>
+          <PresetPanelView handlePresets={handlePresets} gen={gen} />
         </Col>
       </Row>
     </Container>

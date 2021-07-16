@@ -1,7 +1,7 @@
 @use '../utils/variables' as v;
 @use '../utils/mixins' as m;
 
-.notsureyet {
+#preset-dropdown {
   @include m.btn-shadow($color: v.$bright-orange);
   @include m.borders($size: 1px, $type: solid, $color: v.$bright-orange);
   margin-bottom: 30px;
@@ -17,9 +17,23 @@
     color: v.$bright-pink;
     background-color: v.$background;
   }
-
-  // border: 5px solid rgba(72, 255, 0, 0.945);
 }
+
+// .dropdown-menu[x-placement^='bottom'],
+// .dropdown-menu[x-placement^='left'],
+// .dropdown-menu[x-placement^='right'],
+// .dropdown-menu[x-placement^='top'] {
+//   // @include m.btn-shadow($color: v.$bright-orange);
+//   @include m.borders($size: 1px, $type: solid, $color: v.$bright-orange);
+//   margin-bottom: 30px;
+//   width: 135px;
+//   height: 30px;
+//   font-size: small;
+//   background-color: v.$background;
+//   color: v.$bright-orange;
+// }
+
+// border: 5px solid rgba(72, 255, 0, 0.945);
 
 .presets {
   margin: 20px;

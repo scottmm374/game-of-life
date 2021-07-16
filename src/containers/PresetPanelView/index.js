@@ -7,9 +7,9 @@ const PresetView = (props) => {
   return (
     <Container className='presets'>
       <Row className='d-flex justify-content-center'>
-        <Col>
+        {/* <Col>
           <h4>Generation: {props.gen}</h4>
-        </Col>
+        </Col> */}
 
         <Col>
           <DropdownButton id='preset-dropdown' title='Choose a Preset'>

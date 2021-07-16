@@ -1,14 +1,14 @@
 @use '../utils/variables' as v;
 @use '../utils/mixins' as m;
 
-.control-button {
+.btn-group .control-button {
   @include m.btn-shadow($color: v.$bright-pink);
   @include m.borders($size: 1px, $type: solid, $color: v.$bright-pink);
   color: v.$bright-pink;
-  width: 65px;
-  height: 65px;
+  max-width: 115px;
+  height: 35px;
   background-color: v.$background;
-  border-radius: 50%;
+  border-radius: 5%;
   margin: 10px;
 
   &:hover {
