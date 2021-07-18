@@ -3,6 +3,7 @@ import ControlView from '../ControlsView';
 import PresetPanelView from '../PresetPanelView';
 import RulesView from '../RulesView/index';
 import CanvasView from '../Canvas';
+import CellSize from '../CellSize/index';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const BoardGameView = ({
@@ -52,6 +53,9 @@ const BoardGameView = ({
         </Col>
         <Col>
           <PresetPanelView handlePresets={handlePresets} gen={gen} />
+        </Col>
+        <Col>
+          <CellSize handlePresets={handlePresets} />
         </Col>
       </Row>
     </Container>
