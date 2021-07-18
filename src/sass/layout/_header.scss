@@ -11,7 +11,6 @@
   margin-bottom: 30px;
   background-color: v.$background;
   border-bottom: 3px ridge v.$bright-pink;
-  // padding: 30px;
 
   img {
     @include m.misc-shadow(
@@ -20,6 +19,7 @@
       $blur: 14px,
       $color: v.$transparent-orange
     );
+    max-width: 50%;
 
     margin: 30px 0px;
   }

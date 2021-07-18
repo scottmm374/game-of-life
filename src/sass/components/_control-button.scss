@@ -1,15 +1,16 @@
 @use '../utils/variables' as v;
 @use '../utils/mixins' as m;
 
-.btn-group .control-button {
+// .btn-group {
+.control-button {
   @include m.btn-shadow($color: v.$bright-pink);
   @include m.borders($size: 1px, $type: solid, $color: v.$bright-pink);
   color: v.$bright-pink;
-  max-width: 115px;
-  height: 35px;
+  width: 5rem;
+  height: 2.5rem;
   background-color: v.$background;
   border-radius: 5%;
-  margin: 10px;
+  margin: auto;
 
   &:hover {
     @include m.btn-shadow($color: v.$bright-orange);
@@ -18,3 +19,8 @@
     background-color: v.$background;
   }
 }
+
+.buttons {
+  // border: 1px solid white;
+}
+// }

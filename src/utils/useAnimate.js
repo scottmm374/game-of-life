@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import Presets from './presets';
 
-export const height = 1100;
-export const width = 1100;
-export const cell_size = 55;
+export const height = 700;
+export const width = 700;
+export const cell_size = 14;
 
 export function useAnimate() {
   const canvasRef = useRef(null);
@@ -11,6 +11,8 @@ export function useAnimate() {
   const [nextGrid, setNextGrid] = useState(
     Presets(null, height, width, cell_size)
   );
+
+  console.log(nextGrid, 'next grid animate');
 
   const ROWS = Math.floor(height / cell_size);
   const COLS = Math.floor(width / cell_size);

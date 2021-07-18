@@ -26,17 +26,36 @@ body {
 // .controls {
 //   border: 3px solid green;
 // }
-// .canvasview {
-//   border: 3px dashed rgb(226, 47, 158);
-// }
-// .controls-and-game {
-//   border: 5px solid white;
+// // .canvasview {
+// //   border: 3px dashed rgb(226, 47, 158);
+// // }
+// .game {
+//   border: 5px solid orange;
 // }
 
-// .presets {
-//   border: 2px solid blue;
-// }
+.about-section {
+  // border: 2px solid blue;
+}
+
+.rules-section {
+  // border: 2px solid yellow;
+}
 
 // .rules {
 //   border: 2px solid white;
 // }
+
+// .control-panel {
+//   border: 5px dashed pink;
+// }
+
+// .slider-speed {
+//   // display: inline-block;
+//   // margin-top: 30px;
+//   // margin-left: 160px;
+//   // width: 80%;
+// direction: rtl;
+// }
+.control-view {
+  margin-top: 4%;
+}

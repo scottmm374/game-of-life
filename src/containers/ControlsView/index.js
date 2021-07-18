@@ -1,36 +1,39 @@
 import React from 'react';
-import { Container, Row, Col, ButtonGroup, Button } from 'react-bootstrap';
-// import { Label } from "reactstrap";
+import { Container, Row, Col } from 'react-bootstrap';
+import ControlButtons from './ControlButton';
+import PresetMenu from './PresetMenu';
 
-const ControlView = (props) => {
+const ControlPanelView = ({
+  start,
+  stop,
+  clear,
+  speed,
+  handlePresets,
+  controlSpeed,
+  gen,
+}) => {
   return (
-    <ButtonGroup className='controls d-flex justify-content-center'>
-      <Button className='control-button' onClick={props.start}>
-        Start
-      </Button>
+    <Container className='control-view'>
+      <Row>
+        <Col xs={12} md={4} className='d-flex justify-content-end'>
+          <h4>Generations: {gen}</h4>
+        </Col>
 
-      <Button className='control-button' onClick={props.stop}>
-        Stop
-      </Button>
-
-      <Button className='control-button' onClick={props.clear}>
-        Clear
-      </Button>
-    </ButtonGroup>
+        <Col xs={12} md={4}>
+          <ControlButtons
+            start={start}
+            stop={stop}
+            clear={clear}
+            controlSpeed={controlSpeed}
+            speed={speed}
+          />
+        </Col>
+        <Col xs={12} md={4}>
+          <PresetMenu handlePresets={handlePresets} />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
-export default ControlView;
-
-{
-  /* <slider className='slider-speed'>
-        <Label htmlFor='controlSpeed'>Speed</Label>
-        <input
-          type='range'
-          min='50'
-          max='1000'
-          step='50'
-          onChange={props.controlSpeed}
-        />
-      </slider> */
-}
+export default ControlPanelView;

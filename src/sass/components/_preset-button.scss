@@ -5,8 +5,8 @@
   @include m.btn-shadow($color: v.$bright-orange);
   @include m.borders($size: 1px, $type: solid, $color: v.$bright-orange);
   margin-bottom: 30px;
-  width: 135px;
-  height: 30px;
+  width: 9rem;
+  height: 2.5rem;
   font-size: small;
   background-color: v.$background;
   color: v.$bright-orange;
@@ -35,6 +35,6 @@
 
 // border: 5px solid rgba(72, 255, 0, 0.945);
 
-.presets {
-  margin: 20px;
-}
+// .presets {
+//   margin: 20px;
+// }
