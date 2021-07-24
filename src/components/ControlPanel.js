@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import BoardGameView from '../containers/BoardGameView/index';
 import { useAnimate } from '../utils/useAnimate';
-import { Container, Col, Row } from 'react-bootstrap';
 import NewGen from './NewGen';
 import Presets from '../utils/presets';
 

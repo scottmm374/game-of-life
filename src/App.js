@@ -1,6 +1,5 @@
 import React from 'react';
 import './sass/main.scss';
-import { Container, Row, Col } from 'react-bootstrap';
 import ControlPanel from './components/ControlPanel';
 import Header from './containers/Header/index';
 import Footer from './containers/Footer/index';
