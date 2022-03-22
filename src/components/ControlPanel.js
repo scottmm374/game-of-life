@@ -1,16 +1,27 @@
-import React, { useState, useRef } from "react";
-import ControlView from "./views/ControlView";
-import { useAnimate } from "./hooks/useAnimate";
-import NewGen from "./NewGen";
-import Presets from "./utils/presets";
-import PresetView from "./views/PresetView";
+import React, { useState, useRef } from 'react';
+import ControlView from './views/ControlView';
+import { useAnimate } from './hooks/useAnimate';
+import NewGen from './NewGen';
+import Presets from './utils/presets';
+import PresetView from './views/PresetView';
+import { Container, Row, Col } from 'reactstrap';
 
 function ControlPanel() {
   const interval = useRef(null);
   const [gameRunning, setGameRunning] = useState(false);
   const [speed, setSpeed] = useState();
 
-  const [canvasRef, cell_size, initialGrid, nextGrid, setNextGrid, gen, setGen, width, height] = useAnimate();
+  const [
+    canvasRef,
+    cell_size,
+    initialGrid,
+    nextGrid,
+    setNextGrid,
+    gen,
+    setGen,
+    width,
+    height,
+  ] = useAnimate();
 
   function updateGrid() {
     setNextGrid((grid) => NewGen(grid, height, width, cell_size));
@@ -51,7 +62,10 @@ function ControlPanel() {
   function startGame() {
     stopGame();
     setGameRunning(true);
-    interval.current = setInterval(() => requestAnimationFrame(updateGrid), speed);
+    interval.current = setInterval(
+      () => requestAnimationFrame(updateGrid),
+      speed
+    );
   }
 
   function clearBoard() {
@@ -85,20 +99,38 @@ function ControlPanel() {
 
   return (
     <>
-      <div className="game">
-        <div className="boardgame">
-          <div>
-            <canvas ref={canvasRef} id="canvas" width={width} height={height} onClick={handleClick} />
-          </div>
-          <div className="controls">
-            <ControlView controlSpeed={controlSpeed} startGame={startGame} stopGame={stopGame} clearBoard={clearBoard} gameRunning={gameRunning} handlePresets={handlePresets} gen={gen} />
-            <p>{speed}</p>
-          </div>
-        </div>
-        <div>
-          <PresetView handlePresets={handlePresets} />
-        </div>
-      </div>
+      <Container fluid>
+        <Row>
+          <Col>
+            <canvas
+              ref={canvasRef}
+              id='canvas'
+              width={width}
+              height={height}
+              onClick={handleClick}
+            />
+          </Col>
+          <Col>
+            <PresetView handlePresets={handlePresets} />
+          </Col>
+        </Row>
+
+        <Row>
+          {/* <div className='controls'> */}
+          <ControlView
+            controlSpeed={controlSpeed}
+            startGame={startGame}
+            stopGame={stopGame}
+            clearBoard={clearBoard}
+            gameRunning={gameRunning}
+            handlePresets={handlePresets}
+            gen={gen}
+            speed={speed}
+          />
+          {/* <p>{speed}</p> */}
+          {/* </div> */}
+        </Row>
+      </Container>
     </>
   );
 }

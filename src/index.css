@@ -2,8 +2,20 @@
   box-sizing: border-box;
 }
 
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+} */
+
+html {
+  width: 100%;
+}
+
 body {
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

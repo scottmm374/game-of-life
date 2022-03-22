@@ -1,67 +1,96 @@
-import React from "react";
+import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 const PresetView = (props) => {
   return (
     <>
-      <div className="preset-title">
-        <h3>Choose a Preset</h3>
-      </div>
+      <Container fluid>
+        <Row>
+          <Col>
+            <h3 className='preset-title'>Choose a Preset</h3>
+          </Col>
+        </Row>
+        <Row className='button-containers'>
+          <Col>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='thunderbird'
+            >
+              Thunderbird
+            </button>
 
-      <div className="presets">
-        <div className="preset-button-container">
-          <div className="buttons">
-            <div>
-              <button className="preset-button" onClick={props.handlePresets} value="thunderbird">
-                Thunderbird
-              </button>
-            </div>
-            <div>
-              <button button className="preset-button" onClick={props.handlePresets} value="quad_thunderbird">
-                Quad-Thunderbird
-              </button>
-            </div>
+            <button
+              button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='quad_thunderbird'
+            >
+              Quad-Thunderbird
+            </button>
 
-            <div>
-              <button className="preset-button" onClick={props.handlePresets} value="infinite">
-                Infinite
-              </button>
-            </div>
-          </div>
-          <div className="buttons">
-            <div>
-              <button className="preset-button" onClick={props.handlePresets} value="gospers_glider_gun">
-                Gospers Glider Gun
-              </button>
-            </div>
-            <div>
-              <button className="preset-button" onClick={props.handlePresets} value="mash_up">
-                Mash-up
-              </button>
-            </div>
-            <div>
-              <button className="preset-button" onClick={props.handlePresets} value="random">
-                Random
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="rules">
-          <h3 className="rules-header">Rules of Conways Game of Life</h3>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='infinite'
+            >
+              Infinite
+            </button>
+          </Col>
+          <Col>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='gospers_glider_gun'
+            >
+              Gospers Glider Gun
+            </button>
 
-          <h5 className="rules-subtitle">DEATH</h5>
-          <ul>
-            <h6>If a cell is Alive it will die if:</h6>
-            <li>If the cell has more then 3 neighbors.</li>
-            <li>If the cell has less then 2 neighbors</li>
-          </ul>
-          <h5 className="rules-subtitle">BIRTH</h5>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='mash_up'
+            >
+              Mash-up
+            </button>
 
-          <ul>
-            <h6>If a cell is Dead it will be born if:</h6>
-            <li>If the cell has exactly three neighbors, it will come to Life!</li>
-          </ul>
-        </div>
-      </div>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='random'
+            >
+              Random
+            </button>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h3 className='rules-header'>Rules of Conways Game of Life</h3>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h5 className='rules-subtitle'>DEATH</h5>
+            <ul>
+              <h6>If a cell is Alive it will die if:</h6>
+              <li>If the cell has more then 3 neighbors.</li>
+              <li>If the cell has less then 2 neighbors</li>
+            </ul>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h5 className='rules-subtitle'>BIRTH</h5>
+
+            <ul>
+              <h6>If a cell is Dead it will be born if:</h6>
+              <li>
+                If the cell has exactly three neighbors, it will come to Life!
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

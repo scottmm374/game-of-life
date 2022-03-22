@@ -1,12 +1,12 @@
 .App {
   background-color: #302e2e;
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   color: #e03c8a;
 }
 
-h3 {
+/* h3 {
   margin-bottom: 70px;
-}
+} */
 
 h2,
 h5 {
@@ -14,12 +14,12 @@ h5 {
 }
 
 h4 {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   border-bottom: 2px solid #e03c8a;
 }
 h6 {
   color: #e67212;
-  margin-left: 22px;
+  /* margin-left: 22px; */
 }
 
 li {
@@ -27,11 +27,12 @@ li {
 }
 .rules-header {
   margin-bottom: 40px;
-  margin-left: 60px;
+  /* margin-left: 60px; */
+  margin-top: 3em;
 }
 
 canvas {
-  margin-left: 150px;
+  /* margin-left: 150px;*/
   margin-top: 85px;
   margin-bottom: 20px;
   border: 2px solid #e67212;
@@ -41,8 +42,8 @@ canvas {
 
 footer {
   background-color: #0000007a;
-  width: 100%;
-  margin-top: 70px;
+  /* width: 100%;
+  /* margin-top: 70px; */
   padding: 50px;
   font-size: 1rem;
   text-align: center;
@@ -61,34 +62,18 @@ footer a:hover {
 header img {
   margin-bottom: 30px;
   width: 40%;
-  /* box-shadow: 4px 4px 30px #e67212; */
+  box-shadow: 4px 4px 30px #e67212;
   box-shadow: 6px 11px 14px #e67212b5;
 }
 
 header {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   background-color: #0000007a;
   box-shadow: 1px 6px 30px #e03c8a;
   border-bottom: solid 2px #e03c8a;
-  width: 100%;
+  /* width: 100%; */
   padding: 30px;
   text-align: center;
-}
-
-button {
-  width: 115px;
-  height: 37px;
-  background-color: #0000007a;
-  color: #e03c8a;
-  border: 1px solid #e03c8a;
-  box-shadow: 5px 4px 9px #e03c8a;
-}
-
-button:hover {
-  color: #e67212;
-  border: 1px solid #e67212;
-  background-color: #313131;
-  box-shadow: 5px 4px 9px #e67212;
 }
 
 .slider-speed {
@@ -99,10 +84,31 @@ button:hover {
   direction: rtl;
 }
 
+.button-containers {
+  text-align: center;
+  max-width: 75%;
+}
+
+.control-button {
+  width: 115px;
+  height: 37px;
+  background-color: #0000007a;
+  color: #e03c8a;
+  border: 1px solid #e03c8a;
+  box-shadow: 5px 4px 9px #e03c8a;
+}
+
+.control-button:hover {
+  color: #e67212;
+  border: 1px solid #e67212;
+  background-color: #313131;
+  box-shadow: 5px 4px 9px #e67212;
+}
+
 .preset-button {
   margin-bottom: 30px;
-  width: 200px;
-  height: 37px;
+  width: 175px;
+  height: 60px;
   background-color: #0000007a;
   color: #e67212;
   border: 1px solid #e67212;
@@ -116,59 +122,14 @@ button:hover {
   box-shadow: 5px 4px 9px #e03c8a;
 }
 
-.control-buttons {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  margin-left: 150px;
-}
-
-.boardgame {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.rules {
-  display: flex;
-  flex-direction: column;
-  padding-top: 5rem;
-  margin-left: 45;
-}
-.presets {
-  margin-left: 30px;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
 .preset-title {
-  margin-left: 93px;
+  text-align: left;
+  margin-bottom: 3rem;
   margin-top: 5.25rem;
+  margin-left: 3.2rem;
 }
 
 .rules-subtitle {
   margin-left: 60px;
   margin-bottom: 15px;
-}
-.preset-button-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-}
-
-.game {
-  display: flex;
-  width: 100%;
-}
-
-@media (max-width: 375px) {
-  .canvas {
-    max-width: 50%;
-  }
 }
