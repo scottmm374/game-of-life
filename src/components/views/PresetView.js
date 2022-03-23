@@ -7,7 +7,7 @@ const PresetView = (props) => {
       <Container fluid>
         <Row>
           <Col>
-            <h3 className='preset-title'>Choose a Preset</h3>
+            <p className='titles-preset-rules'>Choose a Preset</p>
           </Col>
         </Row>
         <Row className='button-containers'>
@@ -65,12 +65,12 @@ const PresetView = (props) => {
         </Row>
         <Row>
           <Col>
-            <h3 className='rules-header'>Rules of Conways Game of Life</h3>
+            <p className='titles-preset-rules'>Rules of Conways Game of Life</p>
           </Col>
         </Row>
         <Row>
           <Col>
-            <h5 className='rules-subtitle'>DEATH</h5>
+            <p className='death-birth'>DEATH</p>
             <ul>
               <h6>If a cell is Alive it will die if:</h6>
               <li>If the cell has more then 3 neighbors.</li>
@@ -80,7 +80,7 @@ const PresetView = (props) => {
         </Row>
         <Row>
           <Col>
-            <h5 className='rules-subtitle'>BIRTH</h5>
+            <p className='death-birth'>BIRTH</p>
 
             <ul>
               <h6>If a cell is Dead it will be born if:</h6>

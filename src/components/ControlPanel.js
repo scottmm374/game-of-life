@@ -109,26 +109,20 @@ function ControlPanel() {
               height={height}
               onClick={handleClick}
             />
+            <ControlView
+              controlSpeed={controlSpeed}
+              startGame={startGame}
+              stopGame={stopGame}
+              clearBoard={clearBoard}
+              gameRunning={gameRunning}
+              handlePresets={handlePresets}
+              gen={gen}
+              speed={speed}
+            />
           </Col>
           <Col>
             <PresetView handlePresets={handlePresets} />
           </Col>
-        </Row>
-
-        <Row>
-          {/* <div className='controls'> */}
-          <ControlView
-            controlSpeed={controlSpeed}
-            startGame={startGame}
-            stopGame={stopGame}
-            clearBoard={clearBoard}
-            gameRunning={gameRunning}
-            handlePresets={handlePresets}
-            gen={gen}
-            speed={speed}
-          />
-          {/* <p>{speed}</p> */}
-          {/* </div> */}
         </Row>
       </Container>
     </>

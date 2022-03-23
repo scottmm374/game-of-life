@@ -4,7 +4,6 @@ import { Label, Input, Container, Row, Col } from 'reactstrap';
 const ControlView = (props) => {
   return (
     <>
-      {/* <div className="control-buttons"> */}
       <Container fluid>
         <Row className='button-containers'>
           <Col xl='6'>
@@ -19,7 +18,7 @@ const ControlView = (props) => {
             </button>
           </Col>
           <Col xl='6'>
-            <h4>Generation: {props.gen}</h4>
+            <p className='gen'>Generations: {props.gen}</p>
           </Col>
         </Row>
 
@@ -27,7 +26,7 @@ const ControlView = (props) => {
         <Row>
           <Col>
             <slider className='slider-speed'>
-              <Label htmlFor='controlSpeed'>Speed</Label>
+              <Label htmlFor='controlSpeed'>Speed </Label>
               <input
                 type='range'
                 min='50'

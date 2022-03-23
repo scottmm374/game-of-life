@@ -8,23 +8,28 @@ import { Container, Row, Col } from 'reactstrap';
 
 function App() {
   return (
-    <Container fluid className='App'>
-      <Row>
-        <Col>
-          <Header />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <ControlPanel />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Footer />
-        </Col>
-      </Row>
-    </Container>
+    <div className='App'>
+      <Header />
+      <ControlPanel />
+      <Footer />
+    </div>
+    // <Container fluid className='App'>
+    //   <Row>
+    //     <Col>
+    //       <Header />
+    //     </Col>
+    //   </Row>
+    //   <Row>
+    //     <Col>
+    //       <ControlPanel />
+    //     </Col>
+    //   </Row>
+    //   <Row>
+    //     <Col>
+    //       <Footer />
+    //     </Col>
+    //   </Row>
+    // </Container>
   );
 }
 

@@ -2,49 +2,30 @@
   background-color: #302e2e;
   font-family: 'Fira Code', monospace;
   color: #e03c8a;
+  width: 100%;
+  /* height: auto; */
 }
 
-/* h3 {
-  margin-bottom: 70px;
-} */
-
-h2,
-h5 {
-  color: #2590da;
-}
-
-h4 {
-  /* margin-top: 10px; */
-  border-bottom: 2px solid #e03c8a;
-}
 h6 {
   color: #e67212;
-  /* margin-left: 22px; */
 }
 
 li {
-  margin-left: 50px;
-}
-.rules-header {
-  margin-bottom: 40px;
-  /* margin-left: 60px; */
-  margin-top: 3em;
+  margin-left: 5%;
 }
 
 canvas {
-  /* margin-left: 150px;*/
-  margin-top: 85px;
-  margin-bottom: 20px;
+  margin-top: 10%;
+  margin-bottom: 10%;
   border: 2px solid #e67212;
   box-shadow: 5px 4px 15px #e671128d;
   border-radius: 5px;
+  /* max-width: 100%; */
 }
 
 footer {
   background-color: #0000007a;
-  /* width: 100%;
-  /* margin-top: 70px; */
-  padding: 50px;
+  padding: 3%;
   font-size: 1rem;
   text-align: center;
   box-shadow: 1px 6px 30px #e03c8a;
@@ -55,32 +36,31 @@ footer a {
   font-size: 1.25rem;
   color: #e67212;
 }
+
 footer a:hover {
   color: #e03c8a;
 }
 
+header {
+  background-color: #0000007a;
+  box-shadow: 1px 6px 30px #e03c8a;
+  border-bottom: solid 2px #e03c8a;
+  padding: 1.5%;
+  text-align: center;
+}
+
 header img {
-  margin-bottom: 30px;
+  margin-bottom: 1%;
   width: 40%;
   box-shadow: 4px 4px 30px #e67212;
   box-shadow: 6px 11px 14px #e67212b5;
 }
 
-header {
-  /* margin-bottom: 30px; */
-  background-color: #0000007a;
-  box-shadow: 1px 6px 30px #e03c8a;
-  border-bottom: solid 2px #e03c8a;
-  /* width: 100%; */
-  padding: 30px;
-  text-align: center;
-}
-
 .slider-speed {
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 160px;
-  width: 80%;
+  /* display: inline-block; */
+  margin-top: 2%;
+  /* margin-left: 160px; */
+  width: 100%;
   direction: rtl;
 }
 
@@ -90,8 +70,8 @@ header {
 }
 
 .control-button {
-  width: 115px;
-  height: 37px;
+  width: 30%;
+  height: 60%;
   background-color: #0000007a;
   color: #e03c8a;
   border: 1px solid #e03c8a;
@@ -106,9 +86,9 @@ header {
 }
 
 .preset-button {
-  margin-bottom: 30px;
-  width: 175px;
-  height: 60px;
+  margin-bottom: 8%;
+  width: 75%;
+  height: 30%;
   background-color: #0000007a;
   color: #e67212;
   border: 1px solid #e67212;
@@ -118,18 +98,25 @@ header {
   color: #e03c8a;
   border: 1px solid #e03c8a;
   background-color: #313131;
-
   box-shadow: 5px 4px 9px #e03c8a;
 }
 
-.preset-title {
-  text-align: left;
-  margin-bottom: 3rem;
-  margin-top: 5.25rem;
-  margin-left: 3.2rem;
+.titles-preset-rules {
+  color: #e03c8a;
+  font-size: 2em;
+  margin-bottom: 2%;
+  margin-top: 10%;
+  margin-left: 4%;
 }
 
-.rules-subtitle {
-  margin-left: 60px;
-  margin-bottom: 15px;
+.death-birth {
+  color: #2590da;
+  font-size: 1.5em;
+  margin-left: 5%;
+  margin-bottom: 1.5%;
+}
+
+.gen {
+  font-size: 1.5em;
+  color: #e67212;
 }
