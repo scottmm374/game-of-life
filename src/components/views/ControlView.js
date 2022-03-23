@@ -5,6 +5,7 @@ const ControlView = (props) => {
   return (
     <>
       <Container fluid>
+        <p className='titles-preset-rules'>Controls</p>
         <Row className='button-containers'>
           <Col>
             <ButtonGroup>

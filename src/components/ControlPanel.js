@@ -102,7 +102,7 @@ function ControlPanel() {
     <>
       <Container fluid>
         <Row>
-          <Col xl='8' className='board'>
+          <Col xl='7' className='board'>
             <canvas
               ref={canvasRef}
               id='canvas'
@@ -111,7 +111,7 @@ function ControlPanel() {
               onClick={handleClick}
             />
           </Col>
-          <Col>
+          <Col className='right-side'>
             <PresetView handlePresets={handlePresets} />
             <ControlView
               controlSpeed={controlSpeed}
