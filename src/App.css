@@ -70,9 +70,14 @@ header img {
 }
 
 .control-button {
-  width: 80px;
-  height: 40px;
-  font-size: 1.25em;
+  font-size: 1em;
+  width: 135px;
+  height: 25px;
+  margin-top: 7%;
+  /* width: 60px;
+  height: 30px; */
+  margin-right: 2%;
+  /* font-size: 1.25em; */
   background-color: #1b1919e8;
   color: #e03c8a;
   border: 1px solid #e03c8a;
@@ -86,10 +91,11 @@ header img {
 }
 
 .preset-button {
+  margin-right: 2%;
   font-size: 1em;
-  margin-bottom: 8%;
-  width: 155px;
-  height: 35px;
+  /* margin-bottom: 8%; */
+  width: 135px;
+  height: 25px;
   background-color: #1b1919e8;
   color: #e67212;
   border: 1px solid #e67212;
@@ -103,20 +109,26 @@ header img {
 
 .titles-preset-rules {
   color: #e03c8a;
-  font-size: 4rem;
+  font-size: 2rem;
   margin-bottom: 2%;
   margin-top: 10%;
-  margin-left: 4%;
+  /* margin-left: 4%; */
 }
 
 .death-birth {
   color: #2590da;
-  font-size: 2.5rem;
-  margin-left: 5%;
+  font-size: 1.5rem;
+  /* margin-left: 5%; */
   margin-bottom: 1.5%;
 }
 
 .gen {
-  font-size: 2.5rem;
-  color: #e67212;
+  margin-top: 10%;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #2590da;
+}
+
+.board {
+  text-align: center;
 }

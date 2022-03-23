@@ -4,6 +4,7 @@ import { useAnimate } from './hooks/useAnimate';
 import NewGen from './NewGen';
 import Presets from './utils/presets';
 import PresetView from './views/PresetView';
+import Rules from './views/Rules';
 import { Container, Row, Col } from 'reactstrap';
 
 function ControlPanel() {
@@ -101,7 +102,7 @@ function ControlPanel() {
     <>
       <Container fluid>
         <Row>
-          <Col>
+          <Col xl='8' className='board'>
             <canvas
               ref={canvasRef}
               id='canvas'
@@ -109,6 +110,9 @@ function ControlPanel() {
               height={height}
               onClick={handleClick}
             />
+          </Col>
+          <Col>
+            <PresetView handlePresets={handlePresets} />
             <ControlView
               controlSpeed={controlSpeed}
               startGame={startGame}
@@ -119,9 +123,7 @@ function ControlPanel() {
               gen={gen}
               speed={speed}
             />
-          </Col>
-          <Col>
-            <PresetView handlePresets={handlePresets} />
+            <Rules />
           </Col>
         </Row>
       </Container>

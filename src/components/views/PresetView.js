@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, ButtonGroup } from 'reactstrap';
+import { Container, Row, Col, ButtonGroup } from 'reactstrap';
 
 const PresetView = (props) => {
   return (
@@ -29,10 +29,6 @@ const PresetView = (props) => {
               >
                 Quad-Thunderbird
               </button>
-            </ButtonGroup>
-          </Col>
-          <Col>
-            <ButtonGroup>
               <button
                 className='preset-button'
                 onClick={props.handlePresets}
@@ -40,6 +36,9 @@ const PresetView = (props) => {
               >
                 Infinite
               </button>
+            </ButtonGroup>
+
+            <ButtonGroup>
               <button
                 className='preset-button'
                 onClick={props.handlePresets}
@@ -47,10 +46,6 @@ const PresetView = (props) => {
               >
                 Gospers Glider Gun
               </button>
-            </ButtonGroup>
-          </Col>
-          <Col>
-            <ButtonGroup>
               <button
                 className='preset-button'
                 onClick={props.handlePresets}
@@ -69,7 +64,7 @@ const PresetView = (props) => {
             </ButtonGroup>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col>
             <p className='titles-preset-rules'>Rules of Conways Game of Life</p>
           </Col>
@@ -95,7 +90,7 @@ const PresetView = (props) => {
               </li>
             </ul>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </>
   );

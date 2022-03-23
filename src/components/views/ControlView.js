@@ -6,7 +6,7 @@ const ControlView = (props) => {
     <>
       <Container fluid>
         <Row className='button-containers'>
-          <Col xl='6'>
+          <Col>
             <ButtonGroup>
               <button className='control-button' onClick={props.startGame}>
                 Start
@@ -18,13 +18,12 @@ const ControlView = (props) => {
                 Clear
               </button>
             </ButtonGroup>
+            <div className='gen'>
+              <p>Generations: {props.gen}</p>
+            </div>
           </Col>
-          <Col xl='6'>
-            <p className='gen'>Generations: {props.gen}</p>
-          </Col>
-        </Row>
+          {/* </Row>
 
-        {/* </div> */}
         <Row>
           <Col>
             <slider className='slider-speed'>
@@ -37,7 +36,7 @@ const ControlView = (props) => {
                 onChange={props.controlSpeed}
               />
             </slider>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </>
