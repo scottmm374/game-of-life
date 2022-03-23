@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label, Input, Container, Row, Col } from 'reactstrap';
+import { Label, Container, Row, Col, ButtonGroup } from 'reactstrap';
 
 const ControlView = (props) => {
   return (
@@ -7,15 +7,17 @@ const ControlView = (props) => {
       <Container fluid>
         <Row className='button-containers'>
           <Col xl='6'>
-            <button className='control-button' onClick={props.startGame}>
-              Start
-            </button>
-            <button className='control-button' onClick={props.stopGame}>
-              Stop
-            </button>
-            <button className='control-button' onClick={props.clearBoard}>
-              Clear
-            </button>
+            <ButtonGroup>
+              <button className='control-button' onClick={props.startGame}>
+                Start
+              </button>
+              <button className='control-button' onClick={props.stopGame}>
+                Stop
+              </button>
+              <button className='control-button' onClick={props.clearBoard}>
+                Clear
+              </button>
+            </ButtonGroup>
           </Col>
           <Col xl='6'>
             <p className='gen'>Generations: {props.gen}</p>
@@ -30,7 +32,7 @@ const ControlView = (props) => {
               <input
                 type='range'
                 min='50'
-                max='1000'
+                max='5000'
                 step='50'
                 onChange={props.controlSpeed}
               />

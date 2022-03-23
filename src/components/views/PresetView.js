@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button, ButtonGroup } from 'reactstrap';
 
 const PresetView = (props) => {
   return (
@@ -12,55 +12,61 @@ const PresetView = (props) => {
         </Row>
         <Row className='button-containers'>
           <Col>
-            <button
-              className='preset-button'
-              onClick={props.handlePresets}
-              value='thunderbird'
-            >
-              Thunderbird
-            </button>
+            <ButtonGroup>
+              <button
+                className='preset-button'
+                onClick={props.handlePresets}
+                value='thunderbird'
+              >
+                Thunderbird
+              </button>
 
-            <button
-              button
-              className='preset-button'
-              onClick={props.handlePresets}
-              value='quad_thunderbird'
-            >
-              Quad-Thunderbird
-            </button>
-
-            <button
-              className='preset-button'
-              onClick={props.handlePresets}
-              value='infinite'
-            >
-              Infinite
-            </button>
+              <button
+                button
+                className='preset-button'
+                onClick={props.handlePresets}
+                value='quad_thunderbird'
+              >
+                Quad-Thunderbird
+              </button>
+            </ButtonGroup>
           </Col>
           <Col>
-            <button
-              className='preset-button'
-              onClick={props.handlePresets}
-              value='gospers_glider_gun'
-            >
-              Gospers Glider Gun
-            </button>
+            <ButtonGroup>
+              <button
+                className='preset-button'
+                onClick={props.handlePresets}
+                value='infinite'
+              >
+                Infinite
+              </button>
+              <button
+                className='preset-button'
+                onClick={props.handlePresets}
+                value='gospers_glider_gun'
+              >
+                Gospers Glider Gun
+              </button>
+            </ButtonGroup>
+          </Col>
+          <Col>
+            <ButtonGroup>
+              <button
+                className='preset-button'
+                onClick={props.handlePresets}
+                value='mash_up'
+              >
+                Mash-up
+              </button>
 
-            <button
-              className='preset-button'
-              onClick={props.handlePresets}
-              value='mash_up'
-            >
-              Mash-up
-            </button>
-
-            <button
-              className='preset-button'
-              onClick={props.handlePresets}
-              value='random'
-            >
-              Random
-            </button>
+              <button
+                className='preset-button'
+                onClick={props.handlePresets}
+                value='random'
+              >
+                Random
+              </button>
+            </ButtonGroup>
           </Col>
         </Row>
         <Row>

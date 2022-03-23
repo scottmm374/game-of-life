@@ -1,5 +1,5 @@
 .App {
-  background-color: #302e2e;
+  background-color: #000000;
   font-family: 'Fira Code', monospace;
   color: #e03c8a;
   width: 100%;
@@ -70,9 +70,10 @@ header img {
 }
 
 .control-button {
-  width: 30%;
-  height: 60%;
-  background-color: #0000007a;
+  width: 80px;
+  height: 40px;
+  font-size: 1.25em;
+  background-color: #1b1919e8;
   color: #e03c8a;
   border: 1px solid #e03c8a;
   box-shadow: 5px 4px 9px #e03c8a;
@@ -81,15 +82,15 @@ header img {
 .control-button:hover {
   color: #e67212;
   border: 1px solid #e67212;
-  background-color: #313131;
   box-shadow: 5px 4px 9px #e67212;
 }
 
 .preset-button {
+  font-size: 1em;
   margin-bottom: 8%;
-  width: 75%;
-  height: 30%;
-  background-color: #0000007a;
+  width: 155px;
+  height: 35px;
+  background-color: #1b1919e8;
   color: #e67212;
   border: 1px solid #e67212;
   box-shadow: 5px 4px 9px #e67212;
@@ -97,13 +98,12 @@ header img {
 .preset-button:hover {
   color: #e03c8a;
   border: 1px solid #e03c8a;
-  background-color: #313131;
   box-shadow: 5px 4px 9px #e03c8a;
 }
 
 .titles-preset-rules {
   color: #e03c8a;
-  font-size: 2em;
+  font-size: 4rem;
   margin-bottom: 2%;
   margin-top: 10%;
   margin-left: 4%;
@@ -111,12 +111,12 @@ header img {
 
 .death-birth {
   color: #2590da;
-  font-size: 1.5em;
+  font-size: 2.5rem;
   margin-left: 5%;
   margin-bottom: 1.5%;
 }
 
 .gen {
-  font-size: 1.5em;
+  font-size: 2.5rem;
   color: #e67212;
 }
