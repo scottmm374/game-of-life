@@ -10,7 +10,7 @@ export function useAnimate() {
   const [gen, setGen] = useState(0);
 
   const [nextGrid, setNextGrid] = useState(
-    Presets('clock', height, width, cell_size)
+    Presets('quad_thunderbird', height, width, cell_size)
   );
 
   const ROWS = Math.floor(height / cell_size);

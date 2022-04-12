@@ -5,8 +5,12 @@ const ControlView = (props) => {
   return (
     <>
       <Container fluid>
-        <p className='titles-preset-rules'>Controls</p>
-        <Row className='button-containers'>
+        <Row>
+          <Col>
+            <p className='titles-preset-rules'>Controls</p>
+          </Col>
+        </Row>
+        <Row>
           <Col>
             <ButtonGroup>
               <button className='control-button' onClick={props.startGame}>
@@ -19,9 +23,13 @@ const ControlView = (props) => {
                 Clear
               </button>
             </ButtonGroup>
-            <div className='gen'>
-              <p>Generations: {props.gen}</p>
-            </div>
+            {/* <Row>
+              <Col>
+                <div className='gen'>
+                  <p>Generations: {props.gen}</p>
+                </div>
+              </Col>
+            </Row> */}
           </Col>
           {/* </Row>
 

@@ -37,7 +37,10 @@ const PresetView = (props) => {
                 Infinite
               </button>
             </ButtonGroup>
-
+          </Col>
+        </Row>
+        <Row className='button-containers'>
+          <Col>
             <ButtonGroup>
               <button
                 className='preset-button'
