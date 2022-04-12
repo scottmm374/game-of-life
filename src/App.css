@@ -6,12 +6,23 @@
   /* height: auto; */
 }
 
-h6 {
+h5 {
   color: #e67212;
 }
 
 li {
   margin-left: 5%;
+  font-size: 1.25rem;
+  line-height: 35px;
+}
+
+header {
+  background-color: #0000007a;
+  /* box-shadow: 1px 6px 30px #e03c8a;
+  border-bottom: solid 2px #e03c8a; */
+  padding: 1.5%;
+  /* text-align: center; */
+  width: 100%;
 }
 
 canvas {
@@ -22,6 +33,54 @@ canvas {
   /* border-radius: 5px; */
   width: 80%;
   /* border: 1px dashed yellow; */
+}
+.icon-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.color-button {
+  /* padding: 2em; */
+  border-radius: 5px;
+  width: 4em;
+  height: 2em;
+}
+
+.pink {
+  background-color: #e03c8a;
+  border-radius: 5px;
+  border: 1px solid #e03c8a;
+}
+
+.blue {
+  background-color: #2590da;
+  border-radius: 5px;
+  border: 1px solid #2590da;
+}
+
+.orange {
+  background-color: #e67212;
+  border-radius: 5px;
+  border: 1px solid #e67212;
+}
+
+.color-picker {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-linkedin-in,
+.fa-github-alt,
+.fa-envelope {
+  font-size: 3em;
+  color: #e03c8a;
+  padding: 1em;
+}
+
+.fa-linkedin-in:hover,
+.fa-github-alt:hover,
+.fa-envelope:hover {
+  color: #e67212;
 }
 
 footer {
@@ -42,20 +101,12 @@ footer a:hover {
   color: #e03c8a;
 }
 
-header {
-  background-color: #0000007a;
-  box-shadow: 1px 6px 30px #e03c8a;
-  border-bottom: solid 2px #e03c8a;
-  padding: 1.5%;
-  text-align: center;
-}
-
-header img {
-  margin-bottom: 1%;
-  width: 40%;
-  /* box-shadow: 4px 4px 30px #e67212; */
-  /* box-shadow: 6px 11px 14px #e67212b5; */
-}
+/* header img { */
+/* margin-bottom: 1%; */
+/* width: 40%; */
+/* box-shadow: 4px 4px 30px #e67212; */
+/* box-shadow: 6px 11px 14px #e67212b5; */
+/* } */
 
 .slider-speed {
   /* display: inline-block; */
@@ -65,15 +116,16 @@ header img {
   direction: rtl;
 }
 
-/* .button-containers { */
-/* text-align: center; */
-/* max-width: 75%; */
-/* } */
+/* .button-containers {
+  text-align: center;
+  max-width: 75%;
+} */
 
 .control-button {
   font-size: 1em;
-  width: 135px;
-  height: 25px;
+  width: 10em;
+  height: auto;
+  padding: 3%;
   /* margin-top: 10%; */
   /* width: 60px;
   height: 30px; */
@@ -95,9 +147,8 @@ header img {
   margin-right: 2%;
   margin-bottom: 3%;
   font-size: 1em;
-  /* margin-bottom: 8%; */
-  width: 135px;
-  height: 25px;
+  width: 10em;
+  height: auto;
   background-color: #1b1919e8;
   color: #e67212;
   border: 1px solid #e67212;
@@ -111,31 +162,29 @@ header img {
 
 .titles-preset-rules {
   color: #e03c8a;
-  font-size: 2rem;
-  margin-bottom: 3%;
+  font-size: 2.5rem;
+  margin-bottom: 5%;
   margin-top: 10%;
 }
 
 .death-birth {
   color: #2590da;
   font-size: 1.5rem;
-  margin-bottom: 1.5%;
+  /* margin-bottom: 1.5%; */
 }
 
 .gen {
-  margin-top: 10%;
+  margin-top: 15%;
   text-align: left;
-  font-size: 2rem;
-  color: #2590da;
+  font-size: 4rem;
+  color: #e67212;
   text-decoration-line: underline;
 }
 
 .board {
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  /* border: 1px solid red; */
-  /* width: 100%; */
+  /* margin-top: 10%; */
+  margin-bottom: 5%;
 }
 
 .right-side {

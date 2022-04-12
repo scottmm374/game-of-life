@@ -124,7 +124,7 @@ function ControlPanel() {
               gen={gen}
               speed={speed}
             />
-            <Rules />
+            <Rules gen={gen} />
           </Col>
         </Row>
       </Container>
