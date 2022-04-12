@@ -1,9 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+@import 'normalize.css';
 
-body {
-  font-family: "Fira Code", monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  overscroll-behavior: none;
+  font-size: 62.5%;
 }
