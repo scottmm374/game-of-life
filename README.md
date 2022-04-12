@@ -2,11 +2,11 @@
 
 ---
 
-# [Play Michelle's Game of Life](https://game-of-life.scottmm374.vercel.app)
+# [Play my version of Game of Life](https://game-of-life.scottmm374.vercel.app)
 
-**I was curious what pattern filling in all the edges would render, This was the result. I call it Clock!**
+<!-- **I was curious what pattern filling in all the edges would render, This was the result. I call it Clock!**
 
-![Game Of Life](/src/images/demo.gif)
+![Game Of Life](/src/images/demo.gif) -->
 
 ---
 
@@ -17,7 +17,7 @@ aspects of computer science and nature.
 
 ![example-patterns](https://media.giphy.com/media/4VVZTvTqzRR0BUwNIH/giphy.gif)
 
-# Visualizing the "Game of Life"
+<!-- # Visualizing the "Game of Life"
 
 The main entry point of your application should house the visualization
 of this cellular automaton. Include necessary components, such as:
@@ -86,7 +86,7 @@ Write an algorithm that:
 - Explore alternate algorithms for finding the nth generation, such
   as [Hashlife](https://en.wikipedia.org/wiki/Hashlife)
 
-# Uses of CA
+# Uses of CA -->
 
 - Cellular automata can be used directly to create visual or acoustic multimedia content, to generate random numbers for cryptography or other purposes, and possibly to build parallel computers.
 - The chief use for cellular automata, however, is to model physical and biological systems.
