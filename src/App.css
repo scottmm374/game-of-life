@@ -24,6 +24,17 @@ canvas {
   /* border: 1px dashed yellow; */
 }
 
+.fa-linkedin-in,
+.fa-github-alt,
+.fa-envelope {
+  font-size: 5em;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
 footer {
   background-color: #0000007a;
   padding: 3%;
@@ -44,8 +55,8 @@ footer a:hover {
 
 header {
   background-color: #0000007a;
-  box-shadow: 1px 6px 30px #e03c8a;
-  border-bottom: solid 2px #e03c8a;
+  /* box-shadow: 1px 6px 30px #e03c8a;
+  border-bottom: solid 2px #e03c8a; */
   padding: 1.5%;
   text-align: center;
 }
@@ -132,10 +143,8 @@ header img {
 
 .board {
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  /* border: 1px solid red; */
-  /* width: 100%; */
+  /* margin-top: 10%; */
+  margin-bottom: 5%;
 }
 
 .right-side {

@@ -24,14 +24,6 @@ export function useAnimate() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    // const colorArr = ['#e03c8a', '#2590da', '#e67212', '#5e936f', '#d3c041'];
-
-    // function randomColors(arr) {
-    //   return colorArr[Math.floor(Math.random() * colorArr.length)];
-    // }
-    // console.log(randomColor, "random");
-
-    // controls drawing of the grid on canvas.
     function render(grid, context) {
       for (let row = 0; row < grid.length; row++) {
         for (let col = 0; col < grid[row].length; col++) {
@@ -40,11 +32,8 @@ export function useAnimate() {
           context.beginPath();
 
           context.rect(col * cell_size, row * cell_size, cell_size, cell_size);
-          // console.log(cell_size, col * cell_size);
-          // context.rect(0, 0, height, width);
 
           if (cell === 1) {
-            // context.fillStyle = randomColors(`${colorArr}`);
             context.fillStyle = '#2590da';
           } else {
             context.fillStyle = '#020202';
