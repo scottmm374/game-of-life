@@ -2,7 +2,7 @@ export default function NewGen(grid, height, width, cell_size) {
   // copy of grid
   const newGenGrid = grid.map((array) => [...array]);
 
-  console.log(JSON.stringify(newGenGrid));
+  // console.log(JSON.stringify(newGenGrid));
 
   // Game logic
 
@@ -36,7 +36,7 @@ export default function NewGen(grid, height, width, cell_size) {
       }
     }
   }
-  console.log(JSON.stringify(newGenGrid));
+  // console.log(JSON.stringify(newGenGrid));
 
   return newGenGrid;
 }

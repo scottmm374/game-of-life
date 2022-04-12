@@ -1,28 +1,30 @@
 import React from 'react';
-import { Label, Input, Container, Row, Col } from 'reactstrap';
+import { Label, Container, Row, Col, ButtonGroup } from 'reactstrap';
 
 const ControlView = (props) => {
   return (
     <>
       <Container fluid>
+        <p className='titles-preset-rules'>Controls</p>
         <Row className='button-containers'>
-          <Col xl='6'>
-            <button className='control-button' onClick={props.startGame}>
-              Start
-            </button>
-            <button className='control-button' onClick={props.stopGame}>
-              Stop
-            </button>
-            <button className='control-button' onClick={props.clearBoard}>
-              Clear
-            </button>
+          <Col>
+            <ButtonGroup>
+              <button className='control-button' onClick={props.startGame}>
+                Start
+              </button>
+              <button className='control-button' onClick={props.stopGame}>
+                Stop
+              </button>
+              <button className='control-button' onClick={props.clearBoard}>
+                Clear
+              </button>
+            </ButtonGroup>
+            <div className='gen'>
+              <p>Generations: {props.gen}</p>
+            </div>
           </Col>
-          <Col xl='6'>
-            <p className='gen'>Generations: {props.gen}</p>
-          </Col>
-        </Row>
+          {/* </Row>
 
-        {/* </div> */}
         <Row>
           <Col>
             <slider className='slider-speed'>
@@ -30,12 +32,12 @@ const ControlView = (props) => {
               <input
                 type='range'
                 min='50'
-                max='1000'
+                max='5000'
                 step='50'
                 onChange={props.controlSpeed}
               />
             </slider>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </>

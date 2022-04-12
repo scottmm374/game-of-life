@@ -1,5 +1,5 @@
 .App {
-  background-color: #302e2e;
+  background-color: #000000;
   font-family: 'Fira Code', monospace;
   color: #e03c8a;
   width: 100%;
@@ -17,23 +17,24 @@ li {
 canvas {
   margin-top: 10%;
   margin-bottom: 10%;
-  border: 2px solid #e67212;
-  box-shadow: 5px 4px 15px #e671128d;
-  border-radius: 5px;
-  /* max-width: 100%; */
+  /* border: 2px solid #e67212; */
+  /* box-shadow: 5px 4px 15px #e671128d; */
+  /* border-radius: 5px; */
+  width: 80%;
+  /* border: 1px dashed yellow; */
 }
 
 footer {
   background-color: #0000007a;
   padding: 3%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   box-shadow: 1px 6px 30px #e03c8a;
   border-top: ridge;
 }
 
 footer a {
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #e67212;
 }
 
@@ -52,8 +53,8 @@ header {
 header img {
   margin-bottom: 1%;
   width: 40%;
-  box-shadow: 4px 4px 30px #e67212;
-  box-shadow: 6px 11px 14px #e67212b5;
+  /* box-shadow: 4px 4px 30px #e67212; */
+  /* box-shadow: 6px 11px 14px #e67212b5; */
 }
 
 .slider-speed {
@@ -64,59 +65,80 @@ header img {
   direction: rtl;
 }
 
-.button-containers {
-  text-align: center;
-  max-width: 75%;
-}
+/* .button-containers { */
+/* text-align: center; */
+/* max-width: 75%; */
+/* } */
 
 .control-button {
-  width: 30%;
-  height: 60%;
-  background-color: #0000007a;
+  font-size: 1em;
+  width: 135px;
+  height: 25px;
+  /* margin-top: 10%; */
+  /* width: 60px;
+  height: 30px; */
+  margin-right: 2%;
+  /* font-size: 1.25em; */
+  background-color: #1b1919e8;
   color: #e03c8a;
   border: 1px solid #e03c8a;
-  box-shadow: 5px 4px 9px #e03c8a;
+  /* box-shadow: 5px 4px 9px #e03c8a; */
 }
 
 .control-button:hover {
   color: #e67212;
   border: 1px solid #e67212;
-  background-color: #313131;
   box-shadow: 5px 4px 9px #e67212;
 }
 
 .preset-button {
-  margin-bottom: 8%;
-  width: 75%;
-  height: 30%;
-  background-color: #0000007a;
+  margin-right: 2%;
+  margin-bottom: 3%;
+  font-size: 1em;
+  /* margin-bottom: 8%; */
+  width: 135px;
+  height: 25px;
+  background-color: #1b1919e8;
   color: #e67212;
   border: 1px solid #e67212;
-  box-shadow: 5px 4px 9px #e67212;
+  /* box-shadow: 5px 4px 9px #e67212; */
 }
 .preset-button:hover {
   color: #e03c8a;
   border: 1px solid #e03c8a;
-  background-color: #313131;
   box-shadow: 5px 4px 9px #e03c8a;
 }
 
 .titles-preset-rules {
   color: #e03c8a;
-  font-size: 2em;
-  margin-bottom: 2%;
+  font-size: 2rem;
+  margin-bottom: 3%;
   margin-top: 10%;
-  margin-left: 4%;
 }
 
 .death-birth {
   color: #2590da;
-  font-size: 1.5em;
-  margin-left: 5%;
+  font-size: 1.5rem;
   margin-bottom: 1.5%;
 }
 
 .gen {
-  font-size: 1.5em;
-  color: #e67212;
+  margin-top: 10%;
+  text-align: left;
+  font-size: 2rem;
+  color: #2590da;
+  text-decoration-line: underline;
+}
+
+.board {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  /* border: 1px solid red; */
+  /* width: 100%; */
+}
+
+.right-side {
+  margin-top: 2%;
+  margin-bottom: 10%;
 }
