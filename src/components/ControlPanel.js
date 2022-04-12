@@ -30,30 +30,30 @@ function ControlPanel() {
   }
 
   // handles the function, clicking on grid.
-  function handleClick(e) {
-    stopGame();
-    let mousePos = getCoodinates(e, canvasRef, cell_size);
+  // function handleClick(e) {
+  //   stopGame();
+  //   let mousePos = getCoodinates(e, canvasRef, cell_size);
 
-    const currentCood = {
-      x: mousePos.x,
-      y: mousePos.y,
-    };
+  //   const currentCood = {
+  //     x: mousePos.x,
+  //     y: mousePos.y,
+  //   };
 
-    const newGrid = nextGrid.map((row, key) => {
-      if (key === currentCood.y / cell_size) {
-        return row.map((col, col_key) => {
-          if (col_key === currentCood.x / cell_size) {
-            return col === 0 ? 1 : 0;
-          } else {
-            return col;
-          }
-        });
-      } else {
-        return row;
-      }
-    });
-    setNextGrid(newGrid);
-  }
+  //   const newGrid = nextGrid.map((row, key) => {
+  //     if (key === currentCood.y / cell_size) {
+  //       return row.map((col, col_key) => {
+  //         if (col_key === currentCood.x / cell_size) {
+  //           return col === 0 ? 1 : 0;
+  //         } else {
+  //           return col;
+  //         }
+  //       });
+  //     } else {
+  //       return row;
+  //     }
+  //   });
+  //   setNextGrid(newGrid);
+  // }
 
   function stopGame() {
     setGameRunning(false);
@@ -89,14 +89,15 @@ function ControlPanel() {
   }
 
   // Mouse coodinates when Clicking
-  function getCoodinates(e, canvasRef, cell_size) {
-    let bound = canvasRef.current.getBoundingClientRect();
-    const currentCood = {
-      x: e.clientX - bound.left - ((e.clientX - bound.left) % cell_size),
-      y: e.clientY - bound.top - ((e.clientY - bound.top) % cell_size),
-    };
-    return currentCood;
-  }
+  // function getCoodinates(e, canvasRef, cell_size) {
+  //   let bound = canvasRef.current.getBoundingClientRect();
+  //   console.log('Boiund', bound);
+  //   const currentCood = {
+  //     x: e.clientX - bound.left - ((e.clientX - bound.left) % cell_size),
+  //     y: e.clientY - bound.top - ((e.clientY - bound.top) % cell_size),
+  //   };
+  //   return currentCood;
+  // }
 
   return (
     <>
@@ -108,7 +109,7 @@ function ControlPanel() {
               id='canvas'
               width={width}
               height={height}
-              onClick={handleClick}
+              // onClick={handleClick}
             />
           </Col>
           <Col className='right-side'>

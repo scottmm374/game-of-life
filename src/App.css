@@ -17,10 +17,11 @@ li {
 canvas {
   margin-top: 10%;
   margin-bottom: 10%;
-  border: 2px solid #e67212;
-  box-shadow: 5px 4px 15px #e671128d;
-  border-radius: 5px;
+  /* border: 2px solid #e67212; */
+  /* box-shadow: 5px 4px 15px #e671128d; */
+  /* border-radius: 5px; */
   width: 80%;
+  /* border: 1px dashed yellow; */
 }
 
 footer {
@@ -131,6 +132,10 @@ header img {
 
 .board {
   text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  /* border: 1px solid red; */
+  /* width: 100%; */
 }
 
 .right-side {
