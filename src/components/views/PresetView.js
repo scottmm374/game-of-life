@@ -4,10 +4,10 @@ import { Container, Row, Col, ButtonGroup } from 'reactstrap';
 const PresetView = (props) => {
   return (
     <>
-      <Container fluid>
+      <Container>
         <Row>
           <Col>
-            <p className='titles-preset-rules'>Choose a Preset</p>
+            <h4 className='titles-preset-rules'>Choose a Preset</h4>
           </Col>
         </Row>
         <Row className='button-containers'>

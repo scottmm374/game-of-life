@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 const Rules = (props) => {
   return (
     <>
-      <Container fluid>
+      <Container>
         <Row>
           <Col>
             <p className='titles-preset-rules'>Rules of Conways Game of Life</p>
@@ -34,14 +34,6 @@ const Rules = (props) => {
                 The cell has exactly three neighbors, it will come to Life!
               </li>
             </ul>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <div className='gen'>
-              <p>Generations: {props.gen}</p>
-            </div>
           </Col>
         </Row>
       </Container>
