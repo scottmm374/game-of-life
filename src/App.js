@@ -8,13 +8,16 @@ import { Container, Row, Col } from 'reactstrap';
 
 function App() {
   return (
-    <div fluid className='App'>
+    <>
       <Header />
-
-      <ControlPanel />
+      <main>
+        <Container>
+          <ControlPanel />
+        </Container>
+      </main>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

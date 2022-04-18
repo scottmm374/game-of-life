@@ -5,68 +5,63 @@ const PresetView = (props) => {
   return (
     <>
       <Container>
-        <Row>
-          <Col>
-            <h4 className='titles-preset-rules'>Choose a Preset</h4>
-          </Col>
-        </Row>
-        <Row className='button-containers'>
-          <Col>
-            <ButtonGroup>
-              <button
-                className='preset-button'
-                onClick={props.handlePresets}
-                value='thunderbird'
-              >
-                Thunderbird
-              </button>
+        <div>
+          <h4 className='titles-preset-rules'>Choose a Preset</h4>
+        </div>
 
-              <button
-                button
-                className='preset-button'
-                onClick={props.handlePresets}
-                value='quad_thunderbird'
-              >
-                Quad-Thunderbird
-              </button>
-              <button
-                className='preset-button'
-                onClick={props.handlePresets}
-                value='infinite'
-              >
-                Infinite
-              </button>
-            </ButtonGroup>
-          </Col>
-        </Row>
-        <Row className='button-containers'>
-          <Col>
-            <ButtonGroup>
-              <button
-                className='preset-button'
-                onClick={props.handlePresets}
-                value='gospers_glider_gun'
-              >
-                Gospers Glider Gun
-              </button>
-              <button
-                className='preset-button'
-                onClick={props.handlePresets}
-                value='mash_up'
-              >
-                Mash-up
-              </button>
+        <div className='button-containers'>
+          <ButtonGroup>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='thunderbird'
+            >
+              Thunderbird
+            </button>
 
-              <button
-                className='preset-button'
-                onClick={props.handlePresets}
-                value='random'
-              >
-                Random
-              </button>
-            </ButtonGroup>
-          </Col>
-        </Row>
+            <button
+              button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='quad_thunderbird'
+            >
+              Quad-Thunderbird
+            </button>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='infinite'
+            >
+              Infinite
+            </button>
+          </ButtonGroup>
+        </div>
+        <div className='button-containers'>
+          <ButtonGroup>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='gospers_glider_gun'
+            >
+              Gospers Glider Gun
+            </button>
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='mash_up'
+            >
+              Mash-up
+            </button>
+
+            <button
+              className='preset-button'
+              onClick={props.handlePresets}
+              value='random'
+            >
+              Random
+            </button>
+          </ButtonGroup>
+        </div>
       </Container>
     </>
   );

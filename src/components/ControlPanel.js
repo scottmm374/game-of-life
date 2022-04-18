@@ -114,30 +114,12 @@ function ControlPanel() {
               gen={gen}
               speed={speed}
             />
+            <canvas ref={canvasRef} id='canvas' width={width} height={height} />
           </Col>
-        </Row>
-        <Row>
-          <Col xl='7' className='board'>
-            <canvas
-              ref={canvasRef}
-              id='canvas'
-              width={width}
-              height={height}
-              // onClick={handleClick}
-            />
-          </Col>
+
           <Col className='right-side'>
             <PresetView handlePresets={handlePresets} />
-            {/* <ControlView
-              controlSpeed={controlSpeed}
-              startGame={startGame}
-              stopGame={stopGame}
-              clearBoard={clearBoard}
-              gameRunning={gameRunning}
-              handlePresets={handlePresets}
-              gen={gen}
-              speed={speed}
-            /> */}
+
             <Rules />
           </Col>
         </Row>
