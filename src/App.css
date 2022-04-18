@@ -47,7 +47,10 @@ canvas {
 
 .fa-linkedin-in,
 .fa-github-alt,
-.fa-envelope {
+.fa-envelope,
+.fa-circle-play,
+.fa-circle-pause,
+.fa-arrows-rotate {
   font-size: 3em;
   color: #e03c8a;
   padding: 1em;
@@ -55,7 +58,10 @@ canvas {
 
 .fa-linkedin-in:hover,
 .fa-github-alt:hover,
-.fa-envelope:hover {
+.fa-envelope:hover,
+.fa-circle-play:hover,
+.fa-circle-pause:hover,
+.fa-arrows-rotate:hover {
   color: #e67212;
 }
 
