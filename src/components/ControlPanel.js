@@ -101,19 +101,9 @@ function ControlPanel() {
 
   return (
     <>
-      <Container fluid>
+      <Container>
         <Row>
-          <Col xl='7' className='board'>
-            <canvas
-              ref={canvasRef}
-              id='canvas'
-              width={width}
-              height={height}
-              // onClick={handleClick}
-            />
-          </Col>
-          <Col className='right-side'>
-            <PresetView handlePresets={handlePresets} />
+          <Col xl='7' className='game-controls'>
             <ControlView
               controlSpeed={controlSpeed}
               startGame={startGame}
@@ -124,7 +114,13 @@ function ControlPanel() {
               gen={gen}
               speed={speed}
             />
-            <Rules gen={gen} />
+            <canvas ref={canvasRef} id='canvas' width={width} height={height} />
+          </Col>
+
+          <Col className='right-side'>
+            <PresetView handlePresets={handlePresets} />
+
+            <Rules />
           </Col>
         </Row>
       </Container>

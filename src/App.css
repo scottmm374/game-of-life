@@ -3,7 +3,11 @@
   font-family: 'Fira Code', monospace;
   color: #e03c8a;
   width: 100%;
-  /* height: auto; */
+  height: auto;
+}
+main {
+  min-height: 80vh;
+  background-color: #000000;
 }
 
 h5 {
@@ -11,67 +15,38 @@ h5 {
 }
 
 li {
-  margin-left: 5%;
+  /* margin-left: 5%; */
+  color: #e67212;
   font-size: 1.25rem;
   line-height: 35px;
 }
 
 header {
-  background-color: #0000007a;
+  background-color: #000000;
+  color: #2590da;
   /* box-shadow: 1px 6px 30px #e03c8a;
   border-bottom: solid 2px #e03c8a; */
   padding: 1.5%;
   /* text-align: center; */
-  width: 100%;
+  /* width: 100%; */
 }
 
 canvas {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  /* margin-top: 10%; */
+  /* margin-bottom: 10%; */
   /* border: 2px solid #e67212; */
   /* box-shadow: 5px 4px 15px #e671128d; */
   /* border-radius: 5px; */
-  width: 80%;
+  width: 100%;
   /* border: 1px dashed yellow; */
-}
-.icon-wrapper {
-  display: flex;
-  justify-content: space-around;
-}
-.color-button {
-  /* padding: 2em; */
-  border-radius: 5px;
-  width: 4em;
-  height: 2em;
-}
-
-.pink {
-  background-color: #e03c8a;
-  border-radius: 5px;
-  border: 1px solid #e03c8a;
-}
-
-.blue {
-  background-color: #2590da;
-  border-radius: 5px;
-  border: 1px solid #2590da;
-}
-
-.orange {
-  background-color: #e67212;
-  border-radius: 5px;
-  border: 1px solid #e67212;
-}
-
-.color-picker {
-  margin-top: 3%;
-  display: flex;
-  justify-content: space-around;
 }
 
 .fa-linkedin-in,
 .fa-github-alt,
-.fa-envelope {
+.fa-envelope,
+.fa-circle-play,
+.fa-circle-pause,
+.fa-arrows-rotate {
   font-size: 3em;
   color: #e03c8a;
   padding: 1em;
@@ -79,17 +54,19 @@ canvas {
 
 .fa-linkedin-in:hover,
 .fa-github-alt:hover,
-.fa-envelope:hover {
+.fa-envelope:hover,
+.fa-circle-play:hover,
+.fa-circle-pause:hover,
+.fa-arrows-rotate:hover {
   color: #e67212;
 }
 
 footer {
-  background-color: #0000007a;
-  padding: 3%;
+  background-color: #000000;
+  color: #e03c8a;
+  padding-bottom: 3%;
   font-size: 1.5rem;
   text-align: center;
-  box-shadow: 1px 6px 30px #e03c8a;
-  border-top: ridge;
 }
 
 footer a {
@@ -101,49 +78,27 @@ footer a:hover {
   color: #e03c8a;
 }
 
-/* header img { */
-/* margin-bottom: 1%; */
-/* width: 40%; */
-/* box-shadow: 4px 4px 30px #e67212; */
-/* box-shadow: 6px 11px 14px #e67212b5; */
-/* } */
-
-.slider-speed {
-  /* display: inline-block; */
-  margin-top: 2%;
-  /* margin-left: 160px; */
-  width: 100%;
-  direction: rtl;
-}
-
-/* .button-containers {
-  text-align: center;
-  max-width: 75%;
-} */
-
-.control-button {
+/* .control-button {
   font-size: 1em;
   width: 10em;
-  height: auto;
-  padding: 3%;
-  /* margin-top: 10%; */
-  /* width: 60px;
-  height: 30px; */
-  margin-right: 2%;
-  /* font-size: 1.25em; */
-  background-color: #1b1919e8;
-  color: #e03c8a;
-  border: 1px solid #e03c8a;
-  /* box-shadow: 5px 4px 9px #e03c8a; */
-}
+  height: auto; */
+/* padding: 3%;
+  margin-top: 10%;
+  margin-right: 2%; */
 
-.control-button:hover {
+/* background-color: #1b1919e8; */
+/* color: #e03c8a;
+  border: 1px solid #e03c8a;
+} */
+
+/* .control-button:hover {
   color: #e67212;
   border: 1px solid #e67212;
   box-shadow: 5px 4px 9px #e67212;
-}
+} */
 
 .preset-button {
+  margin-top: 10%;
   margin-right: 2%;
   margin-bottom: 3%;
   font-size: 1em;
@@ -163,8 +118,8 @@ footer a:hover {
 .titles-preset-rules {
   color: #e03c8a;
   font-size: 2.5rem;
-  margin-bottom: 5%;
-  margin-top: 10%;
+  /* margin-bottom: 5%; */
+  /* margin-top: 10%; */
 }
 
 .death-birth {
@@ -174,20 +129,20 @@ footer a:hover {
 }
 
 .gen {
-  margin-top: 15%;
-  text-align: left;
-  font-size: 4rem;
+  /* margin-top: 15%; */
+  /* text-align: left; */
+  font-size: 2em;
   color: #e67212;
   text-decoration-line: underline;
 }
 
-.board {
-  text-align: center;
-  /* margin-top: 10%; */
-  margin-bottom: 5%;
-}
+/* .board { */
+/* text-align: center; */
+/* margin-top: 10%; */
+/* margin-bottom: 5%; */
+/* } */
 
-.right-side {
-  margin-top: 2%;
-  margin-bottom: 10%;
-}
+/* .right-side { */
+/* margin-top: 2%; */
+/* margin-bottom: 10%; */
+/* } */
