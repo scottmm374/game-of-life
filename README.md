@@ -6,7 +6,7 @@
 
 <!-- **I was curious what pattern filling in all the edges would render, This was the result. I call it Clock!**
 
-![Game Of Life](/src/images/demo.gif) -->
+
 
 ---
 
