@@ -1,15 +1,31 @@
-# Cellular Automata and Conway's "Game of Life"
+# Game of Life
+
+### Table of contents
+
+- [About Conways](link)
+- [Todo](link)
+- [Bugs](link)
+- [Developers](link)
+- [Tech Stack](link)
+- [Design](link)
 
 ---
 
-# [Play my version of Game of Life](https://game-of-life.scottmm374.vercel.app)
-
-<!-- **I was curious what pattern filling in all the edges would render, This was the result. I call it Clock!**
-
-
+## Play [Game of Life](https://game-of-life.scottmm374.vercel.app)
 
 ---
 
+---
+
+## Todo
+
+- [ ] Do this
+- [ ] Do that
+- [ ] Do some other things
+
+<details open>
+<summary>Learn More about Conways Game of Life</summary>
+<br>
 Welcome to John Conway's "Game of Life"! This is a computer science
 classic from 1970, a program that simulates a _cellular automaton_
 (plural _automata_). It has connections to all kinds of different
@@ -17,85 +33,20 @@ aspects of computer science and nature.
 
 ![example-patterns](https://media.giphy.com/media/4VVZTvTqzRR0BUwNIH/giphy.gif)
 
-<!-- # Visualizing the "Game of Life"
-
-The main entry point of your application should house the visualization
-of this cellular automaton. Include necessary components, such as:
-
-- [x] Grid to display cells.
-
-- [x] Cell objects or components that, at a minimum, should have:
-
-- Properties
-  - [x] current state: (alive, dead), (black, white)
-  - [x] Clickable/Tappable: -[x] can be clicked to allow user to setup initial cell configuration
-    - [x] should NOT be clickable while simulation is running
-- Behaviors
-- [x] Toggle state functionality: switch between alive & dead either
-      because user manually toggled cell before starting simulation or
-      simulation is running and rules of life caused cell to change
-      state
-- [x] An appropriate data structure to hold a grid of cells that is at least
-      25x25. Go as big as you want.
-- [x] Text to display current generation # being displayed
-  - [x] Utilize a timeout function to build the next generation of cells &
-        update the display at the chosen time interval
-- [x] Button(s) that start & stop the animation
-- [x] Button to clear the grid
-
-Write an algorithm that:
-
-- Implements the following basic steps:
-  - For each cell in the current generation's grid:
-    - [x] Examine state of all eight neighbors (it's up to you whether you
-          want cells to wrap around the grid and consider cells on the
-          other side or not)
-    - [x] Apply rules of life to determine if this cell will change states
-    - [x] When main loop completes:
-    - [x] Swap current and next grids
-    - [x] Repeat until simulation stopped
-- [x] Breaks down above steps into appropriate sub-tasks implemented with
-      helper functions to improve readability
-- [x] Uses double buffering to update grid with next generation.
-- [x] Does something well-documented with the edge of the grid. (e.g. wrap
-      around to the far side--most fun!--or assumes all edge cells are
-      permanently dead.)
-
-# Custom Features I implemented
-
-- [x] Create a few sample cell configurations that users can load and run
-
-- [x] Add an option that creates a random cell configuration that users can run
-
-- [x] Allow users to specify the speed of the simulation
-- [x] Add additional cell properties, I added Color.
-
-# Additional Features I would like to add in the future.
-
-- Step through frame feature
-- Save pattern feature
-- Adjust Grid/Board size
-- Choose Color Theme
-
-## Stretch Goals
-
-- Implement 2+ additional custom features, above
-- [x] Deploy your app to a hosting service or, for iOS, to TestFlight (or
-      the App Store!). Web devs can see [more deployment info
-      here](resources/web/deployment).
-- Explore alternate algorithms for finding the nth generation, such
-  as [Hashlife](https://en.wikipedia.org/wiki/Hashlife)
-
-# Uses of CA -->
+<details open>
+<summary><b>What is Cellular Automa</b></summary>
+<br>
 
 - Cellular automata can be used directly to create visual or acoustic multimedia content, to generate random numbers for cryptography or other purposes, and possibly to build parallel computers.
 - The chief use for cellular automata, however, is to model physical and biological systems.
 - Cellular automata can often serve as simpler tools for modeling systems than traditional mathematical methods. They are ideal for modeling systems that—like cellular automata themselves—are composed of simple components that manifest complex behavior.
-  A few examples are: - Gas phenomena - Urban development - Immunological processes - Crystallization.
-  The best known application of cellular automata, however, is modeling living systems. This application is the province of the emerging field of artificial life, which is concerned with modeling biological life or even creating an artificial form of life on a computer, in an attempt to fathom the mystery of the emergence of complex life forms in a universe of increasing entropy.
+A few examples are: - Gas phenomena - Urban development - Immunological processes - Crystallization.
+The best known application of cellular automata, however, is modeling living systems. This application is the province of the emerging field of artificial life, which is concerned with modeling biological life or even creating an artificial form of life on a computer, in an attempt to fathom the mystery of the emergence of complex life forms in a universe of increasing entropy.
+</details>
 
-# Real world phenomena that can be observed in cellular automata
-
+<details open>
+<summary><b>Real world phenomena that can be observed in cellular automata</b></summary>
+<br>
 - Patterns on sea shells Cymbiola innexa are similar to patterns generated by rule 30 1D CA
 - Growth of crystals especially patterns in snowflakes can be modeled by simple 2D CA
 - Excitable media in biology (predator-prey dynamics) and chemistry (Belousov-Zhabotinsky reaction) produce spiral patterns that can be seen in Greenberg-Hastings Models
@@ -104,8 +55,11 @@ Write an algorithm that:
 - Models of universal computation include rule 110 and the Game of Life
 - The Game of Life exhibits interesting patterns that can't really be seen in the real world but they excite our imagination about what CA are capable of
 
-# Touring Completeness:
+</details>
 
+<details open>
+<summary><b>Touring Completeness:</b></summary>
+<br>
 In the game of life we have the computational Head (the actual program that examines the current cell and determines the actions to take with that cell).
 
 The tape are the cells, each one individually.
@@ -119,3 +73,7 @@ The touring machine in the Game of life is only aware of one cell at a time, the
       - Change the state of the cell to "Dead"
 
 The **_accept states_** of the Game of Life are determined by the 3 rules. Once these states have been reached and no other possibilities exist, it will remain in this state infinitley.
+
+</details>
+
+</details>
