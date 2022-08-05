@@ -3,26 +3,29 @@ import { Container, Row, Col, ButtonGroup } from 'reactstrap';
 
 const ControlView = (props) => {
   return (
-    <>
-      <ButtonGroup>
-        <i class='fa-solid fa-circle-play' onClick={props.startGame}></i>
-        <i class='fa-solid fa-circle-pause' onClick={props.stopGame}></i>
-        <i class='fa-solid fa-arrows-rotate' onClick={props.clearBoard}></i>
-        {/* <button className='control-button' onClick={props.stopGame}>
-          Stop
-        </button>
-        <button className='control-button' onClick={props.clearBoard}>
-          Clear
-        </button> */}
-      </ButtonGroup>
-
-      {/* </Col>
-          <Col> */}
-
-      <div className='gen'>
-        <p>Generations: {props.gen}</p>
-      </div>
-    </>
+    <Container>
+      <Row style={{ 'align-items': 'baseline' }}>
+        <Col>
+          <ButtonGroup>
+            <i
+              className='fa-solid fa-circle-play'
+              onClick={props.startGame}
+            ></i>
+            <i
+              className='fa-solid fa-circle-pause'
+              onClick={props.stopGame}
+            ></i>
+            <i
+              className='fa-solid fa-arrows-rotate'
+              onClick={props.clearBoard}
+            ></i>
+          </ButtonGroup>
+        </Col>
+        <Col className='gen'>
+          <h4>Generations: {props.gen}</h4>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
