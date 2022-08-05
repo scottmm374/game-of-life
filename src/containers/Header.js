@@ -28,8 +28,10 @@ const Header = () => {
         <Container>
           <Row style={{ 'align-items': 'baseline' }}>
             <Col>
-              <h1>Michelle's Game of Life</h1>
+              <h1>Conways Game of Life</h1>
             </Col>
+          </Row>
+          <Row>
             <Col>
               <i
                 href='https://www.linkedin.com/in/scottmm374/'
