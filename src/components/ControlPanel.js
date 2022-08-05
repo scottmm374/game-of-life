@@ -16,6 +16,7 @@ function ControlPanel() {
     canvasRef,
     cell_size,
     initialGrid,
+    // eslint-disable-next-line
     nextGrid,
     setNextGrid,
     gen,

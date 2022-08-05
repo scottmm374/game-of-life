@@ -4,7 +4,7 @@ import './App.css';
 import ControlPanel from './components/ControlPanel';
 import Header from './containers/Header';
 import Footer from './containers/Footer';
-
+// eslint-disable-next-line
 import { Container, Row, Col } from 'reactstrap';
 
 function App() {

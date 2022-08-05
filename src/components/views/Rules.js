@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 import { Container, Row, Col, List } from 'reactstrap';
 
 const Rules = (props) => {
