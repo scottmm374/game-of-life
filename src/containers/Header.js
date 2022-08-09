@@ -28,7 +28,7 @@ const Header = () => {
         <Container>
           <Row style={{ 'align-items': 'baseline' }}>
             <Col>
-              <h1>Conways Game of Life</h1>
+              <h1 className='display-1 text-center mt-3'>Conways Game of Life</h1>
             </Col>
           </Row>
 
