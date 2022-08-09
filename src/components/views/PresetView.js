@@ -6,9 +6,13 @@ const PresetView = (props) => {
   return (
     <>
       <Container>
-        <div>
-          <h4 className='titles-preset-rules'>Choose a Preset</h4>
-        </div>
+        <Row>
+          <Col sm='12'>
+            {/* <div> */}
+            <h4 className='titles-preset-rules'>Choose a Preset</h4>
+            {/* </div> */}
+          </Col>
+        </Row>
 
         <div className='button-containers'>
           <ButtonGroup>
