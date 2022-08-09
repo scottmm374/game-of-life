@@ -59,6 +59,10 @@
   --bs-body-bg: #fff;
   /* CUSTOM Variables */
   --custom-body-font-family: 'Barlow', sans-serif;
+  /*! try slight backshadow maybe slight orange || pink */
+  --custom-header-font-family: 'Monoton', cursive;
+
+  /* 'Press Start 2P', cursive; */
 
 }
 
@@ -111,6 +115,7 @@ h2,
 .h2,
 h1,
 .h1 {
+
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -529,6 +534,7 @@ progress {
 }
 
 .display-1 {
+  font-family: var(--custom-header-font-family);
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
   line-height: 1.2;
