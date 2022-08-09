@@ -115,6 +115,8 @@ function ControlPanel() {
               gen={gen}
               speed={speed}
             />
+          </Col>
+          <Col sm='12' md='6'>
             <canvas ref={canvasRef} id='canvas' width={width} height={height} />
           </Col>
 
