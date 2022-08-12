@@ -1,3 +1,20 @@
+//******************************************
+//*** File: App.scss
+//******************************************
+//******************************************
+//** Variables
+//******************************************
+$text-align-center: center;
+
+//******************************************
+//* Mixins
+//******************************************
+@mixin text-align($text-align: $text-align-center) {
+  text-align: $text-align;
+}
+
+
+
 .App {
   background-color: #000000;
   font-family: 'Fira Code', monospace;
@@ -5,6 +22,7 @@
   width: 100%;
   height: auto;
 }
+
 main {
   min-height: 80vh;
   background-color: #000000;
@@ -78,6 +96,8 @@ footer a:hover {
   color: #e03c8a;
 }
 
+
+
 /* .control-button {
   font-size: 1em;
   width: 10em;
@@ -109,6 +129,7 @@ footer a:hover {
   border: 1px solid #e67212;
   /* box-shadow: 5px 4px 9px #e67212; */
 }
+
 .preset-button:hover {
   color: #e03c8a;
   border: 1px solid #e03c8a;
@@ -116,6 +137,7 @@ footer a:hover {
 }
 
 .titles-preset-rules {
+  @include text-align();
   color: #e03c8a;
   font-size: 2.5rem;
   /* margin-bottom: 5%; */

@@ -16,6 +16,7 @@ function ControlPanel() {
     canvasRef,
     cell_size,
     initialGrid,
+    // eslint-disable-next-line
     nextGrid,
     setNextGrid,
     gen,
@@ -103,23 +104,30 @@ function ControlPanel() {
     <>
       <Container>
         <Row>
-          <Col xl='7' className='game-controls'>
-            <ControlView
-              controlSpeed={controlSpeed}
-              startGame={startGame}
-              stopGame={stopGame}
-              clearBoard={clearBoard}
-              gameRunning={gameRunning}
-              handlePresets={handlePresets}
-              gen={gen}
-              speed={speed}
-            />
+          <Col sm='12' md='6' lg='6' xl='7'>
             <canvas ref={canvasRef} id='canvas' width={width} height={height} />
           </Col>
-
-          <Col className='right-side'>
-            <PresetView handlePresets={handlePresets} />
-
+          <Col md='5' className='right-side text-center'>
+            <Col xl='6' className='game-controls'>
+              <ControlView
+                controlSpeed={controlSpeed}
+                startGame={startGame}
+                stopGame={stopGame}
+                clearBoard={clearBoard}
+                gameRunning={gameRunning}
+                handlePresets={handlePresets}
+                gen={gen}
+                speed={speed}
+              />
+            </Col>
+            <Col>
+              <PresetView handlePresets={handlePresets} />
+            </Col>
+          </Col>
+        </Row>
+        <Row>
+          {/* as of right now will later put in modal window  */}
+          <Col className='text-center'>
             <Rules />
           </Col>
         </Row>

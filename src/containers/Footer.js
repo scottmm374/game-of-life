@@ -17,6 +17,26 @@ const Footer = () => {
               </p>
             </Col>
           </Row>
+          <Row>
+            <Col>
+              <i
+                href='https://www.linkedin.com/in/scottmm374/'
+                className='fa-brands fa-linkedin-in'
+                target='blank'
+              ></i>
+
+              <i
+                href='https://github.com/scottmm374'
+                className='fa-brands fa-github-alt'
+                target='blank'
+              ></i>
+              <i
+                href='mailto:scottmm374@gmail.com'
+                className='fas fa-envelope'
+                target='blank'
+              ></i>
+            </Col>
+          </Row>
         </Container>
       </footer>
     </>
